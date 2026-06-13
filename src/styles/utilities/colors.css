@@ -1,0 +1,28 @@
+.text-heading {
+  @apply !text-[#222e48];
+}
+
+.text-body {
+  @apply !text-[#576070];
+}
+
+.text-main {
+  @apply !text-[#066ccb];
+}
+
+/* Text Color */
+.hover-text-white:hover {
+  @apply !text-white;
+}
+
+.hover-text-heading:hover {
+  @apply !text-[#222e48];
+}
+
+.hover-text-body:hover {
+  @apply !text-[#576070];
+}
+
+.hover-text-main:hover {
+  @apply !text-[#066ccb];
+}

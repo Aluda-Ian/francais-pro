@@ -1,0 +1,27 @@
+.border-dashed {
+  @apply !border-dashed;
+}
+
+.border-bottom-dashed {
+  @apply border-b-[#dfe0e4] border-b border-dashed border-b-[#dfe0e4] border-b border-dashed;
+}
+
+.border-right-dashed {
+  @apply border-r-[#dfe0e4] border-r border-dashed;
+}
+
+.border-bottom-dashed-main {
+  @apply border-b-[#c7e3fd] border-b border-dashed;
+}
+
+.border-bottom-solid {
+  @apply border-b-[#dfe0e4] border-b border-solid;
+}
+
+.border-top-solid {
+  @apply border-t-[#dfe0e4] border-t border-solid;
+}
+
+.border-transparent {
+  @apply !border-transparent;
+}

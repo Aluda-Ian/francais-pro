@@ -1,0 +1,60 @@
+.instructor-item .cover-img {
+  @apply min-h-[344px];
+}
+
+.social-infos {
+  @apply absolute bg-[#066ccb] z-[1] p-2 rounded-[50rem];
+  inset-block-end: calc(100% - 24px);
+  inset-inline-end: 24px;
+}
+
+.social-infos__button:hover {
+  @apply scale-110;
+}
+
+.social-infos__button.active i::before {
+  @apply content-["\e32a"];
+}
+
+.social-infos .social-list {
+  @apply hidden;
+}
+
+.our-popular-five {
+  @apply absolute bg-[#066ccb] z-[1] p-2 rounded-[50rem];
+  inset-block-start: 20px;
+  inset-inline-end: 24px;
+}
+
+.our-popular-five__button:hover {
+  @apply scale-110;
+}
+
+.our-popular-five__button.active i::before {
+  @apply content-["\e32a"];
+}
+
+.our-popular-five .social-list {
+  @apply hidden;
+}
+
+/* Instructor Two Item Css Start */
+.instructor-item-two:hover .instructor-item-two__thumb::before {
+  @apply rotate-[225deg];
+}
+
+.instructor-item-two:hover .instructor-item-two__thumb-inner::before {
+  @apply visible opacity-30;
+}
+
+.instructor-item-two__thumb::before {
+  @apply absolute content-[""] w-full h-full border rotate-45 rounded-[inherit] border-solid border-[transparent_#066ccb_transparent_#066ccb] top-0;
+  transition: 0.4s linear;
+  inset-inline-start: 0;
+}
+
+.instructor-item-two__thumb-inner::before {
+  @apply absolute content-[""] w-full h-full bg-[#071431] invisible opacity-0 rounded-[inherit] top-0;
+  transition: 0.1s linear;
+  inset-inline-start: 0;
+}

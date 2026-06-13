@@ -1,0 +1,219 @@
+.header {
+  @apply border-b-[#105CA614] border-b border-solid;
+  transition: 0.2s linear;
+}
+
+@media screen and (max-width: 991px) {
+  .header {
+    @apply px-0 py-2.5;
+  }
+}
+
+.header.fixed-header {
+  @apply sticky w-full z-[99] backdrop-blur-xl animate-[slideDown_0.35s_ease-out] shadow-[0_5px_16px_rgba(0,0,0,0.1)] bg-[#ffffffcc];
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .header.fixed-header {
+    inset-block-start: -1px;
+  }
+}
+
+.header-content-wrapper {
+  @apply gap-[clamp(1rem,_-3.496rem_+_6vw,_2.5rem)];
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.logo img {
+  @apply max-w-[200px];
+}
+
+.toggle-mobileMenu {
+  @apply leading-none text-4xl text-[#222e48];
+}
+
+/* Header Menu and Submenu Css Start */
+.nav-menu {
+  @apply gap-6;
+}
+
+@media screen and (max-width: 1399px) {
+  .nav-menu {
+    @apply gap-5;
+  }
+}
+
+.nav-menu__item.activePage>a {
+  @apply text-[#066ccb];
+}
+
+.nav-menu__item.activePage>a::before {
+  @apply text-[#066ccb];
+}
+
+.nav-menu__item:hover>a {
+  @apply text-[#222e48];
+}
+
+@media (min-width: 992px) {
+  .nav-menu__item:hover>a {
+    @apply text-[#066ccb];
+  }
+}
+
+.nav-menu__link {
+  @apply text-[#222e48] font-medium w-full w-full px-0 py-[38px];
+}
+
+@media screen and (max-width: 1399px) {
+  .nav-menu__link {
+    @apply !text-sm;
+  }
+}
+
+.has-submenu {
+  @apply relative;
+}
+
+.has-submenu .nav-menu__link {
+  padding-inline-end: 16px;
+}
+
+.has-submenu.active>a,
+.has-submenu.active>a::before {
+  @apply text-[#066ccb];
+}
+
+.has-submenu.active>a::before {
+  @apply !-translate-y-2/4 !rotate-180;
+}
+
+.has-submenu:hover .nav-submenu {
+  @apply visible opacity-100;
+  margin-block-start: 0;
+}
+
+@media (min-width: 992px) {
+  .has-submenu:hover>a::before {
+    @apply text-[#066ccb] -translate-y-2/4 rotate-180;
+  }
+}
+
+.has-submenu>a {
+  @apply relative;
+}
+
+.has-submenu>a::before {
+  @apply absolute content-["\e136"] -translate-y-2/4 font-black text-[#222e48];
+  transition: 0.2s linear;
+  font-family: "Phosphor";
+  inset-inline-end: 0;
+  inset-block-start: 50%;
+}
+
+/* Submenu Start */
+.nav-submenu {
+  @apply absolute w-max bg-white min-w-[190px] overflow-hidden invisible opacity-0 z-[99] p-2 rounded-md;
+  transition: 0.2s linear;
+  inset-inline-start: 0;
+  inset-block-start: 100%;
+  margin-block-start: 16px;
+}
+
+@media (min-width: 992px) {
+  .nav-submenu {
+    @apply max-h-[400px] overflow-y-auto;
+  }
+}
+
+.nav-submenu__item {
+  @apply block rounded relative;
+  transition: 0.2s linear;
+}
+
+.nav-submenu__item.activePage .nav-submenu__link {
+  @apply text-[#066ccb];
+}
+
+.nav-submenu__item:hover a {
+  @apply text-[#222e48];
+}
+
+.nav-submenu__link {
+  @apply text-[#222e48] font-medium w-full w-full block text-sm px-3.5 py-2 rounded-[inherit] before:absolute;
+  padding-inline-end: 16px;
+}
+
+.header-right {
+  @apply gap-[clamp(0.5rem,_-2.498rem_+_4vw,_1.5rem)];
+}
+
+@media screen and (max-width: 991px) {
+  .header-select {
+    margin-inline-start: auto;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .header-select {
+    @apply w-auto inline-flex;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .select-icon {
+    @apply !hidden;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .info-action {
+    @apply !w-10 !h-10;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .info-action {
+    @apply !w-[34px] !h-[34px] !text-lg;
+  }
+}
+
+@media (min-width: 570px) and (max-width: 1501px) {
+  .nav-menu__item .nav-menu__link {
+    @apply !text-xs;
+  }
+
+  .common-input {
+    @apply !max-w-[180px];
+  }
+}
+
+@media (min-width: 570px) and (max-width: 1399px) {
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    @apply px-0 py-[11px] px-0 py-1.5 px-0 py-[11px];
+    padding-inline-start: 30px !important;
+    padding-inline-end: 48px !important;
+  }
+
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-inline-start: 30px !important;
+    padding-inline-end: 48px !important;
+  }
+
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-inline-start: 30px !important;
+    padding-inline-end: 48px !important;
+  }
+}

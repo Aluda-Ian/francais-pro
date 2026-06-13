@@ -1,0 +1,40 @@
+.mobile-menu {
+  @apply fixed bg-white w-[300px] h-screen overflow-y-auto z-[991] -translate-x-full p-6;
+  transition: 0.2s linear;
+  padding-block-end: 68px;
+}
+.mobile-menu.active {
+  @apply translate-x-[0%];
+}
+.close-button {
+  @apply absolute w-7 h-7 bg-[#ebecef] flex justify-center items-center rounded-[50%] hover:bg-black hover:text-white;
+  transition: 0.2s linear;
+  inset-inline-end: 8px;
+  inset-block-start: 8px;
+}
+.nav-menu--mobile {
+  @apply block;
+  margin-block-start: 32px;
+}
+.nav-menu--mobile .nav-menu__item > a::before {
+  @apply -translate-y-2/4 rotate-0;
+}
+.nav-menu--mobile .nav-menu__link {
+  @apply relative px-0 py-3 !border-b-[#dfe0e4] !border-b !border-solid;
+  padding-inline-end: 16px;
+}
+.nav-menu--mobile .nav-submenu {
+  @apply static visible opacity-100 shadow-none w-full hidden p-0;
+  transition: 0.2s linear;
+  margin-block-start: 0;
+  margin-inline-start: 16px;
+}
+.nav-menu--mobile .nav-submenu__link {
+  @apply w-full px-0 py-2.5 rounded-none !border-b-[#dfe0e4] !border-b !border-solid;
+}
+.nav-menu--mobile .nav-submenu__item:hover {
+  @apply bg-transparent text-[#066ccb];
+}
+.nav-menu--mobile .nav-submenu__item::before {
+  @apply hidden;
+}

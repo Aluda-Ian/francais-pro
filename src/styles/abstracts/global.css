@@ -1,0 +1,75 @@
+.js-marquee {
+  @apply flex gap-6;
+}
+
+.js-marquee-wrapper {
+  @apply flex gap-6;
+}
+
+.apexcharts-grid-row {
+  @apply !fill-transparent !opacity-0;
+}
+
+.my-profile {
+  @apply min-h-screen flex flex-col;
+}
+
+body {
+  background: whitesmoke;
+  font-family: "Open Sans", sans-serif;
+}
+
+.avatar-upload {
+  @apply relative max-w-[460px];
+}
+
+.avatar-upload .avatar-edit {
+  @apply absolute z-[1] right-3 top-2.5;
+}
+
+.avatar-upload .avatar-edit input {
+  @apply hidden;
+}
+
+.avatar-upload .avatar-edit input+label {
+  @apply inline-block w-[34px] h-[34px] border cursor-pointer font-[normal] mb-0 rounded-[100%] border-solid border-transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.avatar-upload .avatar-preview {
+  @apply w-[120px] h-[120px] relative rounded-[100%];
+}
+
+.avatar-upload .avatar-preview>div {
+  @apply w-full h-full bg-cover bg-no-repeat bg-center rounded-[100%];
+}
+
+.ql-toolbar.ql-snow {
+  @apply border-[transparent];
+}
+
+.dropdown-toggle::after {
+  @apply hidden;
+}
+
+.dropdown-item:hover {
+  background: none;
+}
+
+.dropdown-menu {
+  @apply shadow-[0px_13px_30px_10px_rgba(46,45,116,0.05)] border-[none];
+}
+
+
+.slick-arrow {
+  @apply !text-[unset] before:!content-none;
+  position: unset !important;
+  transform: unset !important;
+}
+
+
+.alter-arrow button {
+  @apply !text-[unset] before:!content-none;
+  position: unset !important;
+  transform: unset !important;
+}

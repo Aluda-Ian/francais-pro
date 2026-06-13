@@ -1,0 +1,6 @@
+@media (min-width: 992px) {
+  .account-img {
+    @apply relative;
+    inset-inline-start: 13%;
+  }
+}

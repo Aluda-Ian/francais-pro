@@ -1,0 +1,74 @@
+.footer {
+  margin-block-start: auto;
+}
+
+.footer-item__logo {
+  margin-block-end: 20px;
+}
+
+.footer-item__logo a img {
+  @apply w-full h-full max-w-[190px] max-h-16;
+}
+
+.footer-menu__link:hover {
+  @apply text-[#066ccb];
+}
+
+/* Footer Contact */
+.footer-contact__item {
+  @apply gap-4 text-white font-light;
+  margin-block-end: 16px;
+}
+
+.footer-contact__item:last-child {
+  margin-block-end: 0;
+}
+
+.footer-contact__icon {
+  @apply text-[inherit] font-[inherit];
+}
+
+.footer-contact__text {
+  @apply text-[inherit] font-[inherit];
+}
+
+.footer-contact__link {
+  @apply text-inherit hover:text-[#066ccb] hover:text-[#066ccb];
+}
+
+.footer-top {
+  @apply mb-[clamp(2.5rem,_-0.543rem_+_6.339vw,_5rem)];
+}
+
+.footer-top__left {
+  @apply flex items-center gap-[clamp(1.5rem,_0.283rem_+_2.536vw,_2.5rem)];
+}
+
+.footer-top__left .text {
+  @apply max-w-[330px];
+}
+
+.subscribe-form {
+  @apply max-w-[550px];
+}
+
+.subscribe-form input {
+  @apply text-white rounded-none border-t-0 border-x-0 md:min-w-[400px];
+  padding-inline-start: 40px !important;
+}
+
+.subscribe-form input::placeholder {
+  @apply text-[#ffffffcc];
+}
+
+.subscribe-form .input-icon {
+  inset-inline-start: 0;
+}
+
+.footer-links {
+  @apply flex items-center flex-wrap gap-[clamp(0.625rem,_-0.896rem_+_3.17vw,_1.875rem)];
+}
+
+.footer-link:hover {
+  @apply text-[#066ccb];
+}

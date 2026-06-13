@@ -1,0 +1,115 @@
+.bg-color-three {
+  @apply bg-[rgba(47,167,95,0.05)];
+}
+
+.bg-dark-yellow {
+  @apply bg-[#f3b439];
+}
+
+.hover-bg-white:hover {
+  @apply bg-white;
+}
+
+.bg-color-black {
+  @apply bg-[#0b1323];
+}
+
+.bg-color-deep-green {
+  @apply bg-[#00a76f];
+}
+
+.bg-color-violet {
+  @apply bg-[#8e33ff];
+}
+
+.bg-color-info {
+  @apply bg-[#00b8d9];
+}
+
+.bg-color-light-green {
+  @apply bg-green-500;
+}
+
+.bg-color-yellow {
+  @apply bg-[#ffab00];
+}
+
+.bg-color-danger {
+  @apply bg-[#ff5630];
+}
+
+.bg-color-blue {
+  @apply bg-[#0066ff];
+}
+
+.bg-color-main-500 {
+  @apply bg-[#066bc9b7];
+}
+
+.bg-color-paste {
+  @apply bg-[#33ff00];
+}
+
+.bg-color-warning {
+  @apply bg-[#ff7a00];
+}
+
+.bg-transparent {
+  @apply bg-transparent;
+}
+
+.bg-img-one {
+  background-image: url("../../images/thumbs/instructor-dashboard-img3.png");
+}
+
+.bg-img-two {
+  background-image: url("../../images/bg/gradient-bg-2.png");
+}
+
+.bg-img-three {
+  background-image: url("../../images/thumbs/testimonials-three-img3.png");
+}
+
+.bg-img-four {
+  background-image: url("../../images/thumbs/banner-three-img1.png");
+}
+
+.bg-img-five {
+  background-image: url("../../images/thumbs/banner-three-img2.png");
+}
+
+.bg-img-six {
+  background-image: url("../../images/thumbs/banner-three-img3.png");
+}
+
+.bg-img-seven {
+  background-image: url("../../images/bg/gradient-bg-2.png");
+}
+
+.bg-img-eight {
+  background-image: url("../../images/bg/banner-5-bg-img1.png");
+}
+
+.bg-img-nine {
+  background-image: url("../../images/shapes/child-future-bg-img1.png");
+}
+
+.bg-img-ten {
+  background-image: url("../../images/shapes/child-future-bg-img1.png");
+}
+
+.bg-img-eleven {
+  background-image: url("../../images/bg/gradient-bg.png");
+}
+
+.bg-img-twelve {
+  background-image: url("../../images/bg/gradient-bg.png");
+}
+
+.bg-img-thirteen {
+  background-image: url("../../images/thumbs/student-dashbord-profile-photo-img1.png");
+}
+
+.bg-img-fourteen {
+  background-image: url("../../images/bg/banner-5-bg-img1.png");
+}

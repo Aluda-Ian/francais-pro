@@ -1,0 +1,11 @@
+.line-height-96 {
+  @apply leading-[1.2];
+}
+
+.line-height-1 {
+  @apply leading-none;
+}
+
+.line-height-105 {
+  @apply leading-normal;
+}

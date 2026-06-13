@@ -1,0 +1,27 @@
+.triangle-shape::before {
+  @apply absolute content-[""] h-[65px] w-10 bg-[#a7d3fc] -translate-x-2/4;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  inset-block-start: 100%;
+  inset-inline-start: 50%;
+}
+
+.shape-bg-red-light::before {
+  @apply bg-red-200;
+}
+
+.shape-bg-green-light::before {
+  @apply bg-green-200;
+}
+
+.triangle-shape-right::before,
+.triangle-shape-right::after {
+  @apply absolute content-[""] w-[42px] h-[30px] bg-[black] bottom-full;
+  clip-path: polygon(100% 100%, 0 42%, 0 100%);
+  inset-inline-end: 0;
+}
+
+.triangle-shape-right::after {
+  clip-path: polygon(100% 100%, 100% 42%, 0 100%);
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+}

@@ -1,0 +1,33 @@
+@media (min-width: 1600px) {
+  .about-thumbs {
+    @apply !absolute w-[716px];
+    inset-inline-end: 54%;
+    inset-block-start: 0;
+  }
+}
+
+.offer-message {
+  @apply absolute z-[1];
+  inset-inline-start: -100px;
+  inset-block-end: 200px;
+}
+
+@media screen and (max-width: 1199px) {
+  .offer-message {
+    inset-inline-start: 24px;
+  }
+}
+
+.offer-message.style-two {
+  @apply z-[1];
+  inset-inline-start: auto;
+  inset-inline-end: 24px;
+  inset-block-end: auto;
+  inset-block-start: 60px;
+}
+
+@media (min-width: 1599px) {
+  .offer-message.style-two {
+    inset-inline-end: -70px;
+  }
+}

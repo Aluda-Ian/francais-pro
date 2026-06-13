@@ -1,0 +1,18 @@
+.scroll-hide {
+  @apply absolute overflow-y-hidden w-full;
+  padding-inline-end: 17px;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .scroll-hide {
+    padding-inline-end: 0;
+  }
+}
+
+.scroll-hide-sm {
+  @apply absolute overflow-y-hidden w-[calc(100%_-_0px)];
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}

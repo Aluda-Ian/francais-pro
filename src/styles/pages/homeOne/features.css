@@ -1,0 +1,19 @@
+.features-item {
+  @apply p-[clamp(1.5rem,_-1.498rem_+_4vw,_2.5rem)];
+}
+
+.half-bg {
+  @apply relative z-[1] before:absolute before:content-[""] before:w-full before:h-3/6 before:bg-[#f3f9ff] before:z-[-1] before:bottom-0;
+}
+
+.half-bg::before {
+  inset-inline-start: 0;
+}
+
+.half-bg.style-two::before {
+  @apply top-0 bottom-auto;
+}
+
+.half-bg__64::before {
+  @apply h-[64%];
+}

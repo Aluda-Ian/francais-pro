@@ -1,0 +1,25 @@
+@media (min-width: 1200px) {
+  .about-three-thumbs__one {
+    @apply pb-[100px];
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-three-thumbs__two {
+    @apply absolute max-w-sm border border-solid border-white;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+  }
+}
+
+@media (max-width: 1399px) {
+  .about-three-thumbs__two {
+    @apply max-w-[354px];
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .about-three-thumbs__two {
+    @apply max-w-full w-full;
+  }
+}

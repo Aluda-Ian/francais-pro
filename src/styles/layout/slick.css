@@ -1,0 +1,40 @@
+.slick-initialized.slick-slider .slick-track {
+  @apply flex;
+}
+
+.slick-initialized.slick-slider .slick-slide {
+  @apply cursor-grab h-auto mx-2.5 my-0;
+}
+
+.slick-initialized.slick-slider .slick-slide>div {
+  @apply h-full;
+}
+
+.slick-initialized.slick-slider .slick-slide>div>div {
+  @apply h-full;
+}
+
+@media screen and (max-width: 1399px) {
+  .responsive-arrow .slick-arrow {
+    @apply !w-10 !h-10 !bg-[#ffffff20] !text-white;
+  }
+}
+
+/* Dots Css Start */
+.slick-dots {
+  @apply text-center;
+  padding-block-start: 20px;
+}
+
+.slick-dots li {
+  @apply inline-block leading-[0];
+}
+
+.slick-dots li button {
+  @apply bg-[#00000020] text-white w-2 h-2 indent-[-9999px]  mx-[3px] my-0 rounded-[1px] rounded-[50%] border-[none];
+  transition: 0.3s linear;
+}
+
+.slick-dots li.slick-active button {
+  @apply bg-[#066ccb] w-[25px] rounded-[5px];
+}

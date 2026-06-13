@@ -1,0 +1,34 @@
+.masonry {
+  @apply gap-x-6;
+  column-count: 2;
+}
+
+@media (min-width: 768px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .masonry {
+    @apply gap-x-4;
+  }
+}
+
+.masonry__item {
+  @apply mb-6;
+}
+
+@media screen and (max-width: 767px) {
+  .masonry__item {
+    @apply mb-4;
+  }
+}
+
+.masonry__item:hover .masonry__image {
+  @apply !visible !opacity-100;
+}
+
+.masonry__image {
+  @apply !bg-[#0e162aad] text-[28px];
+}

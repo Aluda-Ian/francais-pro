@@ -1,0 +1,125 @@
+.common-accordion .accordion-item {
+  @apply border overflow-hidden rounded-2xl border-solid border-[#ebecef];
+}
+
+.common-accordion .accordion-item:not(:last-child) {
+  margin-block-end: 20px;
+}
+
+.common-accordion .accordion-item:has(.accordion-collapse.collapse.show),
+.common-accordion .accordion-item:has(.accordion-collapse.collapsing) {
+  @apply !text-[#fff] !bg-[#066ccb];
+}
+
+.common-accordion .accordion-button[aria-expanded="true"] {
+  @apply !text-[#fff];
+}
+
+.common-accordion .accordion-collapse.collapse.show {
+  @apply !text-[#fff];
+}
+
+.common-accordion .accordion-header {
+  @apply leading-none;
+}
+
+.common-accordion .accordion-header .accordion-button.collapsed {
+  @apply !bg-[#f3f9ff];
+}
+
+.common-accordion .accordion-body {
+  @apply px-[30px] py-5;
+  padding-block-start: 0;
+}
+
+@media screen and (max-width: 575px) {
+  .common-accordion .accordion-body {
+    @apply p-4;
+    padding-block-start: 0;
+  }
+}
+
+.common-accordion .accordion-body__desc {
+  @apply pt-3 border-t-white border-t border-dashed;
+}
+
+.common-accordion:first-of-type .accordion-button.collapsed {
+  @apply rounded-[5px];
+}
+
+.common-accordion:last-of-type .accordion-button.collapsed {
+  @apply rounded-[5px];
+}
+
+.common-accordion .accordion-button {
+  @apply text-[#222e48] font-semibold px-8 py-6 after:bg-none focus:shadow-none text-start text-[clamp(1rem,_0.696rem_+_0.634vw,_1.25rem)];
+  padding-inline-end: 64px;
+}
+
+.common-accordion .accordion-button[aria-expanded="true"]::after {
+  content: "\e32a";
+  color: #222e48;
+  background-color: #fff;
+  color: #066ccb;
+}
+
+@media screen and (max-width: 575px) {
+  .common-accordion .accordion-button {
+    @apply p-4;
+    padding-inline-end: 64px;
+  }
+}
+
+.common-accordion .accordion-button:not(.collapsed) {
+  @apply shadow-none text-[#066ccb] after:bg-none after:text-[#066ccb] !bg-transparent;
+}
+
+.common-accordion .accordion-button[aria-expanded="true"]::after,
+.common-accordion .accordion-button[aria-expanded="false"]::after {
+  @apply font-black content-["\e3d4"] text-[#066ccb] inline-block absolute -translate-y-2/4 h-9 w-9 bg-[#066ccb] flex justify-center items-center text-white text-center rounded-[50%];
+  font-family: "Phosphor";
+  inset-block-start: 50%;
+  inset-inline-end: 30px;
+}
+
+@media screen and (max-width: 575px) {
+
+  .common-accordion .accordion-button[aria-expanded="true"]::after,
+  .common-accordion .accordion-button[aria-expanded="false"]::after {
+    inset-inline-end: 20px;
+  }
+}
+
+.common-accordion.style-two .accordion-header .accordion-button.collapsed {
+  @apply !bg-[#fff];
+}
+
+.common-accordion.style-two .accordion-header [aria-expanded="false"]::after {
+  @apply bg-transparent text-[#066ccb] border border-solid border-[#ebecef];
+}
+
+.common-accordion.style-three .accordion-item .accordion-button {
+  @apply !bg-[#fff];
+}
+
+.common-accordion.style-three .accordion-item .accordion-button.bg-main-25 {
+  @apply !bg-[#f3f9ff];
+}
+
+.common-accordion.style-three .accordion-item .accordion-button:not(.collapsed) {
+  @apply !rounded-[16px] !bg-[#066ccb];
+}
+
+.common-accordion.style-three .accordion-item .accordion-button[aria-expanded="true"]::after,
+.common-accordion.style-three .accordion-item .accordion-button[aria-expanded="false"]::after {
+  @apply w-[unset] h-[unset] text-[#404a60] content-["\e136"] bg-transparent;
+}
+
+.common-accordion.style-three .accordion-item .accordion-button[aria-expanded="true"]::after {
+  @apply content-["\e13c"] text-white;
+}
+
+.common-accordion.style-three .accordion-item:has(.accordion-collapse.collapse.show),
+.common-accordion.style-three .accordion-item:has(.accordion-collapse.collapsing) {
+  @apply !text-[#222e48] !bg-[#fff];
+}

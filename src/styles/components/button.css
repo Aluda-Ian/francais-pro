@@ -1,0 +1,57 @@
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+  @apply text-[none] bg-[none] border-[none];
+}
+
+.btn {
+  @apply relative rounded-[5px] border-[1px] border-[solid] border-[transparent] font-medium !text-[#ffffff] leading-none capitalize px-[32px] py-[17px] flex justify-center;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:focus-visible {
+  @apply !shadow-none;
+}
+
+.btn-sm {
+  @apply !py-[14px] !px-[20px];
+}
+
+.btn:active {
+  @apply scale-[1.01];
+}
+
+.btn-main {
+  @apply !bg-[#066ccb] !border-[#066ccb];
+}
+
+.btn-main:hover {
+  @apply !bg-[#0556a2] !border-[#0556a2];
+}
+
+.btn-outline-main {
+  @apply !bg-[transparent] !border-[#066ccb] !text-[#066ccb];
+}
+
+.btn-outline-main:hover {
+  @apply !bg-[#105CA61A] !border-[#066ccb];
+}
+
+.btn-white {
+  @apply !bg-[#fff] !border-[#fff] !text-[#066ccb];
+}
+
+.btn-white:hover {
+  @apply !bg-[#066ccb] !border-[#066ccb] !text-[#fff];
+}
+
+.btn-outline-white {
+  @apply !bg-transparent !border-[#ffffff] !text-[#fff];
+}
+
+.btn-outline-white:hover {
+  @apply !bg-[#ffffff40] !border-[#ffffff];
+}

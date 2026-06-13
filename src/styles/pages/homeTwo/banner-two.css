@@ -1,0 +1,72 @@
+@media (min-width: 1200px) {
+  .banner-two {
+    @apply !pt-8;
+  }
+}
+
+.showHideOne {
+  @apply animate-[showHideOne_10s_linear_infinite];
+}
+
+.showHideTwo {
+  @apply animate-[showHideTwo_10s_linear_infinite];
+}
+
+@keyframes showHideOne {
+  0% {
+    clip-path: polygon(100% 100%, 100% 100%, 100% 0, 100% 0);
+    opacity: 0.8;
+  }
+
+  10% {
+    clip-path: polygon(100% 100%, 100% 100%, 100% 0, 100% 0);
+    opacity: 1;
+  }
+
+  80% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+
+  95% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes showHideTwo {
+  0% {
+    clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+  }
+
+  10% {
+    clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+    opacity: 0.8;
+  }
+
+  15% {
+    opacity: 0.4;
+  }
+
+  20% {
+    opacity: 0.8;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  50% {
+    clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0);
+  }
+
+  95% {
+    clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0);
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,49 @@
+.nav-tab-wrapper {
+  @apply rounded-3xl;
+}
+
+@media (min-width: 992px) {
+  .nav-tab-wrapper {
+    @apply rounded-[50rem];
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .common-tab {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(124px,1fr))];
+  }
+}
+
+.common-tab .nav-item .nav-link {
+  @apply !px-6 !py-4;
+}
+
+@media screen and (max-width: 1399px) {
+  .common-tab .nav-item .nav-link {
+    @apply !text-sm !px-4 !py-3;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .common-tab .nav-item .nav-link {
+    @apply !text-[0.8125rem];
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .common-tab .nav-item .nav-link i {
+    @apply !hidden;
+  }
+}
+
+.common-tab .nav-item .nav-link.active {
+  @apply !text-white !bg-[#066ccb] !border-[#066ccb];
+}
+
+.common-tab .nav-item .nav-link.active i {
+  @apply !text-white;
+}
+
+.common-tab .nav-item .nav-link:hover {
+  @apply text-[#066ccb];
+}

@@ -1,0 +1,231 @@
+.rounded-1 {
+  @apply !rounded-[0.0625rem];
+}
+
+.rounded-2 {
+  @apply !rounded-sm;
+}
+
+.rounded-3 {
+  @apply !rounded-[0.1875rem];
+}
+
+.rounded-4 {
+  @apply !rounded;
+}
+
+.rounded-5 {
+  @apply !rounded-[0.3125rem];
+}
+
+.rounded-6 {
+  @apply !rounded-md;
+}
+
+.rounded-7 {
+  @apply !rounded-[0.4375rem];
+}
+
+.rounded-8 {
+  @apply !rounded-lg;
+}
+
+.rounded-9 {
+  @apply !rounded-[0.5625rem];
+}
+
+.rounded-10 {
+  @apply !rounded-[0.625rem];
+}
+
+.rounded-11 {
+  @apply !rounded-[0.6875rem];
+}
+
+.rounded-12 {
+  @apply !rounded-xl;
+}
+
+.rounded-13 {
+  @apply !rounded-[0.8125rem];
+}
+
+.rounded-14 {
+  @apply !rounded-[0.875rem];
+}
+
+.rounded-16 {
+  @apply !rounded-2xl;
+}
+
+.rounded-18 {
+  @apply !rounded-[1.125rem];
+}
+
+.rounded-20 {
+  @apply !rounded-[1.25rem];
+}
+
+.rounded-21 {
+  @apply !rounded-[1.3125rem];
+}
+
+.rounded-22 {
+  @apply !rounded-[1.375rem];
+}
+
+.rounded-24 {
+  @apply !rounded-3xl;
+}
+
+.rounded-26 {
+  @apply !rounded-[1.625rem];
+}
+
+.rounded-28 {
+  @apply !rounded-[1.75rem];
+}
+
+.rounded-30 {
+  @apply !rounded-[1.875rem];
+}
+
+.rounded-32 {
+  @apply !rounded-[2rem];
+}
+
+.rounded-36 {
+  @apply !rounded-[2.25rem];
+}
+
+.rounded-38 {
+  @apply !rounded-[2.375rem];
+}
+
+.rounded-40 {
+  @apply !rounded-[2.5rem];
+}
+
+.rounded-44 {
+  @apply !rounded-[2.75rem];
+}
+
+.rounded-48 {
+  @apply !rounded-[3rem];
+}
+
+.rounded-50 {
+  @apply !rounded-[3.125rem];
+}
+
+.rounded-51 {
+  @apply !rounded-[3.1875rem];
+}
+
+.rounded-52 {
+  @apply !rounded-[3.25rem];
+}
+
+.rounded-54 {
+  @apply !rounded-[3.375rem];
+}
+
+.rounded-56 {
+  @apply !rounded-[3.5rem];
+}
+
+.rounded-60 {
+  @apply !rounded-[3.75rem];
+}
+
+.rounded-64 {
+  @apply !rounded-[4rem];
+}
+
+.rounded-68 {
+  @apply !rounded-[4.25rem];
+}
+
+.rounded-72 {
+  @apply !rounded-[4.5rem];
+}
+
+.rounded-76 {
+  @apply !rounded-[4.75rem];
+}
+
+.rounded-80 {
+  @apply !rounded-[5rem];
+}
+
+.rounded-85 {
+  @apply !rounded-[5.3125rem];
+}
+
+.rounded-90 {
+  @apply !rounded-[5.625rem];
+}
+
+.rounded-96 {
+  @apply !rounded-[6rem];
+}
+
+.rounded-104 {
+  @apply !rounded-[6.5rem];
+}
+
+.rounded-110 {
+  @apply !rounded-[6.875rem];
+}
+
+.rounded-120 {
+  @apply !rounded-[7.5rem];
+}
+
+.rounded-126 {
+  @apply !rounded-[7.875rem];
+}
+
+.rounded-136 {
+  @apply !rounded-[8.5rem];
+}
+
+.rounded-144 {
+  @apply !rounded-[9rem];
+}
+
+.rounded-154 {
+  @apply !rounded-[9.625rem];
+}
+
+.rounded-160 {
+  @apply !rounded-[10rem];
+}
+
+.rounded-184 {
+  @apply !rounded-[11.5rem];
+}
+
+.rounded-187 {
+  @apply !rounded-[11.6875rem];
+}
+
+.rounded-top-start-8px {
+  @apply !rounded-tl-lg;
+}
+
+.rounded-top-start-72px {
+  @apply !rounded-tl-[72px];
+}
+
+.rounded-top-end-72px {
+  @apply !rounded-tr-[72px];
+}
+
+.rounded-bottom-start-72px {
+  @apply !rounded-bl-[72px];
+}
+
+.rounded-bottom-end-72px {
+  @apply !rounded-br-[72px];
+}

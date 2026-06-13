@@ -1,0 +1,57 @@
+#half-star-rating .rating-group {
+  @apply inline-flex;
+}
+
+#half-star-rating .rating__icon {
+  @apply pointer-events-none;
+}
+
+#half-star-rating .rating__input {
+  @apply !absolute;
+  inset-inline-start: -9999px !important;
+}
+
+#half-star-rating .rating__label {
+  @apply cursor-pointer text-[2rem] px-[0.1em] py-0;
+}
+
+#half-star-rating .rating__label--half {
+  @apply z-[2];
+  padding-inline-end: 0;
+  margin-inline-end: -36px;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+#half-star-rating .rating__icon--star {
+  @apply text-[orange];
+}
+
+#half-star-rating .rating__icon--none {
+  @apply text-[#eee];
+}
+
+#half-star-rating .rating__input--none:checked+.rating__label .rating__icon--none {
+  @apply text-[red];
+}
+
+#half-star-rating .rating__input:checked~.rating__label .rating__icon--star {
+  @apply text-[#ddd];
+}
+
+#half-star-rating .rating-group:hover .rating__label .rating__icon--star,
+#half-star-rating .rating-group:hover .rating__label--half .rating__icon--star {
+  @apply text-[orange];
+}
+
+#half-star-rating .rating__input:hover~.rating__label .rating__icon--star,
+#half-star-rating .rating__input:hover~.rating__label--half .rating__icon--star {
+  @apply text-[#ddd];
+}
+
+#half-star-rating .rating-group:hover .rating__input--none:not(:hover)+.rating__label .rating__icon--none {
+  @apply text-[#eee];
+}
+
+#half-star-rating .rating__input--none:hover+.rating__label .rating__icon--none {
+  @apply text-[red];
+}

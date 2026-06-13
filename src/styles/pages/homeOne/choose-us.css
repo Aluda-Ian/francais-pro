@@ -1,0 +1,67 @@
+.animation-video {
+  @apply relative;
+}
+
+@media (max-width: 464px) {
+  .animation-video {
+    @apply mt-4;
+  }
+}
+
+@media (min-width: 464px) {
+  .animation-video {
+    @apply absolute -bottom-20;
+    inset-inline-start: 0;
+  }
+}
+
+.choose-us__thumbs {
+  @apply max-w-screen-sm;
+  margin-block-end: 80px;
+}
+
+@media (min-width: 464px) {
+  .choose-us__thumbs {
+    padding-inline-start: 110px;
+  }
+}
+
+@media (max-width: 464px) {
+  .choose-us__img {
+    @apply w-full;
+  }
+}
+
+.play-button::before {
+  @apply absolute content-[""] w-[inherit] h-[inherit] z-[-1] animate-[animate_2.3s_ease-out_infinite] rounded-[50%] top-0;
+  background: inherit;
+  inset-inline-start: 0;
+  -webkit-animation: animate 2.3s ease-out infinite;
+}
+
+
+@keyframes animate {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  30% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+  }
+
+  60% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 0.9;
+  }
+
+  100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    opacity: 0;
+  }
+}

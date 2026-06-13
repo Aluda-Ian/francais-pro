@@ -1,0 +1,15 @@
+.cover-img {
+  @apply w-full h-full object-cover;
+}
+
+.flex-align {
+  @apply flex items-center;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}

@@ -1,0 +1,19 @@
+.contact-item * {
+  transition: 0.2s linear;
+}
+
+.contact-item:hover * {
+  @apply !text-white;
+}
+
+.contact-item:hover .contact-item__icon {
+  @apply !text-[#066ccb] !bg-white;
+}
+
+.contact-item:hover .contact-item__icon i {
+  @apply !text-[#066ccb];
+}
+
+.contact-item .contact-item__icon {
+  @apply !transition-[0s];
+}

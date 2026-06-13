@@ -1,0 +1,34 @@
+/* ====================== Breadcrumb Css Start ==================== */
+.breadcrumb {
+  @apply relative z-[1] bg-black pt-[clampCal(80, ] pb-0 px-[160)];
+  margin-block-end: 0;
+}
+
+.breadcrumb__wrapper {
+  @apply text-center;
+}
+
+.breadcrumb__img {
+  @apply absolute -translate-x-2/4 z-[-1];
+  inset-inline-start: 50%;
+  inset-block-end: 0;
+}
+
+.breadcrumb__title {
+  @apply text-black text-[clampCal(30, 68)];
+  margin-block-end: 20px;
+}
+
+.breadcrumb__list {
+  @apply flex flex-wrap justify-center gap-5;
+}
+
+.breadcrumb__item {
+  @apply font-normal text-black;
+}
+
+.breadcrumb__link {
+  @apply font-[inherit] text-black text-[inherit] hover:text-black;
+}
+
+/* ====================== Breadcrumb Css End ==================== */

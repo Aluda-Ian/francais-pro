@@ -1,0 +1,13 @@
+.about-two__thumb {
+  @apply pb-[clamp(2rem,_0.479rem_+_3.17vw,_3.25rem)];
+}
+
+@media (min-width: 1199px) {
+  .about-two__thumb {
+    @apply pe-[clamp(2rem,_-2.716rem_+_9.826vw,_5.875rem)];
+  }
+}
+
+.about-two .offer-message.style-two {
+  inset-inline-end: 0 !important;
+}

@@ -1,0 +1,32 @@
+.linear-overlay {
+  @apply relative z-[1] before:absolute before:content-[""] before:w-full before:h-full before:z-[-1];
+}
+
+.linear-overlay::before {
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  background: linear-gradient(90deg,
+      rgba(7, 20, 49, 0.85) 0%,
+      rgba(7, 20, 49, 0.7) 45.64%,
+      rgba(7, 20, 49, 0.3) 61.57%,
+      rgba(7, 20, 49, 0.1) 71.73%,
+      rgba(7, 20, 49, 0) 100%);
+}
+
+.banner-three .slick-slider .slick-slide {
+  @apply m-0;
+}
+
+.banner-three__item {
+  @apply pb-[190px] pt-[clamp(5rem,_-3.368rem_+_17.433vw,_11.875rem)];
+}
+
+@media (min-width: 1400px) {
+  .banner-three .slick-arrow-prev {
+    margin-inline-start: 60px !important;
+  }
+
+  .banner-three .slick-arrow-next {
+    margin-inline-end: 60px !important;
+  }
+}

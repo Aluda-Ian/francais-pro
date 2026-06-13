@@ -1,0 +1,56 @@
+.max-w-66 {
+  @apply max-w-[66px];
+}
+
+.max-w-112 {
+  @apply max-w-[112px];
+}
+
+.progress {
+  @apply bg-[#6a7283];
+}
+
+.progress-sm {
+  @apply h-2;
+}
+
+.animated-bar {
+  animation-name: animateBar;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+}
+
+@keyframes animateBar {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.floating-label {
+  @apply absolute translate-x-[-25px] animate-[animateFloatingLabel_2s_linear_forwards] left-0 bottom-[30px];
+}
+
+@keyframes animateFloatingLabel {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: var(--left-percentage);
+  }
+}
+
+
+.barOverflow {
+  @apply relative overflow-hidden w-[inherit] h-[inherit] -mb-3.5;
+}
+
+.circleBar {
+  @apply absolute w-[calc(100%_-_2px)] h-[calc(100%_+_44px)] box-border rounded-[50%] border-r-[#487fff] border-b-[#487fff] border-[5px] border-solid border-[#e4f1ff] left-0 top-0;
+}

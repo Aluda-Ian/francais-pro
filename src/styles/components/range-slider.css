@@ -1,0 +1,31 @@
+.custom--range #slider-range {
+  @apply h-1.5 m-2 border-0;
+  background: #c1c4cc;
+}
+
+.custom--range #slider-range .ui-slider-handle {
+  @apply !w-[7px] !h-[15px] !bg-[#fff] rounded-[50rem] top-2/4 -translate-y-1/2 !outline-[0]  border-[1px] border-[solid] border-[#066ccb];
+  transition: 0.2s linear;
+}
+
+.custom--range #slider-range .ui-slider-handle:hover,
+.custom--range #slider-range .ui-slider-handle.ui-state-active {
+  @apply -translate-y-2/4 scale-[1.3];
+}
+
+.custom--range #slider-range .ui-slider-handle.ui-state-active {
+  @apply !shadow-[0px_0px_12px_4px_#95959541];
+}
+
+.custom--range #slider-range .ui-widget-header {
+  @apply bg-[#066ccb];
+  transition: 0.2s linear;
+}
+
+.custom--range #slider-range span:focus {
+  @apply bg-[#066ccb];
+}
+
+.custom--range.style-two #slider-range .ui-slider-handle {
+  @apply !w-[15px] !h-[15px];
+}

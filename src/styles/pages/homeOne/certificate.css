@@ -1,0 +1,18 @@
+.certificate {
+  @apply relative before:absolute before:content-[""] before:w-full before:h-3/6 before:!bg-[#f3f9ff] before:z-[-1] before:bottom-0;
+}
+
+@media (min-width: 1199px) {
+  .certificate {
+    @apply pt-[174px];
+  }
+}
+
+.certificate::before {
+  inset-inline-start: 0;
+}
+
+.certificate__thumb {
+  @apply absolute bottom-0;
+  inset-inline-start: 58%;
+}

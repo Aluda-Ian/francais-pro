@@ -1,0 +1,35 @@
+.event-item {
+  @apply gap-[clamp(1.5rem,_0.891rem_+_1.268vw,_2rem)];
+}
+
+@media (min-width: 1199px) {
+  .event-item {
+    @apply !ps-[clamp(1.5rem,_-2.83rem_+_5.333vw,_2.5rem)] !pe-[clamp(1.5rem,_-2.83rem_+_5.333vw,_2.5rem)];
+  }
+}
+
+.event-item h1,
+.event-item h2,
+.event-item h3,
+.event-item h4,
+.event-item h5,
+.event-item h6,
+.event-item span,
+.event-item a {
+  transition: 0.1s linear;
+}
+
+.event-item:hover h1,
+.event-item:hover h2,
+.event-item:hover h3,
+.event-item:hover h4,
+.event-item:hover h5,
+.event-item:hover h6,
+.event-item:hover span,
+.event-item:hover a {
+  @apply !text-white;
+}
+
+.event-item:hover .btn {
+  @apply !border-white hover:!bg-white hover:!text-[#066ccb];
+}

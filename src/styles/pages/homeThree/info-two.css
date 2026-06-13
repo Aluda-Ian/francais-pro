@@ -1,0 +1,15 @@
+.info-two {
+  @apply mt-[-105px] relative z-[1];
+}
+
+.info-two-item {
+  @apply p-[clamp(1.5rem,_-1.498rem_+_4vw,_2.5rem)];
+}
+
+@media (max-width: 991px) and (min-width: 575px),
+(max-width: 424px) {
+  .info-two-item {
+    @apply flex-col;
+    align-items: start;
+  }
+}

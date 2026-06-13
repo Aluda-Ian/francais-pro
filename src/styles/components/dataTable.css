@@ -1,0 +1,4 @@
+table.dataTable > thead > tr > th,
+table.dataTable > thead > tr > td {
+  @apply border-b-[rgba(189,189,189,0.3)] border-b border-solid;
+}

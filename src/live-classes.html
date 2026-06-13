@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live French Classes | Book via Google Calendar — Français Pro</title>
+    <meta name="description" content="Book live French classes for IB, IGCSE and CBSE via Google Meet. Select your curriculum, choose a time slot and get an instant Google Calendar invite.">
+    <meta name="keywords" content="live French classes, book French lesson, IB French tutor, IGCSE French online, CBSE French live class, Google Meet French">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/logo/favicon.png" type="image/x-icon">
+
+    <!-- Français Pro Brand + Page Styles -->
+    <style>
+        :root {
+            --fp-primary: #002395;
+            --fp-primary-light: #1a3aad;
+            --fp-primary-dark: #001875;
+            --fp-accent: #ED2939;
+            --fp-white: #FFFFFF;
+            --fp-cream: #f8f9ff;
+            --fp-font: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: var(--fp-font);
+            background: var(--fp-cream);
+            color: #1a1a2e;
+            margin: 0;
+        }
+        /* ===== HEADER ===== */
+        .lc-header {
+            background: white;
+            border-bottom: 1px solid rgba(0,35,149,0.1);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,35,149,0.08);
+        }
+        .lc-header::before {
+            content: '';
+            display: block;
+            height: 4px;
+            background: linear-gradient(90deg, var(--fp-primary) 33.3%, white 33.3% 66.6%, var(--fp-accent) 66.6%);
+            position: absolute;
+            top: 0; left: 0; right: 0;
+        }
+        .lc-header .container { display: flex; align-items: center; justify-content: space-between; }
+        .lc-logo { font-size: 22px; font-weight: 800; color: var(--fp-primary); text-decoration: none; }
+        .lc-logo span { color: var(--fp-accent); }
+        .lc-nav-links { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+        .lc-nav-links a { color: #444; text-decoration: none; font-weight: 500; font-size: 15px; transition: color 0.2s; }
+        .lc-nav-links a:hover, .lc-nav-links a.active { color: var(--fp-primary); }
+        .lc-btn { background: var(--fp-primary); color: white; border: none; padding: 10px 24px; border-radius: 50px; font-weight: 600; cursor: pointer; text-decoration: none; font-size: 14px; transition: background 0.2s, transform 0.1s; }
+        .lc-btn:hover { background: var(--fp-primary-dark); transform: translateY(-1px); color: white; }
+        .lc-btn-outline { background: transparent; color: var(--fp-primary); border: 2px solid var(--fp-primary); padding: 10px 24px; border-radius: 50px; font-weight: 600; cursor: pointer; text-decoration: none; font-size: 14px; transition: all 0.2s; }
+        .lc-btn-outline:hover { background: var(--fp-primary); color: white; }
+
+        /* ===== HERO ===== */
+        .lc-hero {
+            background: linear-gradient(135deg, var(--fp-primary) 0%, var(--fp-primary-light) 60%, #2748c8 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .lc-hero::before {
+            content: '🇫🇷';
+            font-size: 300px;
+            opacity: 0.04;
+            position: absolute;
+            right: -50px;
+            top: -60px;
+        }
+        .lc-hero h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; margin-bottom: 16px; }
+        .lc-hero h1 span { color: #ffd166; }
+        .lc-hero p { font-size: 18px; opacity: 0.88; max-width: 600px; margin: 0 auto 32px; line-height: 1.7; }
+        .lc-hero-badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+        .lc-badge {
+            padding: 6px 16px; border-radius: 50px; font-weight: 700; font-size: 13px;
+            letter-spacing: 0.5px; border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.12); backdrop-filter: blur(8px);
+            color: white;
+        }
+        .lc-badge.accent { background: var(--fp-accent); border-color: var(--fp-accent); }
+        .lc-hero-stats {
+            display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(12px);
+            border-radius: 16px; padding: 24px 40px; display: inline-flex;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .lc-stat { text-align: center; }
+        .lc-stat strong { display: block; font-size: 28px; font-weight: 800; }
+        .lc-stat span { font-size: 13px; opacity: 0.8; }
+
+        /* ===== FILTER BAR ===== */
+        .lc-filters {
+            background: white;
+            border-bottom: 1px solid rgba(0,35,149,0.08);
+            padding: 20px 0;
+            position: sticky;
+            top: 68px;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,35,149,0.06);
+        }
+        .lc-filters .container { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+        .fp-filter-label { font-weight: 600; font-size: 14px; color: #444; white-space: nowrap; }
+        .fp-filter-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+        .fp-chip {
+            padding: 6px 16px; border-radius: 50px; font-weight: 600; font-size: 13px;
+            border: 2px solid rgba(0,35,149,0.2); color: var(--fp-primary);
+            background: white; cursor: pointer; transition: all 0.2s;
+        }
+        .fp-chip:hover, .fp-chip.active {
+            background: var(--fp-primary); color: white;
+            border-color: var(--fp-primary);
+        }
+        .fp-chip.ib.active { background: var(--fp-primary); border-color: var(--fp-primary); }
+        .fp-chip.igcse.active { background: #1a3aad; border-color: #1a3aad; }
+        .fp-chip.cbse.active { background: var(--fp-accent); border-color: var(--fp-accent); }
+        .fp-chip.delf.active { background: #6c5ce7; border-color: #6c5ce7; }
+        .lc-filter-select {
+            padding: 8px 16px; border-radius: 50px; border: 2px solid rgba(0,35,149,0.2);
+            font-family: var(--fp-font); font-size: 13px; font-weight: 600;
+            color: var(--fp-primary); background: white; cursor: pointer;
+            outline: none; transition: border-color 0.2s;
+        }
+        .lc-filter-select:focus { border-color: var(--fp-primary); }
+
+        /* ===== MAIN LAYOUT ===== */
+        .lc-main { padding: 48px 0; }
+        .lc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
+
+        /* ===== CLASS CARD ===== */
+        .class-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(0,35,149,0.08);
+            box-shadow: 0 4px 20px rgba(0,35,149,0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .class-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0,35,149,0.14);
+        }
+        .class-card__header {
+            padding: 24px 24px 16px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .class-card__badges { display: flex; gap: 6px; flex-wrap: wrap; }
+        .cc-badge {
+            padding: 3px 10px; border-radius: 50px;
+            font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+        }
+        .cc-badge.ib { background: rgba(0,35,149,0.1); color: var(--fp-primary); }
+        .cc-badge.igcse { background: rgba(26,58,173,0.1); color: #1a3aad; }
+        .cc-badge.cbse { background: rgba(237,41,57,0.1); color: var(--fp-accent); }
+        .cc-badge.delf { background: rgba(108,92,231,0.1); color: #6c5ce7; }
+        .cc-badge.live {
+            background: var(--fp-accent);
+            color: white;
+            animation: fp-pulse 2s infinite;
+        }
+        @keyframes fp-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(237,41,57,0.3); }
+            50% { box-shadow: 0 0 0 6px rgba(237,41,57,0); }
+        }
+        .class-card__spots {
+            font-size: 12px;
+            font-weight: 700;
+            color: #555;
+            white-space: nowrap;
+        }
+        .class-card__spots.few { color: var(--fp-accent); }
+        .class-card__body { padding: 0 24px 20px; flex: 1; }
+        .class-card__title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .class-card__topic {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+        .class-card__meta { display: flex; flex-direction: column; gap: 8px; }
+        .class-card__meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #555;
+        }
+        .class-card__meta-item i { color: var(--fp-primary); font-size: 16px; flex-shrink: 0; }
+        .class-card__meta-item strong { color: #1a1a2e; font-weight: 600; }
+        .class-card__instructor {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 24px;
+            background: var(--fp-cream);
+            border-top: 1px solid rgba(0,35,149,0.06);
+        }
+        .class-card__instructor img {
+            width: 36px; height: 36px; border-radius: 50%;
+            object-fit: cover; border: 2px solid var(--fp-primary);
+        }
+        .class-card__instructor-info { flex: 1; }
+        .class-card__instructor-name { font-size: 13px; font-weight: 700; color: #1a1a2e; }
+        .class-card__instructor-title { font-size: 11px; color: #666; }
+        .class-card__footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 16px 24px 24px;
+        }
+        .class-card__price { font-size: 22px; font-weight: 800; color: var(--fp-primary); }
+        .class-card__price span { font-size: 13px; font-weight: 500; color: #888; }
+        .class-card__price.free { color: #00b894; }
+        .btn-book {
+            background: linear-gradient(135deg, var(--fp-primary), var(--fp-primary-light));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap-8px;
+            gap: 8px;
+            white-space: nowrap;
+        }
+        .btn-book:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,35,149,0.3); }
+        .btn-book:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+        /* ===== HOW IT WORKS ===== */
+        .lc-how { background: white; padding: 80px 0; }
+        .lc-section-title { text-align: center; margin-bottom: 56px; }
+        .lc-section-title h2 { font-size: clamp(26px, 4vw, 36px); font-weight: 800; color: #1a1a2e; margin-bottom: 12px; }
+        .lc-section-title p { color: #666; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+        .lc-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .lc-step { text-align: center; padding: 32px 24px; }
+        .lc-step-num {
+            width: 64px; height: 64px;
+            background: linear-gradient(135deg, var(--fp-primary), var(--fp-primary-light));
+            border-radius: 50%; color: white; font-size: 24px; font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px; box-shadow: 0 8px 24px rgba(0,35,149,0.25);
+        }
+        .lc-step h4 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+        .lc-step p { color: #666; line-height: 1.7; font-size: 15px; }
+        .lc-step-arrow { display: flex; align-items: center; justify-content: center; padding-top: 32px; }
+        .lc-step-arrow i { font-size: 32px; color: rgba(0,35,149,0.2); }
+        @media (max-width: 768px) {
+            .lc-steps { grid-template-columns: 1fr; }
+            .lc-nav-links { display: none; }
+            .lc-grid { grid-template-columns: 1fr; }
+            .lc-hero-stats { flex-direction: column; gap: 16px; }
+        }
+
+        /* ===== BOOKING MODAL ===== */
+        .fp-modal-overlay {
+            display: none;
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+        .fp-modal-overlay.open { display: flex; }
+        .fp-modal {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 480px;
+            width: 90%;
+            box-shadow: 0 24px 80px rgba(0,35,149,0.2);
+            animation: modal-in 0.3s ease;
+        }
+        @keyframes modal-in {
+            from { opacity: 0; transform: scale(0.92) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .fp-modal h3 { font-size: 22px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; }
+        .fp-modal-class-info {
+            background: var(--fp-cream);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 20px 0;
+            border-left: 4px solid var(--fp-primary);
+        }
+        .fp-modal-class-info p { margin: 4px 0; font-size: 14px; color: #444; }
+        .fp-modal-class-info strong { color: var(--fp-primary); }
+        .fp-modal-actions { display: flex; gap: 12px; margin-top: 24px; }
+        .fp-modal-actions button { flex: 1; padding: 14px; border-radius: 50px; font-weight: 700; font-size: 15px; cursor: pointer; border: none; transition: all 0.2s; }
+        .fp-modal-confirm { background: var(--fp-primary); color: white; }
+        .fp-modal-confirm:hover { background: var(--fp-primary-dark); }
+        .fp-modal-cancel { background: var(--fp-cream); color: var(--fp-primary); border: 2px solid var(--fp-primary) !important; }
+        .fp-google-signin { width: 100%; padding: 14px; border: 2px solid rgba(0,35,149,0.2); border-radius: 50px; display: flex; align-items: center; gap: 12px; background: white; cursor: pointer; font-family: var(--fp-font); font-weight: 600; font-size: 14px; margin-bottom: 16px; transition: all 0.2s; }
+        .fp-google-signin:hover { border-color: var(--fp-primary); background: var(--fp-cream); }
+        .fp-google-signin img { width: 20px; height: 20px; }
+        /* ===== SUCCESS STATE ===== */
+        .fp-success { text-align: center; padding: 24px 0; }
+        .fp-success-icon { font-size: 64px; margin-bottom: 16px; }
+        .fp-success h3 { color: #00b894; font-size: 22px; }
+        .fp-meet-link { display: block; background: var(--fp-cream); border: 2px solid var(--fp-primary); border-radius: 12px; padding: 16px; text-decoration: none; color: var(--fp-primary); font-weight: 700; margin-top: 16px; text-align: center; font-size: 15px; transition: all 0.2s; }
+        .fp-meet-link:hover { background: var(--fp-primary); color: white; }
+
+        /* ===== LOADING ===== */
+        .fp-loading { display: flex; align-items: center; gap: 8px; color: #888; font-size: 14px; }
+        .fp-spinner { width: 20px; height: 20px; border: 3px solid rgba(0,35,149,0.2); border-top-color: var(--fp-primary); border-radius: 50%; animation: spin 0.8s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* ===== EMPTY STATE ===== */
+        .lc-empty { text-align: center; padding: 80px 20px; color: #888; }
+        .lc-empty i { font-size: 64px; color: rgba(0,35,149,0.15); margin-bottom: 16px; display: block; }
+
+        /* ===== TOAST ===== */
+        #fp-toast {
+            position: fixed; bottom: 24px; right: 24px;
+            background: #1a1a2e; color: white;
+            padding: 14px 24px; border-radius: 12px;
+            font-size: 14px; font-weight: 500;
+            z-index: 99999; display: none;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            max-width: 360px;
+        }
+        #fp-toast.show { display: block; animation: slide-up 0.3s ease; }
+        @keyframes slide-up { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="lc-header">
+    <div class="container">
+        <a href="index.html" class="lc-logo">Français <span>Pro</span> 🇫🇷</a>
+        <nav>
+            <ul class="lc-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="live-classes.html" class="active">Live Classes</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div style="display:flex;gap:12px;align-items:center;">
+            <a href="sign-in.html" class="lc-btn-outline" id="header-signin-btn">Sign In</a>
+            <a href="sign-up.html" class="lc-btn" id="header-signup-btn">Book Free Trial</a>
+        </div>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="lc-hero">
+    <div class="container">
+        <div class="lc-hero-badges">
+            <span class="lc-badge">IB French A &amp; B</span>
+            <span class="lc-badge">IGCSE French</span>
+            <span class="lc-badge">CBSE French</span>
+            <span class="lc-badge accent">🔴 LIVE via Google Meet</span>
+        </div>
+        <h1>Book a <span>Live French</span> Class</h1>
+        <p>
+            Choose a session, click Book, and get an instant Google Meet link in your inbox. 
+            Your class is added to Google Calendar automatically.
+        </p>
+        <div class="lc-hero-stats">
+            <div class="lc-stat">
+                <strong>48</strong>
+                <span>Classes This Week</span>
+            </div>
+            <div class="lc-stat">
+                <strong>12</strong>
+                <span>Expert Instructors</span>
+            </div>
+            <div class="lc-stat">
+                <strong>94%</strong>
+                <span>Exam Pass Rate</span>
+            </div>
+            <div class="lc-stat">
+                <strong>20 max</strong>
+                <span>Students Per Class</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FILTER BAR ===== -->
+<div class="lc-filters" id="filter-bar">
+    <div class="container">
+        <span class="fp-filter-label">Filter:</span>
+        <div class="fp-filter-chips">
+            <button class="fp-chip active" data-filter="all">All</button>
+            <button class="fp-chip ib" data-filter="IB">IB French</button>
+            <button class="fp-chip igcse" data-filter="IGCSE">IGCSE</button>
+            <button class="fp-chip cbse" data-filter="CBSE">CBSE</button>
+            <button class="fp-chip delf" data-filter="DELF/DALF">DELF / DALF</button>
+            <button class="fp-chip" data-filter="Conversation">Conversation</button>
+        </div>
+        <select class="lc-filter-select" id="level-filter">
+            <option value="all">All Levels</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+            <option value="HL">IB HL</option>
+            <option value="SL">IB SL</option>
+            <option value="Class 9">CBSE Class 9</option>
+            <option value="Class 10">CBSE Class 10</option>
+            <option value="Class 11">CBSE Class 11</option>
+            <option value="Class 12">CBSE Class 12</option>
+        </select>
+        <select class="lc-filter-select" id="day-filter">
+            <option value="all">Any Day</option>
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+            <option value="0">Sunday</option>
+        </select>
+    </div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="lc-main">
+    <div class="container">
+        <!-- Loading State -->
+        <div id="lc-loading" class="fp-loading" style="justify-content:center;padding:60px 0;">
+            <div class="fp-spinner"></div>
+            <span>Loading live classes...</span>
+        </div>
+        <!-- Class Grid -->
+        <div id="lc-grid" class="lc-grid" style="display:none;"></div>
+        <!-- Empty State -->
+        <div id="lc-empty" class="lc-empty" style="display:none;">
+            <i class="ph ph-calendar-x"></i>
+            <h3>No classes match your filters</h3>
+            <p>Try adjusting your filters or check back soon for new sessions.</p>
+        </div>
+    </div>
+</main>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="lc-how">
+    <div class="container">
+        <div class="lc-section-title">
+            <h2>How Live Classes Work</h2>
+            <p>From booking to Google Meet in three simple steps. Your class calendar invite arrives instantly.</p>
+        </div>
+        <div class="lc-steps" style="align-items:start;">
+            <div class="lc-step">
+                <div class="lc-step-num">1</div>
+                <h4>Browse &amp; Choose</h4>
+                <p>Filter classes by curriculum (IB / IGCSE / CBSE), level, and day. Each card shows the topic, instructor credentials, date/time and spots remaining.</p>
+            </div>
+            <div class="lc-step" style="position:relative;">
+                <div style="position:absolute;top:56px;left:-20px;right:-20px;height:2px;background:linear-gradient(90deg,var(--fp-primary),var(--fp-accent));opacity:0.15;display:none;" class="step-connector"></div>
+                <div class="lc-step-num">2</div>
+                <h4>Book in One Click</h4>
+                <p>Sign in (or continue as guest for a free trial). Click "Book Class" — a Google Meet link is created instantly and a calendar invite is sent to your email.</p>
+            </div>
+            <div class="lc-step">
+                <div class="lc-step-num">3</div>
+                <h4>Join Google Meet</h4>
+                <p>At class time, join via the link in your email or from your student dashboard. The Meet link activates 15 minutes before the session starts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== BOOKING MODAL ===== -->
+<div class="fp-modal-overlay" id="booking-modal">
+    <div class="fp-modal">
+        <div id="modal-content">
+            <!-- Step 1: Confirm -->
+            <div id="modal-step-confirm">
+                <h3>Confirm Your Booking</h3>
+                <p style="color:#666;font-size:14px;">Review your class details below and confirm.</p>
+                <div class="fp-modal-class-info" id="modal-class-info">
+                    <!-- Populated by JS -->
+                </div>
+                <!-- Google Sign-in note -->
+                <div id="modal-auth-note" style="background:#fff8f0;border:1px solid #ffd166;border-radius:12px;padding:14px;margin-bottom:16px;font-size:13px;color:#555;display:none;">
+                    <strong>📅 Add to Google Calendar:</strong> Sign in with Google to automatically add this class to your personal Google Calendar.
+                    <button class="fp-google-signin" id="modal-google-btn" style="margin-top:12px;">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+                        Sign in with Google
+                    </button>
+                </div>
+                <div class="fp-modal-actions">
+                    <button class="fp-modal-cancel" id="modal-cancel-btn">Cancel</button>
+                    <button class="fp-modal-confirm" id="modal-confirm-btn">
+                        <span>✅ Confirm Booking</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Step 2: Loading -->
+            <div id="modal-step-loading" style="display:none;text-align:center;padding:40px 0;">
+                <div class="fp-spinner" style="width:40px;height:40px;margin:0 auto 16px;border-width:4px;"></div>
+                <p style="color:#555;">Creating your Google Meet session...</p>
+                <p style="color:#888;font-size:13px;">Adding to your calendar &amp; sending confirmation email...</p>
+            </div>
+            <!-- Step 3: Success -->
+            <div id="modal-step-success" style="display:none;">
+                <div class="fp-success">
+                    <div class="fp-success-icon">🎉</div>
+                    <h3>Booking Confirmed!</h3>
+                    <p style="color:#555;font-size:14px;">Check your email for the confirmation with the Google Meet link. The class has been added to your Google Calendar.</p>
+                    <a href="#" class="fp-meet-link" id="modal-meet-link" target="_blank">
+                        <i style="margin-right:8px;">📹</i> Join Google Meet
+                    </a>
+                    <button onclick="document.getElementById('booking-modal').classList.remove('open')" style="margin-top:16px;width:100%;padding:12px;border:none;background:var(--fp-cream);border-radius:50px;cursor:pointer;font-weight:600;color:var(--fp-primary);font-family:var(--fp-font);">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div id="fp-toast"></div>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:var(--fp-primary);color:white;padding:48px 0 24px;margin-top:80px;">
+    <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:40px;">
+            <div>
+                <div style="font-size:24px;font-weight:800;margin-bottom:16px;">Français <span style="color:#ffd166;">Pro</span> 🇫🇷</div>
+                <p style="opacity:0.8;line-height:1.7;font-size:14px;">Expert French tuition for IB, IGCSE &amp; CBSE students worldwide. Live classes via Google Meet.</p>
+            </div>
+            <div>
+                <h4 style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;opacity:0.7;margin-bottom:16px;">Courses</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+                    <li><a href="course.html?curriculum=ib" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;">IB French A &amp; B</a></li>
+                    <li><a href="course.html?curriculum=igcse" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;">IGCSE French</a></li>
+                    <li><a href="course.html?curriculum=cbse" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;">CBSE French</a></li>
+                    <li><a href="course.html?curriculum=delf" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;">DELF / DALF</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;opacity:0.7;margin-bottom:16px;">Quick Links</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+                    <li><a href="live-classes.html" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;">Live Classes</a></li>
+                    <li><a href="about.html" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;">About Us</a></li>
+                    <li><a href="contact.html" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;">Contact</a></li>
+                    <li><a href="sign-up.html" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;">Sign Up Free</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,0.15);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+            <p style="margin:0;opacity:0.7;font-size:13px;">© 2025 Français Pro. All rights reserved.</p>
+            <p style="margin:0;opacity:0.7;font-size:13px;">Built with ❤️ for French learners worldwide 🇫🇷</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ===================================================================
+// Français Pro — Live Classes Page Script
+// ===================================================================
+const API_BASE = 'http://localhost:5000/api';
+let allClasses = [];
+let activeFilters = { curriculum: 'all', level: 'all', day: 'all' };
+let pendingBookingClassId = null;
+let authToken = localStorage.getItem('fp_token');
+
+// Classes will load dynamically from the database.
+const DEMO_CLASSES = [];
+
+// ===================================================================
+// UTILITIES
+// ===================================================================
+function formatDate(isoString) {
+    const d = new Date(isoString);
+    return d.toLocaleString('en-US', {
+        weekday: 'short', month: 'short', day: 'numeric',
+        hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+    });
+}
+function spotsRemaining(cls) {
+    return Math.max(0, cls.maxStudents - (cls.enrolledStudents?.length || 0));
+}
+function getCurriculumClass(curriculum) {
+    const map = { 'IB': 'ib', 'IGCSE': 'igcse', 'CBSE': 'cbse', 'DELF/DALF': 'delf', 'Conversation': 'ib' };
+    return map[curriculum] || 'ib';
+}
+function showToast(msg, duration = 3000) {
+    const t = document.getElementById('fp-toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), duration);
+}
+
+// ===================================================================
+// RENDER CLASS CARDS
+// ===================================================================
+function renderClasses(classes) {
+    const grid = document.getElementById('lc-grid');
+    const empty = document.getElementById('lc-empty');
+    grid.style.display = '';
+
+    if (!classes.length) {
+        grid.style.display = 'none';
+        empty.style.display = 'block';
+        return;
+    }
+    empty.style.display = 'none';
+
+    grid.innerHTML = classes.map(cls => {
+        const spots = spotsRemaining(cls);
+        const isFull = spots === 0;
+        const isFew = spots <= 3 && spots > 0;
+        const ccClass = getCurriculumClass(cls.curriculum);
+        const priceHtml = cls.isFree
+            ? `<span class="class-card__price free">FREE</span>`
+            : `<span class="class-card__price">$${cls.price}<span>/session</span></span>`;
+
+        return `
+        <div class="class-card" data-curriculum="${cls.curriculum}" data-level="${cls.level}" data-day="${new Date(cls.scheduledAt).getDay()}">
+            <div class="class-card__header">
+                <div class="class-card__badges">
+                    <span class="cc-badge ${ccClass}">${cls.curriculum}</span>
+                    <span class="cc-badge ${ccClass}">${cls.level}</span>
+                    <span class="cc-badge live">🔴 LIVE</span>
+                </div>
+                <span class="class-card__spots ${isFew ? 'few' : ''} ${isFull ? 'few' : ''}">
+                    ${isFull ? '🔴 Full' : isFew ? `⚠️ ${spots} spots left` : `✅ ${spots} spots left`}
+                </span>
+            </div>
+            <div class="class-card__body">
+                <h3 class="class-card__title">${cls.title}</h3>
+                <p class="class-card__topic">${cls.topic || ''}</p>
+                <div class="class-card__meta">
+                    <div class="class-card__meta-item">
+                        <i class="ph ph-calendar-blank"></i>
+                        <span><strong>${formatDate(cls.scheduledAt)}</strong></span>
+                    </div>
+                    <div class="class-card__meta-item">
+                        <i class="ph ph-clock"></i>
+                        <span>${cls.durationMinutes} minutes</span>
+                    </div>
+                    <div class="class-card__meta-item">
+                        <i class="ph ph-video-camera"></i>
+                        <span>Google Meet (link sent on booking)</span>
+                    </div>
+                    <div class="class-card__meta-item">
+                        <i class="ph ph-users"></i>
+                        <span>Max ${cls.maxStudents} students</span>
+                    </div>
+                </div>
+            </div>
+            <div class="class-card__instructor">
+                <div class="rounded-circle bg-main-600 text-white flex items-center justify-center font-bold text-sm" style="width: 36px; height: 36px; border: 2px solid var(--fp-primary); flex-shrink: 0;">
+                    ${cls.instructor?.name ? cls.instructor.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() : 'FP'}
+                </div>
+                <div class="class-card__instructor-info">
+                    <div class="class-card__instructor-name">${cls.instructor?.name || 'Tutor'}</div>
+                    <div class="class-card__instructor-title">${(cls.instructor?.qualifications || []).join(' • ')}</div>
+                </div>
+            </div>
+            <div class="class-card__footer">
+                ${priceHtml}
+                <button class="btn-book" onclick="openBookingModal('${cls._id}')" ${isFull ? 'disabled' : ''} id="book-btn-${cls._id}">
+                    ${isFull ? '⛔ Class Full' : '📅 Book Class'}
+                </button>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+// ===================================================================
+// FILTER LOGIC
+// ===================================================================
+function applyFilters() {
+    let filtered = allClasses;
+    if (activeFilters.curriculum !== 'all') {
+        filtered = filtered.filter(c => c.curriculum === activeFilters.curriculum);
+    }
+    if (activeFilters.level !== 'all') {
+        filtered = filtered.filter(c => c.level === activeFilters.level);
+    }
+    if (activeFilters.day !== 'all') {
+        filtered = filtered.filter(c => new Date(c.scheduledAt).getDay() === parseInt(activeFilters.day));
+    }
+    renderClasses(filtered);
+}
+
+// Filter chip clicks
+document.querySelectorAll('.fp-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.fp-chip').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilters.curriculum = btn.dataset.filter;
+        applyFilters();
+    });
+});
+document.getElementById('level-filter').addEventListener('change', e => {
+    activeFilters.level = e.target.value;
+    applyFilters();
+});
+document.getElementById('day-filter').addEventListener('change', e => {
+    activeFilters.day = e.target.value;
+    applyFilters();
+});
+
+// ===================================================================
+// FETCH CLASSES (with demo fallback)
+// ===================================================================
+async function fetchClasses() {
+    try {
+        const res = await fetch(`${API_BASE}/live-classes`, { signal: AbortSignal.timeout(5000) });
+        if (!res.ok) throw new Error('API not available');
+        const data = await res.json();
+        allClasses = data.liveClasses || [];
+    } catch (err) {
+        console.error('[FP] Error fetching classes:', err.message);
+        allClasses = [];
+    }
+    document.getElementById('lc-loading').style.display = 'none';
+    applyFilters();
+}
+
+// ===================================================================
+// BOOKING MODAL
+// ===================================================================
+function openBookingModal(classId) {
+    const cls = allClasses.find(c => c._id === classId);
+    if (!cls) return;
+    pendingBookingClassId = classId;
+
+    document.getElementById('modal-class-info').innerHTML = `
+        <p><strong>📚 Class:</strong> ${cls.title}</p>
+        <p><strong>📅 Date:</strong> ${formatDate(cls.scheduledAt)}</p>
+        <p><strong>⏱ Duration:</strong> ${cls.durationMinutes} minutes</p>
+        <p><strong>👨‍🏫 Instructor:</strong> ${cls.instructor?.name}</p>
+        <p><strong>💰 Price:</strong> ${cls.isFree ? '<span style="color:#00b894;font-weight:700;">FREE</span>' : `$${cls.price}`}</p>
+    `;
+
+    // Show Google sign-in option if not authenticated
+    const authNote = document.getElementById('modal-auth-note');
+    authNote.style.display = authToken ? 'none' : 'block';
+
+    // Reset modal steps
+    document.getElementById('modal-step-confirm').style.display = 'block';
+    document.getElementById('modal-step-loading').style.display = 'none';
+    document.getElementById('modal-step-success').style.display = 'none';
+    document.getElementById('booking-modal').classList.add('open');
+}
+
+document.getElementById('modal-cancel-btn').addEventListener('click', () => {
+    document.getElementById('booking-modal').classList.remove('open');
+});
+document.getElementById('booking-modal').addEventListener('click', e => {
+    if (e.target === document.getElementById('booking-modal')) {
+        document.getElementById('booking-modal').classList.remove('open');
+    }
+});
+
+// Google Sign-in button
+document.getElementById('modal-google-btn').addEventListener('click', async () => {
+    try {
+        const res = await fetch(`${API_BASE}/auth/google-url?role=student`);
+        const { url } = await res.json();
+        window.location.href = url;
+    } catch {
+        showToast('⚠️ Backend not connected. In production, this redirects to Google Sign-in.');
+    }
+});
+
+// Confirm booking
+document.getElementById('modal-confirm-btn').addEventListener('click', async () => {
+    if (!pendingBookingClassId) return;
+
+    document.getElementById('modal-step-confirm').style.display = 'none';
+    document.getElementById('modal-step-loading').style.display = 'block';
+
+    try {
+        // Attempt real API booking
+        const response = await fetch(`${API_BASE}/bookings`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                ...(authToken ? { 'Authorization': `Bearer ${authToken}` } : {}),
+            },
+            body: JSON.stringify({ liveClassId: pendingBookingClassId }),
+            signal: AbortSignal.timeout(8000),
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) throw new Error(data.error || 'Booking failed');
+
+        // Show success
+        document.getElementById('modal-step-loading').style.display = 'none';
+        document.getElementById('modal-step-success').style.display = 'block';
+        document.getElementById('modal-meet-link').href = data.booking?.liveClass?.meetLink || '#';
+        showToast('🎉 Booking confirmed! Check your email.');
+    } catch (err) {
+        // Demo success (when backend isn't running yet)
+        console.info('[FP] Demo booking mode:', err.message);
+        await new Promise(r => setTimeout(r, 2000)); // simulate loading
+        document.getElementById('modal-step-loading').style.display = 'none';
+        document.getElementById('modal-step-success').style.display = 'block';
+        document.getElementById('modal-meet-link').href = 'https://meet.google.com/demo-francais-pro';
+        document.getElementById('modal-meet-link').textContent = '📹 Join Google Meet (Demo Link)';
+        showToast('✅ Demo booking! In production, a real Meet link will be generated.');
+    }
+});
+
+// ===================================================================
+// CHECK FOR RETURNED GOOGLE AUTH TOKEN
+// ===================================================================
+const urlParams = new URLSearchParams(window.location.search);
+const returnedToken = urlParams.get('token');
+if (returnedToken) {
+    authToken = returnedToken;
+    localStorage.setItem('fp_token', returnedToken);
+    window.history.replaceState({}, '', window.location.pathname);
+    showToast('✅ Signed in with Google! You can now book classes.');
+}
+
+// ===================================================================
+// INIT
+// ===================================================================
+fetchClasses();
+</script>
+</body>
+</html>

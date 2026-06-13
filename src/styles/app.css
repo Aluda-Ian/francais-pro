@@ -1,0 +1,199 @@
+/* ==============
+ ========= css table of contents =========
+
+ * template name: EduAll
+ * version: 1.0
+ * description: LMS, Tutors, Education & Online Course Tailwind CSS Template
+ * author: wowtheme7
+ * author-url: https://themeforest.net/user/wowtheme7
+ 01. abstracts
+     1.01 --> mixins
+     1.02 --> variables
+    
+ 02. base
+     2.01 --> reset
+     2.02 --> typography
+     2.03 --> global
+ 03. components
+     3.01 --> buttons
+     3.02 --> forms
+     3.03 --> preloader
+ 04. layout
+     4.01 --> header
+     4.02 --> banner
+     4.03 --> footer
+ 05. sections
+     5.01 --> authentication
+     5.02 --> news
+     5.03 --> testimonial
+     5.04 --> profit
+     5.05 --> pricing
+     5.06 --> explore
+     5.07 --> offer
+     5.08 --> feature
+     5.09 --> market
+     5.10 --> conversation
+     5.11 --> way
+     5.12 --> exchange
+     5.13 --> trading
+     5.14 --> countdown
+     5.15 --> counter
+     5.16 --> work
+     5.17 --> allocation
+     5.18 --> distribution
+     5.19 --> token
+     5.20 --> invest
+     5.21 --> advisor
+     5.22 --> faq
+     5.23 --> download
+     5.24 --> contact
+     5.25 --> payment methods
+     5.26 --> terms
+     5.27 --> coming soon
+    ==================================
+============== */
+
+@import "./utilities/layout.css";
+
+
+
+/* abstract styles */
+@import "./abstracts/variable.css";
+@import "./abstracts/global.css";
+@import "./abstracts/popular-tutors-six.css";
+
+/* component styles */
+@import "./components/button.css";
+@import "./components/form.css";
+@import "./components/select-global.css";
+@import "./components/tab.css";
+@import "./components/accordion.css";
+@import "./components/range-slider.css";
+@import "./components/star-rating.css";
+@import "./components/playr.css";
+@import "./components/dataTable.css";
+
+/* layout styles */
+@import "./layout/preloader.css";
+@import "./layout/section-heading.css";
+@import "./layout/header.css";
+@import "./layout/header-top.css";
+@import "./layout/mobile-nav-menu.css";
+@import "./layout/footer.css";
+@import "./layout/scroll-top.css";
+@import "./layout/social-icon.css";
+@import "./layout/slick.css";
+
+/* pages styles */
+@import "./pages/homeFour/banner-four.css";
+@import "./pages/homeFour/how-it-works.css";
+@import "./pages/homeOne/banner.css";
+@import "./pages/homeOne/features.css";
+@import "./pages/homeOne/course-item.css";
+@import "./pages/homeOne/about.css";
+@import "./pages/homeOne/instructor.css";
+@import "./pages/homeOne/choose-us.css";
+@import "./pages/homeOne/certificate.css";
+@import "./pages/homeThree/banner-three.css";
+@import "./pages/homeThree/info-two.css";
+@import "./pages/homeThree/about-three.css";
+@import "./pages/homeThree/faculty.css";
+@import "./pages/homeThree/testimonials-three.css";
+@import "./pages/homeThree/event.css";
+@import "./pages/homeTwo/banner-two.css";
+@import "./pages/homeTwo/choose-us-two.css";
+@import "./pages/homeTwo/certificate-two.css";
+@import "./pages/homeTwo/faq.css";
+@import "./pages/othersPage/course-list-view.css";
+@import "./pages/othersPage/course-details.css";
+@import "./pages/othersPage/tutor-details.css";
+@import "./pages/othersPage/account.css";
+@import "./pages/othersPage/contact.css";
+@import "./pages/othersPage/gallery.css";
+@import "./pages/othersPage/product.css";
+@import "./pages/othersPage/about-us-five.css";
+@import "./pages/othersPage/banner-five.css";
+@import "./pages/othersPage/dashboard.css";
+@import "./utilities/typography.css";
+@import "./utilities/margin.css";
+@import "./utilities/padding.css";
+@import "./utilities/classes.css";
+@import "./utilities/extend.css";
+@import "./utilities/size.css";
+@import "./utilities/colors.css";
+@import "./utilities/border.css";
+@import "./utilities/bg.css";
+@import "./utilities/genarated.css";
+@import "./utilities/font-size.css";
+@import "./utilities/shadow.css";
+@import "./utilities/radius.css";
+@import "./utilities/scroll-hide.css";
+@import "./utilities/overlay.css";
+@import "./utilities/line-clamp.css";
+@import "./utilities/scrollbar.css";
+@import "./utilities/gap.css";
+@import "./utilities/hover.css";
+@import "./utilities/mash-bg.css";
+@import "./utilities/animation.css";
+@import "./utilities/line-height.css";
+@import "./utilities/transition.css";
+@import "./utilities/focus.css";
+@import "./pages/rtl/rtl.css";
+
+@config "../../tailwind.config.js";
+
+@import "tailwindcss";
+
+/* custom styles */
+
+a {
+  @apply !no-underline;
+}
+
+.logo {
+  @apply !leading-0;
+}
+
+ul {
+  @apply !m-0;
+}
+
+.collapse {
+    visibility: unset !important;
+}
+
+.preloader {
+    display: none !important;
+}
+
+body, p, span, a, li, input, select, textarea, button {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .breadcrumb__title, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif !important;
+  color: var(--fp-primary-dark) !important; /* Slate/Dark blue headings instead of harsh black */
+}
+
+/* Français Pro Brand Colors & Accents */
+.btn-accent {
+  background-color: var(--fp-accent) !important;
+  border-color: var(--fp-accent) !important;
+  color: white !important;
+  transition: all 0.3s ease;
+}
+.btn-accent:hover {
+  background-color: var(--fp-accent-light) !important;
+  border-color: var(--fp-accent-light) !important;
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+.text-neutral-900, .text-neutral-800 {
+  color: #1e293b !important; /* Slate-800 instead of absolute black */
+}
+
+a:hover {
+  color: var(--fp-accent) !important;
+}

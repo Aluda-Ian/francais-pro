@@ -1,0 +1,15 @@
+.focus-border-main-500:focus {
+  @apply !border-[#4aa5f9];
+}
+
+.focus-border-main-600:focus {
+  @apply !border-[#066ccb];
+}
+
+.focus-visible-outline:focus-visible {
+  @apply outline-none;
+}
+
+.focus-box-shadow:focus {
+  @apply shadow-none;
+}

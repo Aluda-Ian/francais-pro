@@ -1,0 +1,15 @@
+.header-top {
+  @apply px-0 py-6;
+}
+
+@media screen and (max-width: 1199px) {
+  .header-top {
+    @apply px-0 py-4;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-top {
+    @apply px-0 py-2;
+  }
+}

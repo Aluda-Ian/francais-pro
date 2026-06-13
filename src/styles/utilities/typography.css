@@ -1,0 +1,128 @@
+* {
+  @apply box-border m-0 p-0;
+}
+
+html {
+  @apply scroll-smooth overflow-x-clip;
+}
+
+body {
+  @apply text-[#576070] bg-white min-h-screen flex flex-col overflow-x-clip;
+  font-family: "Inter", sans-serif;
+  word-break: break-word;
+}
+
+p {
+  @apply font-normal leading-[1.6] m-0;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  @apply text-[#222e48] leading-[1.2] font-bold mt-0 mb-4 mx-0;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+.h1 {
+  @apply text-[clamp(2rem,_0.2181rem_+_3.7123vw,_3rem)];
+}
+
+h2,
+.h2 {
+  @apply text-[clamp(1.75rem,_0.4136rem_+_2.7842vw,_2.5rem)];
+}
+
+h3,
+.h3 {
+  @apply text-[clamp(1.5rem,_0.609rem_+_1.8561vw,_2rem)];
+}
+
+h4,
+.h4 {
+  @apply text-[clamp(1.25rem,_0.8045rem_+_0.9281vw,_1.5rem)];
+}
+
+h5,
+.h5 {
+  @apply text-[clamp(1.125rem,_0.9023rem_+_0.464vw,_1.25rem)];
+}
+
+h6,
+.h6 {
+  @apply text-[clamp(1rem,_0.769rem_+_0.6813vw,_1rem)];
+}
+
+.display1 {
+  @apply text-[clamp(2.5rem,_-6.4095rem_+_18.5615vw,_7.5rem)];
+}
+
+.display2 {
+  @apply text-[clamp(2.25rem,_-2.6502rem_+_10.2088vw,_5rem)];
+}
+
+.display3 {
+  @apply text-[clamp(2rem,_-1.5638rem_+_7.4246vw,_4rem)];
+}
+
+.display4 {
+  @apply text-[clamp(1.75rem,_-1.3683rem_+_6.4965vw,_3.5rem)];
+}
+
+h1>a,
+h2>a,
+h3>a,
+h4>a,
+h5>a,
+h6>a {
+  @apply font-[inherit] text-[inherit] text-inherit transition-[0.2s] duration-[linear] leading-[inherit];
+}
+
+h1>a:hover,
+h2>a:hover,
+h3>a:hover,
+h4>a:hover,
+h5>a:hover,
+h6>a:hover {
+  @apply text-[#066ccb];
+}
+
+a {
+  @apply inline-block transition-[0.2s] duration-[linear] no-underline text-[#0661e9] hover:text-[#1d72f2];
+}
+
+img {
+  @apply max-w-full h-auto;
+}
+
+select {
+  @apply cursor-pointer;
+}
+
+ul,
+ol {
+  @apply m-0 p-0;
+  list-style: none;
+}
+
+button {
+  @apply bg-transparent border-0 focus:shadow-none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.form-select:focus {
+  @apply shadow-none;
+  outline: 0;
+}

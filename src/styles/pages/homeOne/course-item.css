@@ -1,0 +1,47 @@
+.course-item:hover .course-item__img {
+  @apply scale-110;
+}
+
+.course-item__thumb {
+  @apply overflow-hidden max-h-[306px];
+}
+
+.course-item__content {
+  @apply px-4 py-8;
+}
+
+@media screen and (max-width: 991px) {
+  .course-item__content {
+    @apply px-2 py-6;
+  }
+}
+
+.course-item__user {
+  @apply absolute bg-[#066ccb] z-[1] rounded-[50rem];
+  inset-block-end: calc(100% - 30px);
+  inset-inline-end: 24px;
+}
+
+@media (min-width: 575px) {
+  .course-item.list-view {
+    @apply flex;
+  }
+
+  .course-item.list-view .course-item__thumb {
+    @apply max-w-[386px];
+  }
+
+  .course-item.list-view .course-item__content {
+    @apply pl-10 pr-8 py-7;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 768px) {
+  .course-item.list-view .course-item__content {
+    @apply p-6;
+  }
+}
+
+.wishlist-btn:active {
+  @apply scale-[1.2];
+}

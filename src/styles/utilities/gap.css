@@ -1,0 +1,211 @@
+.gap-1 {
+  @apply !gap-px;
+}
+
+.gap-2 {
+  @apply !gap-0.5;
+}
+
+.gap-3 {
+  @apply !gap-[0.1875rem];
+}
+
+.gap-4 {
+  @apply !gap-1;
+}
+
+.gap-5 {
+  @apply !gap-[0.3125rem];
+}
+
+.gap-6 {
+  @apply !gap-1.5;
+}
+
+.gap-7 {
+  @apply !gap-[0.4375rem];
+}
+
+.gap-8 {
+  @apply !gap-2;
+}
+
+.gap-9 {
+  @apply !gap-[0.5625rem];
+}
+
+.gap-10 {
+  @apply !gap-2.5;
+}
+
+.gap-11 {
+  @apply !gap-[0.6875rem];
+}
+
+.gap-12 {
+  @apply !gap-3;
+}
+
+.gap-13 {
+  @apply !gap-[0.8125rem];
+}
+
+.gap-14 {
+  @apply !gap-3.5;
+}
+
+.gap-16 {
+  @apply !gap-4;
+}
+
+.gap-18 {
+  @apply !gap-[1.125rem];
+}
+
+.gap-20 {
+  @apply !gap-5;
+}
+
+.gap-21 {
+  @apply !gap-[1.3125rem];
+}
+
+.gap-22 {
+  @apply !gap-[1.375rem];
+}
+
+.gap-24 {
+  @apply !gap-6;
+}
+
+.gap-26 {
+  @apply !gap-[1.625rem];
+}
+
+.gap-28 {
+  @apply !gap-7;
+}
+
+.gap-30 {
+  @apply !gap-[1.875rem];
+}
+
+.gap-32 {
+  @apply !gap-8;
+}
+
+.gap-36 {
+  @apply !gap-9;
+}
+
+.gap-38 {
+  @apply !gap-[2.375rem];
+}
+
+.gap-40 {
+  @apply !gap-10;
+}
+
+.gap-44 {
+  @apply !gap-11;
+}
+
+.gap-48 {
+  @apply !gap-12;
+}
+
+.gap-50 {
+  @apply !gap-[3.125rem];
+}
+
+.gap-51 {
+  @apply !gap-[3.1875rem];
+}
+
+.gap-52 {
+  @apply !gap-[3.25rem];
+}
+
+.gap-54 {
+  @apply !gap-[3.375rem];
+}
+
+.gap-56 {
+  @apply !gap-14;
+}
+
+.gap-60 {
+  @apply !gap-[3.75rem];
+}
+
+.gap-64 {
+  @apply !gap-16;
+}
+
+.gap-68 {
+  @apply !gap-[4.25rem];
+}
+
+.gap-72 {
+  @apply !gap-[4.5rem];
+}
+
+.gap-76 {
+  @apply !gap-[4.75rem];
+}
+
+.gap-80 {
+  @apply !gap-20;
+}
+
+.gap-85 {
+  @apply !gap-[5.3125rem];
+}
+
+.gap-90 {
+  @apply !gap-[5.625rem];
+}
+
+.gap-96 {
+  @apply !gap-24;
+}
+
+.gap-104 {
+  @apply !gap-[6.5rem];
+}
+
+.gap-110 {
+  @apply !gap-[6.875rem];
+}
+
+.gap-120 {
+  @apply !gap-[7.5rem];
+}
+
+.gap-126 {
+  @apply !gap-[7.875rem];
+}
+
+.gap-136 {
+  @apply !gap-[8.5rem];
+}
+
+.gap-144 {
+  @apply !gap-36;
+}
+
+.gap-154 {
+  @apply !gap-[9.625rem];
+}
+
+.gap-160 {
+  @apply !gap-40;
+}
+
+.gap-184 {
+  @apply !gap-[11.5rem];
+}
+
+.gap-187 {
+  @apply !gap-[11.6875rem];
+}

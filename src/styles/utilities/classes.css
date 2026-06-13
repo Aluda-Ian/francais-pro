@@ -1,0 +1,159 @@
+.container--lg {
+  @apply !max-w-[1600px];
+}
+
+.container--xl {
+  @apply !max-w-[1760px];
+}
+
+.grid-cols-2 {
+  @apply grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-6;
+}
+
+.grid-cols-4 {
+  @apply gap-6 grid min-w-min grid-cols-[1fr_1fr_1fr_220px];
+}
+
+/* Section Background */
+.section-bg {
+  @apply !bg-[#f5f7f9];
+}
+
+/* Column Extra Small Screen */
+@media screen and (min-width: 425px) and (max-width: 575px) {
+  .col-xs-6 {
+    @apply w-6/12;
+  }
+}
+
+.item-active-effect:active {
+  @apply scale-90;
+}
+
+.list-dotted {
+  list-style: disc;
+  padding-inline-start: 2rem;
+}
+
+.outline-0 {
+  outline: none !important;
+}
+
+/* Transition */
+.transition-1 {
+  transition: 0.1s linear;
+}
+
+.transition-2 {
+  transition: 0.2s linear;
+}
+
+.transition-3 {
+
+  transition: 0.3s linear;
+}
+
+.min-width-max-content {
+  @apply min-w-max;
+}
+
+.inset-inline-start-0 {
+  inset-inline-start: 0;
+}
+
+.inset-inline-end-0 {
+  inset-inline-end: 0;
+}
+
+.inset-inline-end--64 {
+  inset-inline-end: -64px !important;
+}
+
+@media (max-width: 991px) {
+  .inset-inline-end--64 {
+    inset-inline-end: 24px !important;
+  }
+}
+
+.inset-block-start-0 {
+  inset-block-start: 0;
+}
+
+.inset-block-end-0 {
+  inset-block-end: 0;
+}
+
+.text-xl-res {
+  @apply text-[clamp(0.9375rem,_0.557rem_+_0.792vw,_1.25rem)];
+}
+
+.end-n4 {
+  inset-inline-end: -6px;
+}
+
+.top-n6 {
+  inset-block-start: -6px;
+}
+
+.start-auto {
+  inset-inline-start: auto !important;
+}
+
+.end-auto {
+  inset-inline-end: auto !important;
+}
+
+.pointer-event-none {
+  @apply pointer-events-none;
+}
+
+/* Text Color */
+.hover-text-decoration-underline:hover {
+  @apply underline;
+}
+
+.hover-text-decoration-none:hover {
+  @apply no-underline;
+}
+
+/* Bg Image Css */
+.bg-img {
+  @apply bg-cover bg-no-repeat bg-[center_center] w-full h-full;
+}
+
+.scale-hover-item:hover .scale-hover-item__img {
+  @apply scale-[1.2];
+}
+
+.aspect-ratio-1 {
+  @apply aspect-[1];
+}
+
+.positioned-rotation {
+  @apply absolute rotate-45 w-full top-[8%];
+  inset-inline-end: -33%;
+}
+
+.border-trans {
+  @apply border-transparent;
+}
+
+.bg-table {
+  @apply bg-[#9e7152];
+}
+
+.bg-watch {
+  @apply bg-[#faddc4];
+}
+
+.bg-pen {
+  @apply bg-[#e4eaed];
+}
+
+.vertical-middle {
+  @apply align-middle;
+}
+
+.min-w-max {
+  @apply min-w-max;
+}

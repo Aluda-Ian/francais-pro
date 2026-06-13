@@ -1,0 +1,7 @@
+@media (min-width: 1199px) {
+  .faq-thumb {
+    @apply absolute -translate-y-2/4 top-2/4;
+    inset-inline-end: 54%;
+    padding-inline-start: 24px;
+  }
+}

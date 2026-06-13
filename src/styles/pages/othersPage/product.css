@@ -1,0 +1,25 @@
+.color-list__button {
+  transition: 0.2s linear;
+}
+
+.color-list__button.active {
+  @apply relative scale-[1.35] before:absolute before:content-["\e182"] before:-translate-x-2/4 before:-translate-y-2/4 before:text-white before:text-base before:top-2/4;
+}
+
+.color-list__button.active::before {
+  font-family: "phosphor";
+  inset-inline-start: 50%;
+}
+
+.active-scale-08:active {
+  @apply scale-[0.8];
+}
+
+.add-to-cart.active {
+  @apply !bg-[#066ccb] !text-white;
+}
+
+/* Product Details Css */
+.product-small-thumbs .slick-current.slick-active>div>div {
+  @apply !border-[#066ccb];
+}

@@ -1,0 +1,28 @@
+.plyr__poster,
+.plyr__video-wrapper {
+  @apply !bg-transparent;
+}
+
+.plyr--video {
+  @apply overflow-hidden rounded-2xl;
+}
+
+.player {
+  @apply w-full;
+}
+
+.plyr__poster {
+  @apply bg-cover;
+}
+
+@media screen and (max-width: 575px) {
+  .plyr__controls__item.plyr__control[data-plyr="pip"] {
+    @apply hidden;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .plyr__controls__item.plyr__control[data-plyr="fullscreen"] {
+    @apply hidden;
+  }
+}

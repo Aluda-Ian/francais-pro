@@ -1,0 +1,29 @@
+@media (max-width: 480px) {
+  .tution-info-list li {
+    @apply flex-col gap-2;
+  }
+
+  .tution-info-list li .w-50-percent {
+    @apply !w-full;
+  }
+
+  .tution-info-list li span:nth-child(2) {
+    @apply !text-sm;
+  }
+}
+
+.tution-info-list li:nth-child(even) {
+  @apply bg-[#f3f9ff];
+}
+
+.tution-info-list.style-two {
+  @apply min-w-[700px];
+}
+
+.tution-info-list.style-two li {
+  @apply flex !flex-row !gap-4;
+}
+
+.tution-info-list.style-two li span {
+  @apply w-1/5;
+}

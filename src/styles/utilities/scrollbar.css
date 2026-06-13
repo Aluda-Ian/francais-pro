@@ -1,0 +1,25 @@
+.scroll-sm::-webkit-scrollbar {
+  @apply w-1.5;
+}
+
+.scroll-sm::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.scroll-sm::-webkit-scrollbar-thumb {
+  @apply rounded-[50px];
+  background: #e4e4e4;
+  background: #ffffff;
+}
+
+.scroll-sm::-webkit-scrollbar-thumb:hover {
+  @apply !bg-[#c1c1c1];
+}
+
+.scroll-sm:hover::-webkit-scrollbar-thumb {
+  background: #e4e4e4;
+}
+
+.scroll-sm-horizontal::-webkit-scrollbar {
+  @apply h-1.5;
+}

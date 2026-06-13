@@ -1,0 +1,15 @@
+@media (min-width: 1200px) {
+  .banner-four-thumb {
+    inset-inline-start: 5%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .banner-four-thumb {
+    inset-inline-start: 20%;
+  }
+}
+
+.box {
+  @apply h-[150px] bg-[red] w-[200px];
+}

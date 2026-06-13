@@ -1,0 +1,44 @@
+.circle {
+  @apply relative w-[158px] h-[158px] flex items-center justify-center z-[-1] rounded-[50%];
+}
+
+.circle.style-two .circle__text span {
+  @apply origin-[0_76px];
+}
+
+@media screen and (max-width: 575px) {
+  .circle.style-two .circle__text span {
+    @apply text-sm origin-[0_58px];
+  }
+}
+
+.circle.static-circle {
+  @apply bg-[#ffffff50] border-white;
+}
+
+.circle.static-circle .circle__badge {
+  @apply border-white;
+}
+
+.circle.static-circle .circle__text span {
+  @apply text-black;
+}
+
+.circle__badge {
+  @apply w-[74px] h-[74px] flex justify-center items-center rounded-[inherit];
+}
+
+.circle__text {
+  @apply absolute w-full h-full text-[#222e48] text-base animate-[textRotation_8s_linear_infinite];
+}
+
+.circle__text span {
+  @apply absolute text-base origin-[0_78px] text-[#222e48] font-medium left-2/4;
+  font-family: "inter";
+}
+
+@keyframes textRotation {
+  to {
+    transform: rotate(360deg);
+  }
+}

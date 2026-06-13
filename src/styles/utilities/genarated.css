@@ -1,0 +1,3545 @@
+.text-main-05 {
+  @apply !text-white;
+}
+
+.text-main-25 {
+  @apply !text-[#f3f9ff];
+}
+
+.text-main-50 {
+  @apply !text-[#e6f2fe];
+}
+
+.text-main-100 {
+  @apply !text-[#c7e3fd];
+}
+
+.text-main-200 {
+  @apply !text-[#a7d3fc];
+}
+
+.text-main-300 {
+  @apply !text-[#88c4fb];
+}
+
+.text-main-400 {
+  @apply !text-[#68b4fa];
+}
+
+.text-main-500 {
+  @apply !text-[#4aa5f9];
+}
+
+.text-main-600 {
+  @apply !text-[#066ccb];
+}
+
+.text-main-700 {
+  @apply !text-[#0661b7];
+}
+
+.text-main-800 {
+  @apply !text-[#0556a2];
+}
+
+.text-main-900 {
+  @apply !text-[#044b8e];
+}
+
+.text-main-two-25 {
+  @apply !text-[#fef7f3];
+}
+
+.text-main-two-50 {
+  @apply !text-[#fef1eb];
+}
+
+.text-main-two-100 {
+  @apply !text-[#fde7dc];
+}
+
+.text-main-two-200 {
+  @apply !text-[#fcddcd];
+}
+
+.text-main-two-300 {
+  @apply !text-[#fbd3be];
+}
+
+.text-main-two-400 {
+  @apply !text-[#fac8af];
+}
+
+.text-main-two-500 {
+  @apply !text-[#fabea1];
+}
+
+.text-main-two-600 {
+  @apply !text-[#f37739];
+}
+
+.text-main-two-700 {
+  @apply !text-[#f2641d];
+}
+
+.text-main-two-800 {
+  @apply !text-[#e3550d];
+}
+
+.text-main-two-900 {
+  @apply !text-[#c74a0c];
+}
+
+.text-main-three-25 {
+  @apply !text-[#f1fbf5];
+}
+
+.text-main-three-50 {
+  @apply !text-[#e8f8ef];
+}
+
+.text-main-three-100 {
+  @apply !text-[#d1f2de];
+}
+
+.text-main-three-200 {
+  @apply !text-[#baebce];
+}
+
+.text-main-three-300 {
+  @apply !text-[#a3e5bd];
+}
+
+.text-main-three-400 {
+  @apply !text-[#8cdead];
+}
+
+.text-main-three-500 {
+  @apply !text-[#75d89c];
+}
+
+.text-main-three-600 {
+  @apply !text-[#2fa75f];
+}
+
+.text-main-three-700 {
+  @apply !text-[#2a9656];
+}
+
+.text-main-three-800 {
+  @apply !text-[#26864c];
+}
+
+.text-main-three-900 {
+  @apply !text-[#217543];
+}
+
+.text-neutral-10 {
+  @apply !text-white;
+}
+
+.text-neutral-20 {
+  @apply !text-[#f5f6f7];
+}
+
+.text-neutral-30 {
+  @apply !text-[#ebecef];
+}
+
+.text-neutral-40 {
+  @apply !text-[#dfe0e4];
+}
+
+.text-neutral-50 {
+  @apply !text-[#c1c4cc];
+}
+
+.text-neutral-60 {
+  @apply !text-[#b2b6bf];
+}
+
+.text-neutral-70 {
+  @apply !text-[#a6aab5];
+}
+
+.text-neutral-80 {
+  @apply !text-[#979ca8];
+}
+
+.text-neutral-90 {
+  @apply !text-[#888e9c];
+}
+
+.text-neutral-100 {
+  @apply !text-[#798090];
+}
+
+.text-neutral-200 {
+  @apply !text-[#6a7283];
+}
+
+.text-neutral-300 {
+  @apply !text-[#5b6477];
+}
+
+.text-neutral-400 {
+  @apply !text-[#4f586d];
+}
+
+.text-neutral-500 {
+  @apply !text-[#404a60];
+}
+
+.text-neutral-600 {
+  @apply !text-[#343e56];
+}
+
+.text-neutral-700 {
+  @apply !text-[#222e48];
+}
+
+.text-neutral-800 {
+  @apply !text-[#13203b];
+}
+
+.text-neutral-900 {
+  @apply !text-[#071431];
+}
+
+.text-light-50 {
+  @apply !text-[#f5f6fa];
+}
+
+.text-light-100 {
+  @apply !text-gray-100;
+}
+
+.text-light-600 {
+  @apply !text-[#e4f1ff];
+}
+
+.text-light-700 {
+  @apply !text-gray-700;
+}
+
+.text-light-800 {
+  @apply !text-gray-800;
+}
+
+.text-primary-50 {
+  @apply !text-[#e4f1ff];
+}
+
+.text-primary-100 {
+  @apply !text-[#bfdcff];
+}
+
+.text-primary-200 {
+  @apply !text-[#95c7ff];
+}
+
+.text-primary-300 {
+  @apply !text-[#6bb1ff];
+}
+
+.text-primary-400 {
+  @apply !text-[#519fff];
+}
+
+.text-primary-500 {
+  @apply !text-[#458eff];
+}
+
+.text-primary-600 {
+  @apply !text-[#487fff];
+}
+
+.text-primary-700 {
+  @apply !text-[#486cea];
+}
+
+.text-primary-800 {
+  @apply !text-[#4759d6];
+}
+
+.text-primary-900 {
+  @apply !text-[#4536b6];
+}
+
+.text-danger-50 {
+  @apply !text-red-50;
+}
+
+.text-danger-100 {
+  @apply !text-red-100;
+}
+
+.text-danger-200 {
+  @apply !text-red-200;
+}
+
+.text-danger-300 {
+  @apply !text-red-300;
+}
+
+.text-danger-400 {
+  @apply !text-red-400;
+}
+
+.text-danger-500 {
+  @apply !text-red-500;
+}
+
+.text-danger-600 {
+  @apply !text-red-600;
+}
+
+.text-danger-700 {
+  @apply !text-red-700;
+}
+
+.text-danger-800 {
+  @apply !text-red-800;
+}
+
+.text-danger-900 {
+  @apply !text-red-900;
+}
+
+.text-success-50 {
+  @apply !text-green-50;
+}
+
+.text-success-100 {
+  @apply !text-green-100;
+}
+
+.text-success-200 {
+  @apply !text-green-200;
+}
+
+.text-success-300 {
+  @apply !text-green-300;
+}
+
+.text-success-400 {
+  @apply !text-green-400;
+}
+
+.text-success-500 {
+  @apply !text-green-500;
+}
+
+.text-success-600 {
+  @apply !text-green-600;
+}
+
+.text-success-700 {
+  @apply !text-green-700;
+}
+
+.text-success-800 {
+  @apply !text-green-800;
+}
+
+.text-success-900 {
+  @apply !text-green-900;
+}
+
+.text-warning-5 {
+  @apply !text-[#f376390d];
+}
+
+.text-warning-30 {
+  @apply !text-[#f376390d];
+}
+
+.text-warning-50 {
+  @apply !text-yellow-50;
+}
+
+.text-warning-100 {
+  @apply !text-yellow-100;
+}
+
+.text-warning-200 {
+  @apply !text-yellow-200;
+}
+
+.text-warning-300 {
+  @apply !text-yellow-300;
+}
+
+.text-warning-400 {
+  @apply !text-yellow-400;
+}
+
+.text-warning-500 {
+  @apply !text-yellow-500;
+}
+
+.text-warning-600 {
+  @apply !text-[#ff9f29];
+}
+
+.text-warning-700 {
+  @apply !text-[#f39016];
+}
+
+.text-warning-800 {
+  @apply !text-[#e58209];
+}
+
+.text-warning-900 {
+  @apply !text-[#d77907];
+}
+
+.text-info-50 {
+  @apply !text-blue-50;
+}
+
+.text-info-100 {
+  @apply !text-blue-100;
+}
+
+.text-info-200 {
+  @apply !text-blue-200;
+}
+
+.text-info-300 {
+  @apply !text-blue-300;
+}
+
+.text-info-400 {
+  @apply !text-blue-400;
+}
+
+.text-info-500 {
+  @apply !text-[#9570f4];
+}
+
+.text-info-600 {
+  @apply !text-[#875bf7];
+}
+
+.text-info-700 {
+  @apply !text-blue-700;
+}
+
+.text-info-800 {
+  @apply !text-blue-800;
+}
+
+.text-info-900 {
+  @apply !text-blue-900;
+}
+
+.text-purple-50 {
+  @apply !text-[#ede7fe];
+}
+
+.text-purple-100 {
+  @apply !text-[#cab6fb];
+}
+
+.text-purple-200 {
+  @apply !text-[#a685f9];
+}
+
+.text-purple-300 {
+  @apply !text-[#8255f7];
+}
+
+.text-purple-400 {
+  @apply !text-[#5f24f4];
+}
+
+.text-purple-500 {
+  @apply !text-[#5314f2];
+}
+
+.text-purple-600 {
+  @apply !text-[#450bdb];
+}
+
+.text-purple-700 {
+  @apply !text-[#3608aa];
+}
+
+.text-purple-800 {
+  @apply !text-[#27067a];
+}
+
+.text-purple-900 {
+  @apply !text-[#170449];
+}
+
+.text-yellow-50 {
+  @apply !text-[#fcefc1];
+}
+
+.text-yello w-100 {
+  @apply !text-[#f8e6a7];
+}
+
+.text-yellow-600 {
+  @apply !text-[#ffca0e];
+}
+
+.text-yellow-700 {
+  @apply !text-[#e1b001];
+}
+
+.hover-text-main-05:hover {
+  @apply !text-white;
+}
+
+.hover-text-main-25:hover {
+  @apply !text-[#f3f9ff];
+}
+
+.hover-text-main-50:hover {
+  @apply !text-[#e6f2fe];
+}
+
+.hover-text-main-100:hover {
+  @apply !text-[#c7e3fd];
+}
+
+.hover-text-main-200:hover {
+  @apply !text-[#a7d3fc];
+}
+
+.hover-text-main-300:hover {
+  @apply !text-[#88c4fb];
+}
+
+.hover-text-main-400:hover {
+  @apply !text-[#68b4fa];
+}
+
+.hover-text-main-500:hover {
+  @apply !text-[#4aa5f9];
+}
+
+.hover-text-main-600:hover {
+  @apply !text-[#066ccb];
+}
+
+.hover-text-main-700:hover {
+  @apply !text-[#0661b7];
+}
+
+.hover-text-main-800:hover {
+  @apply !text-[#0556a2];
+}
+
+.hover-text-main-900:hover {
+  @apply !text-[#044b8e];
+}
+
+.hover-text-main-two-25:hover {
+  @apply !text-[#fef7f3];
+}
+
+.hover-text-main-two-50:hover {
+  @apply !text-[#fef1eb];
+}
+
+.hover-text-main-two-100:hover {
+  @apply !text-[#fde7dc];
+}
+
+.hover-text-main-two-200:hover {
+  @apply !text-[#fcddcd];
+}
+
+.hover-text-main-two-300:hover {
+  @apply !text-[#fbd3be];
+}
+
+.hover-text-main-two-400:hover {
+  @apply !text-[#fac8af];
+}
+
+.hover-text-main-two-500:hover {
+  @apply !text-[#fabea1];
+}
+
+.hover-text-main-two-600:hover {
+  @apply !text-[#f37739];
+}
+
+.hover-text-main-two-700:hover {
+  @apply !text-[#f2641d];
+}
+
+.hover-text-main-two-800:hover {
+  @apply !text-[#e3550d];
+}
+
+.hover-text-main-two-900:hover {
+  @apply !text-[#c74a0c];
+}
+
+.hover-text-main-three-25:hover {
+  @apply !text-[#f1fbf5];
+}
+
+.hover-text-main-three-50:hover {
+  @apply !text-[#e8f8ef];
+}
+
+.hover-text-main-three-100:hover {
+  @apply !text-[#d1f2de];
+}
+
+.hover-text-main-three-200:hover {
+  @apply !text-[#baebce];
+}
+
+.hover-text-main-three-300:hover {
+  @apply !text-[#a3e5bd];
+}
+
+.hover-text-main-three-400:hover {
+  @apply !text-[#8cdead];
+}
+
+.hover-text-main-three-500:hover {
+  @apply !text-[#75d89c];
+}
+
+.hover-text-main-three-600:hover {
+  @apply !text-[#2fa75f];
+}
+
+.hover-text-main-three-700:hover {
+  @apply !text-[#2a9656];
+}
+
+.hover-text-main-three-800:hover {
+  @apply !text-[#26864c];
+}
+
+.hover-text-main-three-900:hover {
+  @apply !text-[#217543];
+}
+
+.hover-text-neutral-10:hover {
+  @apply !text-white;
+}
+
+.hover-text-neutral-20:hover {
+  @apply !text-[#f5f6f7];
+}
+
+.hover-text-neutral-30:hover {
+  @apply !text-[#ebecef];
+}
+
+.hover-text-neutral-40:hover {
+  @apply !text-[#dfe0e4];
+}
+
+.hover-text-neutral-50:hover {
+  @apply !text-[#c1c4cc];
+}
+
+.hover-text-neutral-60:hover {
+  @apply !text-[#b2b6bf];
+}
+
+.hover-text-neutral-70:hover {
+  @apply !text-[#a6aab5];
+}
+
+.hover-text-neutral-80:hover {
+  @apply !text-[#979ca8];
+}
+
+.hover-text-neutral-90:hover {
+  @apply !text-[#888e9c];
+}
+
+.hover-text-neutral-100:hover {
+  @apply !text-[#798090];
+}
+
+.hover-text-neutral-200:hover {
+  @apply !text-[#6a7283];
+}
+
+.hover-text-neutral-300:hover {
+  @apply !text-[#5b6477];
+}
+
+.hover-text-neutral-400:hover {
+  @apply !text-[#4f586d];
+}
+
+.hover-text-neutral-500:hover {
+  @apply !text-[#404a60];
+}
+
+.hover-text-neutral-600:hover {
+  @apply !text-[#343e56];
+}
+
+.hover-text-neutral-700:hover {
+  @apply !text-[#222e48];
+}
+
+.hover-text-neutral-800:hover {
+  @apply !text-[#13203b];
+}
+
+.hover-text-neutral-900:hover {
+  @apply !text-[#071431];
+}
+
+.hover-text-light-50:hover {
+  @apply !text-[#f5f6fa];
+}
+
+.hover-text-light-100:hover {
+  @apply !text-gray-100;
+}
+
+.hover-text-light-600:hover {
+  @apply !text-[#e4f1ff];
+}
+
+.hover-text-light-700:hover {
+  @apply !text-gray-700;
+}
+
+.hover-text-light-800:hover {
+  @apply !text-gray-800;
+}
+
+.hover-text-primary-50:hover {
+  @apply !text-[#e4f1ff];
+}
+
+.hover-text-primary-100:hover {
+  @apply !text-[#bfdcff];
+}
+
+.hover-text-primary-200:hover {
+  @apply !text-[#95c7ff];
+}
+
+.hover-text-primary-300:hover {
+  @apply !text-[#6bb1ff];
+}
+
+.hover-text-primary-400:hover {
+  @apply !text-[#519fff];
+}
+
+.hover-text-primary-500:hover {
+  @apply !text-[#458eff];
+}
+
+.hover-text-primary-600:hover {
+  @apply !text-[#487fff];
+}
+
+.hover-text-primary-700:hover {
+  @apply !text-[#486cea];
+}
+
+.hover-text-primary-800:hover {
+  @apply !text-[#4759d6];
+}
+
+.hover-text-primary-900:hover {
+  @apply !text-[#4536b6];
+}
+
+.hover-text-danger-50:hover {
+  @apply !text-red-50;
+}
+
+.hover-text-danger-100:hover {
+  @apply !text-red-100;
+}
+
+.hover-text-danger-200:hover {
+  @apply !text-red-200;
+}
+
+.hover-text-danger-300:hover {
+  @apply !text-red-300;
+}
+
+.hover-text-danger-400:hover {
+  @apply !text-red-400;
+}
+
+.hover-text-danger-500:hover {
+  @apply !text-red-500;
+}
+
+.hover-text-danger-600:hover {
+  @apply !text-red-600;
+}
+
+.hover-text-danger-700:hover {
+  @apply !text-red-700;
+}
+
+.hover-text-danger-800:hover {
+  @apply !text-red-800;
+}
+
+.hover-text-danger-900:hover {
+  @apply !text-red-900;
+}
+
+.hover-text-success-50:hover {
+  @apply !text-green-50;
+}
+
+.hover-text-success-100:hover {
+  @apply !text-green-100;
+}
+
+.hover-text-success-200:hover {
+  @apply !text-green-200;
+}
+
+.hover-text-success-300:hover {
+  @apply !text-green-300;
+}
+
+.hover-text-success-400:hover {
+  @apply !text-green-400;
+}
+
+.hover-text-success-500:hover {
+  @apply !text-green-500;
+}
+
+.hover-text-success-600:hover {
+  @apply !text-green-600;
+}
+
+.hover-text-success-700:hover {
+  @apply !text-green-700;
+}
+
+.hover-text-success-800:hover {
+  @apply !text-green-800;
+}
+
+.hover-text-success-900:hover {
+  @apply !text-green-900;
+}
+
+.hover-text-warning-5:hover {
+  @apply !text-[#f376390d];
+}
+
+.hover-text-warning-30:hover {
+  @apply !text-[#f376390d];
+}
+
+.hover-text-warning-50:hover {
+  @apply !text-yellow-50;
+}
+
+.hover-text-warning-100:hover {
+  @apply !text-yellow-100;
+}
+
+.hover-text-warning-200:hover {
+  @apply !text-yellow-200;
+}
+
+.hover-text-warning-300:hover {
+  @apply !text-yellow-300;
+}
+
+.hover-text-warning-400:hover {
+  @apply !text-yellow-400;
+}
+
+.hover-text-warning-500:hover {
+  @apply !text-yellow-500;
+}
+
+.hover-text-warning-600:hover {
+  @apply !text-[#ff9f29];
+}
+
+.hover-text-warning-700:hover {
+  @apply !text-[#f39016];
+}
+
+.hover-text-warning-800:hover {
+  @apply !text-[#e58209];
+}
+
+.hover-text-warning-900:hover {
+  @apply !text-[#d77907];
+}
+
+.hover-text-info-50:hover {
+  @apply !text-blue-50;
+}
+
+.hover-text-info-100:hover {
+  @apply !text-blue-100;
+}
+
+.hover-text-info-200:hover {
+  @apply !text-blue-200;
+}
+
+.hover-text-info-300:hover {
+  @apply !text-blue-300;
+}
+
+.hover-text-info-400:hover {
+  @apply !text-blue-400;
+}
+
+.hover-text-info-500:hover {
+  @apply !text-[#9570f4];
+}
+
+.hover-text-info-600:hover {
+  @apply !text-[#875bf7];
+}
+
+.hover-text-info-700:hover {
+  @apply !text-blue-700;
+}
+
+.hover-text-info-800:hover {
+  @apply !text-blue-800;
+}
+
+.hover-text-info-900:hover {
+  @apply !text-blue-900;
+}
+
+.hover-text-purple-50:hover {
+  @apply !text-[#ede7fe];
+}
+
+.hover-text-purple-100:hover {
+  @apply !text-[#cab6fb];
+}
+
+.hover-text-purple-200:hover {
+  @apply !text-[#a685f9];
+}
+
+.hover-text-purple-300:hover {
+  @apply !text-[#8255f7];
+}
+
+.hover-text-purple-400:hover {
+  @apply !text-[#5f24f4];
+}
+
+.hover-text-purple-500:hover {
+  @apply !text-[#5314f2];
+}
+
+.hover-text-purple-600:hover {
+  @apply !text-[#450bdb];
+}
+
+.hover-text-purple-700:hover {
+  @apply !text-[#3608aa];
+}
+
+.hover-text-purple-800:hover {
+  @apply !text-[#27067a];
+}
+
+.hover-text-purple-900:hover {
+  @apply !text-[#170449];
+}
+
+.hover-text-yellow-50:hover {
+  @apply !text-[#fcefc1];
+}
+
+.hover-text-yello w-100:hover {
+  @apply !text-[#f8e6a7];
+}
+
+.hover-text-yellow-600:hover {
+  @apply !text-[#ffca0e];
+}
+
+.hover-text-yellow-700:hover {
+  @apply !text-[#e1b001];
+}
+
+.text-heading {
+  @apply !text-[#222e48];
+}
+
+.text-body {
+  @apply !text-[#576070];
+}
+
+.text-main {
+  @apply !text-[#066ccb];
+}
+
+/* Text Color */
+.border-main-05 {
+  @apply !border-white;
+}
+
+.border-main-25 {
+  @apply !border-[#f3f9ff];
+}
+
+.border-main-50 {
+  @apply !border-[#e6f2fe];
+}
+
+.border-main-100 {
+  @apply !border-[#c7e3fd];
+}
+
+.border-main-200 {
+  @apply !border-[#a7d3fc];
+}
+
+.border-main-300 {
+  @apply !border-[#88c4fb];
+}
+
+.border-main-400 {
+  @apply !border-[#68b4fa];
+}
+
+.border-main-500 {
+  @apply !border-[#4aa5f9];
+}
+
+.border-main-600 {
+  @apply !border-[#066ccb];
+}
+
+.border-main-700 {
+  @apply !border-[#0661b7];
+}
+
+.border-main-800 {
+  @apply !border-[#0556a2];
+}
+
+.border-main-900 {
+  @apply !border-[#044b8e];
+}
+
+.border-main-two-25 {
+  @apply !border-[#fef7f3];
+}
+
+.border-main-two-50 {
+  @apply !border-[#fef1eb];
+}
+
+.border-main-two-100 {
+  @apply !border-[#fde7dc];
+}
+
+.border-main-two-200 {
+  @apply !border-[#fcddcd];
+}
+
+.border-main-two-300 {
+  @apply !border-[#fbd3be];
+}
+
+.border-main-two-400 {
+  @apply !border-[#fac8af];
+}
+
+.border-main-two-500 {
+  @apply !border-[#fabea1];
+}
+
+.border-main-two-600 {
+  @apply !border-[#f37739];
+}
+
+.border-main-two-700 {
+  @apply !border-[#f2641d];
+}
+
+.border-main-two-800 {
+  @apply !border-[#e3550d];
+}
+
+.border-main-two-900 {
+  @apply !border-[#c74a0c];
+}
+
+.border-main-three-25 {
+  @apply !border-[#f1fbf5];
+}
+
+.border-main-three-50 {
+  @apply !border-[#e8f8ef];
+}
+
+.border-main-three-100 {
+  @apply !border-[#d1f2de];
+}
+
+.border-main-three-200 {
+  @apply !border-[#baebce];
+}
+
+.border-main-three-300 {
+  @apply !border-[#a3e5bd];
+}
+
+
+.border-main-three-400 {
+  @apply !border-[#8cdead];
+}
+
+.border-main-three-500 {
+  @apply !border-[#75d89c];
+}
+
+.border-main-three-600 {
+  @apply !border-[#2fa75f];
+}
+
+.border-main-three-700 {
+  @apply !border-[#2a9656];
+}
+
+.border-main-three-800 {
+  @apply !border-[#26864c];
+}
+
+.border-main-three-900 {
+  @apply !border-[#217543];
+}
+
+.border-neutral-10 {
+  @apply !border-white;
+}
+
+.border-neutral-20 {
+  @apply !border-[#f5f6f7];
+}
+
+.border-neutral-30 {
+  @apply !border-[#ebecef];
+}
+
+.border-neutral-40 {
+  @apply !border-[#dfe0e4];
+}
+
+.border-neutral-50 {
+  @apply !border-[#c1c4cc];
+}
+
+.border-neutral-60 {
+  @apply !border-[#b2b6bf];
+}
+
+.border-neutral-70 {
+  @apply !border-[#a6aab5];
+}
+
+.border-neutral-80 {
+  @apply !border-[#979ca8];
+}
+
+.border-neutral-90 {
+  @apply !border-[#888e9c];
+}
+
+.border-neutral-100 {
+  @apply !border-[#798090];
+}
+
+.border-neutral-200 {
+  @apply !border-[#6a7283];
+}
+
+.border-neutral-300 {
+  @apply !border-[#5b6477];
+}
+
+.border-neutral-400 {
+  @apply !border-[#4f586d];
+}
+
+.border-neutral-500 {
+  @apply !border-[#404a60];
+}
+
+.border-neutral-600 {
+  @apply !border-[#343e56];
+}
+
+.border-neutral-700 {
+  @apply !border-[#222e48];
+}
+
+.border-neutral-800 {
+  @apply !border-[#13203b];
+}
+
+.border-neutral-900 {
+  @apply !border-[#071431];
+}
+
+.border-light-50 {
+  @apply !border-[#f5f6fa];
+}
+
+.border-light-100 {
+  @apply !border-gray-100;
+}
+
+.border-light-600 {
+  @apply !border-[#e4f1ff];
+}
+
+.border-light-700 {
+  @apply !border-gray-700;
+}
+
+.border-light-800 {
+  @apply !border-gray-800;
+}
+
+.border-primary-50 {
+  @apply !border-[#e4f1ff];
+}
+
+.border-primary-100 {
+  @apply !border-[#bfdcff];
+}
+
+.border-primary-200 {
+  @apply !border-[#95c7ff];
+}
+
+.border-primary-300 {
+  @apply !border-[#6bb1ff];
+}
+
+.border-primary-400 {
+  @apply !border-[#519fff];
+}
+
+.border-primary-500 {
+  @apply !border-[#458eff];
+}
+
+.border-primary-600 {
+  @apply !border-[#487fff];
+}
+
+.border-primary-700 {
+  @apply !border-[#486cea];
+}
+
+.border-primary-800 {
+  @apply !border-[#4759d6];
+}
+
+.border-primary-900 {
+  @apply !border-[#4536b6];
+}
+
+.border-danger-50 {
+  @apply !border-red-50;
+}
+
+.border-danger-100 {
+  @apply !border-red-100;
+}
+
+.border-danger-200 {
+  @apply !border-red-200;
+}
+
+.border-danger-300 {
+  @apply !border-red-300;
+}
+
+.border-danger-400 {
+  @apply !border-red-400;
+}
+
+.border-danger-500 {
+  @apply !border-red-500;
+}
+
+.border-danger-600 {
+  @apply !border-red-600;
+}
+
+.border-danger-700 {
+  @apply !border-red-700;
+}
+
+.border-danger-800 {
+  @apply !border-red-800;
+}
+
+.border-danger-900 {
+  @apply !border-red-900;
+}
+
+.border-success-50 {
+  @apply !border-green-50;
+}
+
+.border-success-100 {
+  @apply !border-green-100;
+}
+
+.border-success-200 {
+  @apply !border-green-200;
+}
+
+.border-success-300 {
+  @apply !border-green-300;
+}
+
+.border-success-400 {
+  @apply !border-green-400;
+}
+
+.border-success-500 {
+  @apply !border-green-500;
+}
+
+.border-success-600 {
+  @apply !border-green-600;
+}
+
+.border-success-700 {
+  @apply !border-green-700;
+}
+
+.border-success-800 {
+  @apply !border-green-800;
+}
+
+.border-success-900 {
+  @apply !border-green-900;
+}
+
+.border-warning-5 {
+  @apply !border-[#f376390d];
+}
+
+.border-warning-30 {
+  @apply !border-[#f376390d];
+}
+
+.border-warning-50 {
+  @apply !border-yellow-50;
+}
+
+.border-warning-100 {
+  @apply !border-yellow-100;
+}
+
+.border-warning-200 {
+  @apply !border-yellow-200;
+}
+
+.border-warning-300 {
+  @apply !border-yellow-300;
+}
+
+.border-warning-400 {
+  @apply !border-yellow-400;
+}
+
+.border-warning-500 {
+  @apply !border-yellow-500;
+}
+
+.border-warning-600 {
+  @apply !border-[#ff9f29];
+}
+
+.border-warning-700 {
+  @apply !border-[#f39016];
+}
+
+.border-warning-800 {
+  @apply !border-[#e58209];
+}
+
+.border-warning-900 {
+  @apply !border-[#d77907];
+}
+
+.border-info-50 {
+  @apply !border-blue-50;
+}
+
+.border-info-100 {
+  @apply !border-blue-100;
+}
+
+.border-info-200 {
+  @apply !border-blue-200;
+}
+
+.border-info-300 {
+  @apply !border-blue-300;
+}
+
+.border-info-400 {
+  @apply !border-blue-400;
+}
+
+.border-info-500 {
+  @apply !border-[#9570f4];
+}
+
+.border-info-600 {
+  @apply !border-[#875bf7];
+}
+
+.border-info-700 {
+  @apply !border-blue-700;
+}
+
+.border-info-800 {
+  @apply !border-blue-800;
+}
+
+.border-info-900 {
+  @apply !border-blue-900;
+}
+
+.border-purple-50 {
+  @apply !border-[#ede7fe];
+}
+
+.border-purple-100 {
+  @apply !border-[#cab6fb];
+}
+
+.border-purple-200 {
+  @apply !border-[#a685f9];
+}
+
+.border-purple-300 {
+  @apply !border-[#8255f7];
+}
+
+.border-purple-400 {
+  @apply !border-[#5f24f4];
+}
+
+.border-purple-500 {
+  @apply !border-[#5314f2];
+}
+
+.border-purple-600 {
+  @apply !border-[#450bdb];
+}
+
+.border-purple-700 {
+  @apply !border-[#3608aa];
+}
+
+.border-purple-800 {
+  @apply !border-[#27067a];
+}
+
+.border-purple-900 {
+  @apply !border-[#170449];
+}
+
+.border-yellow-50 {
+  @apply !border-[#fcefc1];
+}
+
+.border-yello w-100 {
+  @apply !border-[#f8e6a7];
+}
+
+.border-yellow-600 {
+  @apply !border-[#ffca0e];
+}
+
+.border-yellow-700 {
+  @apply !border-[#e1b001];
+}
+
+.hover-border-main-05:hover {
+  @apply !border-white;
+}
+
+.hover-border-main-25:hover {
+  @apply !border-[#f3f9ff];
+}
+
+.hover-border-main-50:hover {
+  @apply !border-[#e6f2fe];
+}
+
+.hover-border-main-100:hover {
+  @apply !border-[#c7e3fd];
+}
+
+.hover-border-main-200:hover {
+  @apply !border-[#a7d3fc];
+}
+
+.hover-border-main-300:hover {
+  @apply !border-[#88c4fb];
+}
+
+.hover-border-main-400:hover {
+  @apply !border-[#68b4fa];
+}
+
+.hover-border-main-500:hover {
+  @apply !border-[#4aa5f9];
+}
+
+.hover-border-main-600:hover {
+  @apply !border-[#066ccb];
+}
+
+.hover-border-main-700:hover {
+  @apply !border-[#0661b7];
+}
+
+.hover-border-main-800:hover {
+  @apply !border-[#0556a2];
+}
+
+.hover-border-main-900:hover {
+  @apply !border-[#044b8e];
+}
+
+.hover-border-main-two-25:hover {
+  @apply !border-[#fef7f3];
+}
+
+.hover-border-main-two-50:hover {
+  @apply !border-[#fef1eb];
+}
+
+.hover-border-main-two-100:hover {
+  @apply !border-[#fde7dc];
+}
+
+.hover-border-main-two-200:hover {
+  @apply !border-[#fcddcd];
+}
+
+.hover-border-main-two-300:hover {
+  @apply !border-[#fbd3be];
+}
+
+.hover-border-main-two-400:hover {
+  @apply !border-[#fac8af];
+}
+
+.hover-border-main-two-500:hover {
+  @apply !border-[#fabea1];
+}
+
+.hover-border-main-two-600:hover {
+  @apply !border-[#f37739];
+}
+
+.hover-border-main-two-700:hover {
+  @apply !border-[#f2641d];
+}
+
+.hover-border-main-two-800:hover {
+  @apply !border-[#e3550d];
+}
+
+.hover-border-main-two-900:hover {
+  @apply !border-[#c74a0c];
+}
+
+.hover-border-main-three-25:hover {
+  @apply !border-[#f1fbf5];
+}
+
+.hover-border-main-three-50:hover {
+  @apply !border-[#e8f8ef];
+}
+
+.hover-border-main-three-100:hover {
+  @apply !border-[#d1f2de];
+}
+
+.hover-border-main-three-200:hover {
+  @apply !border-[#baebce];
+}
+
+.hover-border-main-three-300:hover {
+  @apply !border-[#a3e5bd];
+}
+
+.hover-border-main-three-400:hover {
+  @apply !border-[#8cdead];
+}
+
+.hover-border-main-three-500:hover {
+  @apply !border-[#75d89c];
+}
+
+.hover-border-main-three-600:hover {
+  @apply !border-[#2fa75f];
+}
+
+.hover-border-main-three-700:hover {
+  @apply !border-[#2a9656];
+}
+
+.hover-border-main-three-800:hover {
+  @apply !border-[#26864c];
+}
+
+.hover-border-main-three-900:hover {
+  @apply !border-[#217543];
+}
+
+.hover-border-neutral-10:hover {
+  @apply !border-white;
+}
+
+.hover-border-neutral-20:hover {
+  @apply !border-[#f5f6f7];
+}
+
+.hover-border-neutral-30:hover {
+  @apply !border-[#ebecef];
+}
+
+.hover-border-neutral-40:hover {
+  @apply !border-[#dfe0e4];
+}
+
+.hover-border-neutral-50:hover {
+  @apply !border-[#c1c4cc];
+}
+
+.hover-border-neutral-60:hover {
+  @apply !border-[#b2b6bf];
+}
+
+.hover-border-neutral-70:hover {
+  @apply !border-[#a6aab5];
+}
+
+.hover-border-neutral-80:hover {
+  @apply !border-[#979ca8];
+}
+
+.hover-border-neutral-90:hover {
+  @apply !border-[#888e9c];
+}
+
+.hover-border-neutral-100:hover {
+  @apply !border-[#798090];
+}
+
+.hover-border-neutral-200:hover {
+  @apply !border-[#6a7283];
+}
+
+.hover-border-neutral-300:hover {
+  @apply !border-[#5b6477];
+}
+
+.hover-border-neutral-400:hover {
+  @apply !border-[#4f586d];
+}
+
+.hover-border-neutral-500:hover {
+  @apply !border-[#404a60];
+}
+
+.hover-border-neutral-600:hover {
+  @apply !border-[#343e56];
+}
+
+.hover-border-neutral-700:hover {
+  @apply !border-[#222e48];
+}
+
+.hover-border-neutral-800:hover {
+  @apply !border-[#13203b];
+}
+
+.hover-border-neutral-900:hover {
+  @apply !border-[#071431];
+}
+
+.hover-border-light-50:hover {
+  @apply !border-[#f5f6fa];
+}
+
+.hover-border-light-100:hover {
+  @apply !border-gray-100;
+}
+
+.hover-border-light-600:hover {
+  @apply !border-[#e4f1ff];
+}
+
+.hover-border-light-700:hover {
+  @apply !border-gray-700;
+}
+
+.hover-border-light-800:hover {
+  @apply !border-gray-800;
+}
+
+.hover-border-primary-50:hover {
+  @apply !border-[#e4f1ff];
+}
+
+.hover-border-primary-100:hover {
+  @apply !border-[#bfdcff];
+}
+
+.hover-border-primary-200:hover {
+  @apply !border-[#95c7ff];
+}
+
+.hover-border-primary-300:hover {
+  @apply !border-[#6bb1ff];
+}
+
+.hover-border-primary-400:hover {
+  @apply !border-[#519fff];
+}
+
+.hover-border-primary-500:hover {
+  @apply !border-[#458eff];
+}
+
+.hover-border-primary-600:hover {
+  @apply !border-[#487fff];
+}
+
+.hover-border-primary-700:hover {
+  @apply !border-[#486cea];
+}
+
+.hover-border-primary-800:hover {
+  @apply !border-[#4759d6];
+}
+
+.hover-border-primary-900:hover {
+  @apply !border-[#4536b6];
+}
+
+.hover-border-danger-50:hover {
+  @apply !border-red-50;
+}
+
+.hover-border-danger-100:hover {
+  @apply !border-red-100;
+}
+
+.hover-border-danger-200:hover {
+  @apply !border-red-200;
+}
+
+.hover-border-danger-300:hover {
+  @apply !border-red-300;
+}
+
+.hover-border-danger-400:hover {
+  @apply !border-red-400;
+}
+
+.hover-border-danger-500:hover {
+  @apply !border-red-500;
+}
+
+.hover-border-danger-600:hover {
+  @apply !border-red-600;
+}
+
+.hover-border-danger-700:hover {
+  @apply !border-red-700;
+}
+
+.hover-border-danger-800:hover {
+  @apply !border-red-800;
+}
+
+.hover-border-danger-900:hover {
+  @apply !border-red-900;
+}
+
+.hover-border-success-50:hover {
+  @apply !border-green-50;
+}
+
+.hover-border-success-100:hover {
+  @apply !border-green-100;
+}
+
+.hover-border-success-200:hover {
+  @apply !border-green-200;
+}
+
+.hover-border-success-300:hover {
+  @apply !border-green-300;
+}
+
+.hover-border-success-400:hover {
+  @apply !border-green-400;
+}
+
+.hover-border-success-500:hover {
+  @apply !border-green-500;
+}
+
+.hover-border-success-600:hover {
+  @apply !border-green-600;
+}
+
+.hover-border-success-700:hover {
+  @apply !border-green-700;
+}
+
+.hover-border-success-800:hover {
+  @apply !border-green-800;
+}
+
+.hover-border-success-900:hover {
+  @apply !border-green-900;
+}
+
+.hover-border-warning-5:hover {
+  @apply !border-[#f376390d];
+}
+
+.hover-border-warning-30:hover {
+  @apply !border-[#f376390d];
+}
+
+.hover-border-warning-50:hover {
+  @apply !border-yellow-50;
+}
+
+.hover-border-warning-100:hover {
+  @apply !border-yellow-100;
+}
+
+.hover-border-warning-200:hover {
+  @apply !border-yellow-200;
+}
+
+.hover-border-warning-300:hover {
+  @apply !border-yellow-300;
+}
+
+.hover-border-warning-400:hover {
+  @apply !border-yellow-400;
+}
+
+.hover-border-warning-500:hover {
+  @apply !border-yellow-500;
+}
+
+.hover-border-warning-600:hover {
+  @apply !border-[#ff9f29];
+}
+
+.hover-border-warning-700:hover {
+  @apply !border-[#f39016];
+}
+
+.hover-border-warning-800:hover {
+  @apply !border-[#e58209];
+}
+
+.hover-border-warning-900:hover {
+  @apply !border-[#d77907];
+}
+
+.hover-border-info-50:hover {
+  @apply !border-blue-50;
+}
+
+.hover-border-info-100:hover {
+  @apply !border-blue-100;
+}
+
+.hover-border-info-200:hover {
+  @apply !border-blue-200;
+}
+
+.hover-border-info-300:hover {
+  @apply !border-blue-300;
+}
+
+.hover-border-info-400:hover {
+  @apply !border-blue-400;
+}
+
+.hover-border-info-500:hover {
+  @apply !border-[#9570f4];
+}
+
+.hover-border-info-600:hover {
+  @apply !border-[#875bf7];
+}
+
+.hover-border-info-700:hover {
+  @apply !border-blue-700;
+}
+
+.hover-border-info-800:hover {
+  @apply !border-blue-800;
+}
+
+.hover-border-info-900:hover {
+  @apply !border-blue-900;
+}
+
+.hover-border-purple-50:hover {
+  @apply !border-[#ede7fe];
+}
+
+.hover-border-purple-100:hover {
+  @apply !border-[#cab6fb];
+}
+
+.hover-border-purple-200:hover {
+  @apply !border-[#a685f9];
+}
+
+.hover-border-purple-300:hover {
+  @apply !border-[#8255f7];
+}
+
+.hover-border-purple-400:hover {
+  @apply !border-[#5f24f4];
+}
+
+.hover-border-purple-500:hover {
+  @apply !border-[#5314f2];
+}
+
+.hover-border-purple-600:hover {
+  @apply !border-[#450bdb];
+}
+
+.hover-border-purple-700:hover {
+  @apply !border-[#3608aa];
+}
+
+.hover-border-purple-800:hover {
+  @apply !border-[#27067a];
+}
+
+.hover-border-purple-900:hover {
+  @apply !border-[#170449];
+}
+
+.hover-border-yellow-50:hover {
+  @apply !border-[#fcefc1];
+}
+
+.hover-border-yello w-100:hover {
+  @apply !border-[#f8e6a7];
+}
+
+.hover-border-yellow-600:hover {
+  @apply !border-[#ffca0e];
+}
+
+.hover-border-yellow-700:hover {
+  @apply !border-[#e1b001];
+}
+
+.focus-border-main-05:focus {
+  @apply !border-white;
+}
+
+.focus-border-main-25:focus {
+  @apply !border-[#f3f9ff];
+}
+
+.focus-border-main-50:focus {
+  @apply !border-[#e6f2fe];
+}
+
+.focus-border-main-100:focus {
+  @apply !border-[#c7e3fd];
+}
+
+.focus-border-main-200:focus {
+  @apply !border-[#a7d3fc];
+}
+
+.focus-border-main-300:focus {
+  @apply !border-[#88c4fb];
+}
+
+.focus-border-main-400:focus {
+  @apply !border-[#68b4fa];
+}
+
+.focus-border-main-500:focus {
+  @apply !border-[#4aa5f9];
+}
+
+.focus-border-main-600:focus {
+  @apply !border-[#066ccb];
+}
+
+.focus-border-main-700:focus {
+  @apply !border-[#0661b7];
+}
+
+.focus-border-main-800:focus {
+  @apply !border-[#0556a2];
+}
+
+.focus-border-main-900:focus {
+  @apply !border-[#044b8e];
+}
+
+.focus-border-main-two-25:focus {
+  @apply !border-[#fef7f3];
+}
+
+.focus-border-main-two-50:focus {
+  @apply !border-[#fef1eb];
+}
+
+.focus-border-main-two-100:focus {
+  @apply !border-[#fde7dc];
+}
+
+.focus-border-main-two-200:focus {
+  @apply !border-[#fcddcd];
+}
+
+.focus-border-main-two-300:focus {
+  @apply !border-[#fbd3be];
+}
+
+.focus-border-main-two-400:focus {
+  @apply !border-[#fac8af];
+}
+
+.focus-border-main-two-500:focus {
+  @apply !border-[#fabea1];
+}
+
+.focus-border-main-two-600:focus {
+  @apply !border-[#f37739];
+}
+
+.focus-border-main-two-700:focus {
+  @apply !border-[#f2641d];
+}
+
+.focus-border-main-two-800:focus {
+  @apply !border-[#e3550d];
+}
+
+.focus-border-main-two-900:focus {
+  @apply !border-[#c74a0c];
+}
+
+.focus-border-main-three-25:focus {
+  @apply !border-[#f1fbf5];
+}
+
+.focus-border-main-three-50:focus {
+  @apply !border-[#e8f8ef];
+}
+
+.focus-border-main-three-100:focus {
+  @apply !border-[#d1f2de];
+}
+
+.focus-border-main-three-200:focus {
+  @apply !border-[#baebce];
+}
+
+.focus-border-main-three-300:focus {
+  @apply !border-[#a3e5bd];
+}
+
+.focus-border-main-three-400:focus {
+  @apply !border-[#8cdead];
+}
+
+.focus-border-main-three-500:focus {
+  @apply !border-[#75d89c];
+}
+
+.focus-border-main-three-600:focus {
+  @apply !border-[#2fa75f];
+}
+
+.focus-border-main-three-700:focus {
+  @apply !border-[#2a9656];
+}
+
+.focus-border-main-three-800:focus {
+  @apply !border-[#26864c];
+}
+
+.focus-border-main-three-900:focus {
+  @apply !border-[#217543];
+}
+
+.focus-border-neutral-10:focus {
+  @apply !border-white;
+}
+
+.focus-border-neutral-20:focus {
+  @apply !border-[#f5f6f7];
+}
+
+.focus-border-neutral-30:focus {
+  @apply !border-[#ebecef];
+}
+
+.focus-border-neutral-40:focus {
+  @apply !border-[#dfe0e4];
+}
+
+.focus-border-neutral-50:focus {
+  @apply !border-[#c1c4cc];
+}
+
+.focus-border-neutral-60:focus {
+  @apply !border-[#b2b6bf];
+}
+
+.focus-border-neutral-70:focus {
+  @apply !border-[#a6aab5];
+}
+
+.focus-border-neutral-80:focus {
+  @apply !border-[#979ca8];
+}
+
+.focus-border-neutral-90:focus {
+  @apply !border-[#888e9c];
+}
+
+.focus-border-neutral-100:focus {
+  @apply !border-[#798090];
+}
+
+.focus-border-neutral-200:focus {
+  @apply !border-[#6a7283];
+}
+
+.focus-border-neutral-300:focus {
+  @apply !border-[#5b6477];
+}
+
+.focus-border-neutral-400:focus {
+  @apply !border-[#4f586d];
+}
+
+.focus-border-neutral-500:focus {
+  @apply !border-[#404a60];
+}
+
+.focus-border-neutral-600:focus {
+  @apply !border-[#343e56];
+}
+
+.focus-border-neutral-700:focus {
+  @apply !border-[#222e48];
+}
+
+.focus-border-neutral-800:focus {
+  @apply !border-[#13203b];
+}
+
+.focus-border-neutral-900:focus {
+  @apply !border-[#071431];
+}
+
+.focus-border-light-50:focus {
+  @apply !border-[#f5f6fa];
+}
+
+.focus-border-light-100:focus {
+  @apply !border-gray-100;
+}
+
+.focus-border-light-600:focus {
+  @apply !border-[#e4f1ff];
+}
+
+.focus-border-light-700:focus {
+  @apply !border-gray-700;
+}
+
+.focus-border-light-800:focus {
+  @apply !border-gray-800;
+}
+
+.focus-border-primary-50:focus {
+  @apply !border-[#e4f1ff];
+}
+
+.focus-border-primary-100:focus {
+  @apply !border-[#bfdcff];
+}
+
+.focus-border-primary-200:focus {
+  @apply !border-[#95c7ff];
+}
+
+.focus-border-primary-300:focus {
+  @apply !border-[#6bb1ff];
+}
+
+.focus-border-primary-400:focus {
+  @apply !border-[#519fff];
+}
+
+.focus-border-primary-500:focus {
+  @apply !border-[#458eff];
+}
+
+.focus-border-primary-600:focus {
+  @apply !border-[#487fff];
+}
+
+.focus-border-primary-700:focus {
+  @apply !border-[#486cea];
+}
+
+.focus-border-primary-800:focus {
+  @apply !border-[#4759d6];
+}
+
+.focus-border-primary-900:focus {
+  @apply !border-[#4536b6];
+}
+
+.focus-border-danger-50:focus {
+  @apply !border-red-50;
+}
+
+.focus-border-danger-100:focus {
+  @apply !border-red-100;
+}
+
+.focus-border-danger-200:focus {
+  @apply !border-red-200;
+}
+
+.focus-border-danger-300:focus {
+  @apply !border-red-300;
+}
+
+.focus-border-danger-400:focus {
+  @apply !border-red-400;
+}
+
+.focus-border-danger-500:focus {
+  @apply !border-red-500;
+}
+
+.focus-border-danger-600:focus {
+  @apply !border-red-600;
+}
+
+.focus-border-danger-700:focus {
+  @apply !border-red-700;
+}
+
+.focus-border-danger-800:focus {
+  @apply !border-red-800;
+}
+
+.focus-border-danger-900:focus {
+  @apply !border-red-900;
+}
+
+.focus-border-success-50:focus {
+  @apply !border-green-50;
+}
+
+.focus-border-success-100:focus {
+  @apply !border-green-100;
+}
+
+.focus-border-success-200:focus {
+  @apply !border-green-200;
+}
+
+.focus-border-success-300:focus {
+  @apply !border-green-300;
+}
+
+.focus-border-success-400:focus {
+  @apply !border-green-400;
+}
+
+.focus-border-success-500:focus {
+  @apply !border-green-500;
+}
+
+.focus-border-success-600:focus {
+  @apply !border-green-600;
+}
+
+.focus-border-success-700:focus {
+  @apply !border-green-700;
+}
+
+.focus-border-success-800:focus {
+  @apply !border-green-800;
+}
+
+.focus-border-success-900:focus {
+  @apply !border-green-900;
+}
+
+.focus-border-warning-5:focus {
+  @apply !border-[#f376390d];
+}
+
+.focus-border-warning-30:focus {
+  @apply !border-[#f376390d];
+}
+
+.focus-border-warning-50:focus {
+  @apply !border-yellow-50;
+}
+
+.focus-border-warning-100:focus {
+  @apply !border-yellow-100;
+}
+
+.focus-border-warning-200:focus {
+  @apply !border-yellow-200;
+}
+
+.focus-border-warning-300:focus {
+  @apply !border-yellow-300;
+}
+
+.focus-border-warning-400:focus {
+  @apply !border-yellow-400;
+}
+
+.focus-border-warning-500:focus {
+  @apply !border-yellow-500;
+}
+
+.focus-border-warning-600:focus {
+  @apply !border-[#ff9f29];
+}
+
+.focus-border-warning-700:focus {
+  @apply !border-[#f39016];
+}
+
+.focus-border-warning-800:focus {
+  @apply !border-[#e58209];
+}
+
+.focus-border-warning-900:focus {
+  @apply !border-[#d77907];
+}
+
+.focus-border-info-50:focus {
+  @apply !border-blue-50;
+}
+
+.focus-border-info-100:focus {
+  @apply !border-blue-100;
+}
+
+.focus-border-info-200:focus {
+  @apply !border-blue-200;
+}
+
+.focus-border-info-300:focus {
+  @apply !border-blue-300;
+}
+
+.focus-border-info-400:focus {
+  @apply !border-blue-400;
+}
+
+.focus-border-info-500:focus {
+  @apply !border-[#9570f4];
+}
+
+.focus-border-info-600:focus {
+  @apply !border-[#875bf7];
+}
+
+.focus-border-info-700:focus {
+  @apply !border-blue-700;
+}
+
+.focus-border-info-800:focus {
+  @apply !border-blue-800;
+}
+
+.focus-border-info-900:focus {
+  @apply !border-blue-900;
+}
+
+.focus-border-purple-50:focus {
+  @apply !border-[#ede7fe];
+}
+
+.focus-border-purple-100:focus {
+  @apply !border-[#cab6fb];
+}
+
+.focus-border-purple-200:focus {
+  @apply !border-[#a685f9];
+}
+
+.focus-border-purple-300:focus {
+  @apply !border-[#8255f7];
+}
+
+.focus-border-purple-400:focus {
+  @apply !border-[#5f24f4];
+}
+
+.focus-border-purple-500:focus {
+  @apply !border-[#5314f2];
+}
+
+.focus-border-purple-600:focus {
+  @apply !border-[#450bdb];
+}
+
+.focus-border-purple-700:focus {
+  @apply !border-[#3608aa];
+}
+
+.focus-border-purple-800:focus {
+  @apply !border-[#27067a];
+}
+
+.focus-border-purple-900:focus {
+  @apply !border-[#170449];
+}
+
+.focus-border-yellow-50:focus {
+  @apply !border-[#fcefc1];
+}
+
+.focus-border-yello w-100:focus {
+  @apply !border-[#f8e6a7];
+}
+
+.focus-border-yellow-600:focus {
+  @apply !border-[#ffca0e];
+}
+
+.focus-border-yellow-700:focus {
+  @apply !border-[#e1b001];
+}
+
+.border-dashed {
+  @apply !border-dashed;
+}
+
+.border-bottom-dashed {
+  @apply !border-b-[#DFE0E4] border-b border-dashed border-b-[#DFE0E4] border-b border-dashed;
+}
+
+.border-right-dashed {
+  @apply !border-r-[#DFE0E4] border-r border-dashed;
+}
+
+.border-bottom-dashed-main {
+  @apply !border-b-[#c7e3fd] border-b border-dashed;
+}
+
+.border-bottom-solid {
+  @apply !border-b-[#DFE0E4] border-b border-solid;
+}
+
+.border-top-solid {
+  @apply !border-t-[#DFE0E4] border-t border-solid;
+}
+
+.border-transparent {
+  @apply !border-transparent;
+}
+
+.bg-main-05 {
+  @apply !bg-white;
+}
+
+.bg-main-25 {
+  @apply !bg-[#f3f9ff];
+}
+
+.bg-main-50 {
+  @apply !bg-[#e6f2fe];
+}
+
+.bg-main-100 {
+  @apply !bg-[#c7e3fd];
+}
+
+.bg-main-200 {
+  @apply !bg-[#a7d3fc];
+}
+
+.bg-main-300 {
+  @apply !bg-[#88c4fb];
+}
+
+.bg-main-400 {
+  @apply !bg-[#68b4fa];
+}
+
+.bg-main-500 {
+  @apply !bg-[#4aa5f9];
+}
+
+.bg-main-600 {
+  @apply !bg-[#066ccb];
+}
+
+.bg-main-700 {
+  @apply !bg-[#0661b7];
+}
+
+.bg-main-800 {
+  @apply !bg-[#0556a2];
+}
+
+.bg-main-900 {
+  @apply !bg-[#044b8e];
+}
+
+.bg-main-two-25 {
+  @apply !bg-[#fef7f3];
+}
+
+.bg-main-two-50 {
+  @apply !bg-[#fef1eb];
+}
+
+.bg-main-two-100 {
+  @apply !bg-[#fde7dc];
+}
+
+.bg-main-two-200 {
+  @apply !bg-[#fcddcd];
+}
+
+.bg-main-two-300 {
+  @apply !bg-[#fbd3be];
+}
+
+.bg-main-two-400 {
+  @apply !bg-[#fac8af];
+}
+
+.bg-main-two-500 {
+  @apply !bg-[#fabea1];
+}
+
+.bg-main-two-600 {
+  @apply !bg-[#f37739];
+}
+
+.bg-main-two-700 {
+  @apply !bg-[#f2641d];
+}
+
+.bg-main-two-800 {
+  @apply !bg-[#e3550d];
+}
+
+.bg-main-two-900 {
+  @apply !bg-[#c74a0c];
+}
+
+.bg-main-three-25 {
+  @apply !bg-[#f1fbf5];
+}
+
+.bg-main-three-50 {
+  @apply !bg-[#e8f8ef];
+}
+
+.bg-main-three-100 {
+  @apply !bg-[#d1f2de];
+}
+
+.bg-main-three-200 {
+  @apply !bg-[#baebce];
+}
+
+.bg-main-three-300 {
+  @apply !bg-[#a3e5bd];
+}
+
+.bg-main-three-400 {
+  @apply !bg-[#8cdead];
+}
+
+.bg-main-three-500 {
+  @apply !bg-[#75d89c];
+}
+
+.bg-main-three-600 {
+  @apply !bg-[#2fa75f];
+}
+
+.bg-main-three-700 {
+  @apply !bg-[#2a9656];
+}
+
+.bg-main-three-800 {
+  @apply !bg-[#26864c];
+}
+
+.bg-main-three-900 {
+  @apply !bg-[#217543];
+}
+
+.bg-neutral-10 {
+  @apply !bg-white;
+}
+
+.bg-neutral-20 {
+  @apply !bg-[#f5f6f7];
+}
+
+.bg-neutral-30 {
+  @apply !bg-[#ebecef];
+}
+
+.bg-neutral-40 {
+  @apply !bg-[#dfe0e4];
+}
+
+.bg-neutral-50 {
+  @apply !bg-[#c1c4cc];
+}
+
+.bg-neutral-60 {
+  @apply !bg-[#b2b6bf];
+}
+
+.bg-neutral-70 {
+  @apply !bg-[#a6aab5];
+}
+
+.bg-neutral-80 {
+  @apply !bg-[#979ca8];
+}
+
+.bg-neutral-90 {
+  @apply !bg-[#888e9c];
+}
+
+.bg-neutral-100 {
+  @apply !bg-[#798090];
+}
+
+.bg-neutral-200 {
+  @apply !bg-[#6a7283];
+}
+
+.bg-neutral-300 {
+  @apply !bg-[#5b6477];
+}
+
+.bg-neutral-400 {
+  @apply !bg-[#4f586d];
+}
+
+.bg-neutral-500 {
+  @apply !bg-[#404a60];
+}
+
+.bg-neutral-600 {
+  @apply !bg-[#343e56];
+}
+
+.bg-neutral-700 {
+  @apply !bg-[#222e48];
+}
+
+.bg-neutral-800 {
+  @apply !bg-[#13203b];
+}
+
+.bg-neutral-900 {
+  @apply !bg-[#071431];
+}
+
+.bg-light-50 {
+  @apply !bg-[#f5f6fa];
+}
+
+.bg-light-100 {
+  @apply !bg-gray-100;
+}
+
+.bg-light-600 {
+  @apply !bg-[#e4f1ff];
+}
+
+.bg-light-700 {
+  @apply !bg-gray-700;
+}
+
+.bg-light-800 {
+  @apply !bg-gray-800;
+}
+
+.bg-primary-50 {
+  @apply !bg-[#e4f1ff];
+}
+
+.bg-primary-100 {
+  @apply !bg-[#bfdcff];
+}
+
+.bg-primary-200 {
+  @apply !bg-[#95c7ff];
+}
+
+.bg-primary-300 {
+  @apply !bg-[#6bb1ff];
+}
+
+.bg-primary-400 {
+  @apply !bg-[#519fff];
+}
+
+.bg-primary-500 {
+  @apply !bg-[#458eff];
+}
+
+.bg-primary-600 {
+  @apply !bg-[#487fff];
+}
+
+.bg-primary-700 {
+  @apply !bg-[#486cea];
+}
+
+.bg-primary-800 {
+  @apply !bg-[#4759d6];
+}
+
+.bg-primary-900 {
+  @apply !bg-[#4536b6];
+}
+
+.bg-danger-50 {
+  @apply !bg-red-50;
+}
+
+.bg-danger-100 {
+  @apply !bg-red-100;
+}
+
+.bg-danger-200 {
+  @apply !bg-red-200;
+}
+
+.bg-danger-300 {
+  @apply !bg-red-300;
+}
+
+.bg-danger-400 {
+  @apply !bg-red-400;
+}
+
+.bg-danger-500 {
+  @apply !bg-red-500;
+}
+
+.bg-danger-600 {
+  @apply !bg-red-600;
+}
+
+.bg-danger-700 {
+  @apply !bg-red-700;
+}
+
+.bg-danger-800 {
+  @apply !bg-red-800;
+}
+
+.bg-danger-900 {
+  @apply !bg-red-900;
+}
+
+.bg-success-50 {
+  @apply !bg-green-50;
+}
+
+.bg-success-100 {
+  @apply !bg-green-100;
+}
+
+.bg-success-200 {
+  @apply !bg-green-200;
+}
+
+.bg-success-300 {
+  @apply !bg-green-300;
+}
+
+.bg-success-400 {
+  @apply !bg-green-400;
+}
+
+.bg-success-500 {
+  @apply !bg-green-500;
+}
+
+.bg-success-600 {
+  @apply !bg-green-600;
+}
+
+.bg-success-700 {
+  @apply !bg-green-700;
+}
+
+.bg-success-800 {
+  @apply !bg-green-800;
+}
+
+.bg-success-900 {
+  @apply !bg-green-900;
+}
+
+.bg-warning-5 {
+  @apply !bg-[#f376390d];
+}
+
+.bg-warning-30 {
+  @apply !bg-[#f376390d];
+}
+
+.bg-warning-50 {
+  @apply !bg-yellow-50;
+}
+
+.bg-warning-100 {
+  @apply !bg-yellow-100;
+}
+
+.bg-warning-200 {
+  @apply !bg-yellow-200;
+}
+
+.bg-warning-300 {
+  @apply !bg-yellow-300;
+}
+
+.bg-warning-400 {
+  @apply !bg-yellow-400;
+}
+
+.bg-warning-500 {
+  @apply !bg-yellow-500;
+}
+
+.bg-warning-600 {
+  @apply !bg-[#ff9f29];
+}
+
+.bg-warning-700 {
+  @apply !bg-[#f39016];
+}
+
+.bg-warning-800 {
+  @apply !bg-[#e58209];
+}
+
+.bg-warning-900 {
+  @apply !bg-[#d77907];
+}
+
+.bg-info-50 {
+  @apply !bg-blue-50;
+}
+
+.bg-info-100 {
+  @apply !bg-blue-100;
+}
+
+.bg-info-200 {
+  @apply !bg-blue-200;
+}
+
+.bg-info-300 {
+  @apply !bg-blue-300;
+}
+
+.bg-info-400 {
+  @apply !bg-blue-400;
+}
+
+.bg-info-500 {
+  @apply !bg-[#9570f4];
+}
+
+.bg-info-600 {
+  @apply !bg-[#875bf7];
+}
+
+.bg-info-700 {
+  @apply !bg-blue-700;
+}
+
+.bg-info-800 {
+  @apply !bg-blue-800;
+}
+
+.bg-info-900 {
+  @apply !bg-blue-900;
+}
+
+.bg-purple-50 {
+  @apply !bg-[#ede7fe];
+}
+
+.bg-purple-100 {
+  @apply !bg-[#cab6fb];
+}
+
+.bg-purple-200 {
+  @apply !bg-[#a685f9];
+}
+
+.bg-purple-300 {
+  @apply !bg-[#8255f7];
+}
+
+.bg-purple-400 {
+  @apply !bg-[#5f24f4];
+}
+
+.bg-purple-500 {
+  @apply !bg-[#5314f2];
+}
+
+.bg-purple-600 {
+  @apply !bg-[#450bdb];
+}
+
+.bg-purple-700 {
+  @apply !bg-[#3608aa];
+}
+
+.bg-purple-800 {
+  @apply !bg-[#27067a];
+}
+
+.bg-purple-900 {
+  @apply !bg-[#170449];
+}
+
+.bg-yellow-50 {
+  @apply !bg-[#fcefc1];
+}
+
+.bg-yello w-100 {
+  @apply !bg-[#f8e6a7];
+}
+
+.bg-yellow-600 {
+  @apply !bg-[#ffca0e];
+}
+
+.bg-yellow-700 {
+  @apply !bg-[#e1b001];
+}
+
+.hover-bg-main-05:hover {
+  @apply !bg-white;
+}
+
+.hover-bg-main-25:hover {
+  @apply !bg-[#f3f9ff];
+}
+
+.hover-bg-main-50:hover {
+  @apply !bg-[#e6f2fe];
+}
+
+.hover-bg-main-100:hover {
+  @apply !bg-[#c7e3fd];
+}
+
+.hover-bg-main-200:hover {
+  @apply !bg-[#a7d3fc];
+}
+
+.hover-bg-main-300:hover {
+  @apply !bg-[#88c4fb];
+}
+
+.hover-bg-main-400:hover {
+  @apply !bg-[#68b4fa];
+}
+
+.hover-bg-main-500:hover {
+  @apply !bg-[#4aa5f9];
+}
+
+.hover-bg-main-600:hover {
+  @apply !bg-[#066ccb];
+}
+
+.hover-bg-main-700:hover {
+  @apply !bg-[#0661b7];
+}
+
+.hover-bg-main-800:hover {
+  @apply !bg-[#0556a2];
+}
+
+.hover-bg-main-900:hover {
+  @apply !bg-[#044b8e];
+}
+
+.hover-bg-main-two-25:hover {
+  @apply !bg-[#fef7f3];
+}
+
+.hover-bg-main-two-50:hover {
+  @apply !bg-[#fef1eb];
+}
+
+.hover-bg-main-two-100:hover {
+  @apply !bg-[#fde7dc];
+}
+
+.hover-bg-main-two-200:hover {
+  @apply !bg-[#fcddcd];
+}
+
+.hover-bg-main-two-300:hover {
+  @apply !bg-[#fbd3be];
+}
+
+.hover-bg-main-two-400:hover {
+  @apply !bg-[#fac8af];
+}
+
+.hover-bg-main-two-500:hover {
+  @apply !bg-[#fabea1];
+}
+
+.hover-bg-main-two-600:hover {
+  @apply !bg-[#f37739];
+}
+
+.hover-bg-main-two-700:hover {
+  @apply !bg-[#f2641d];
+}
+
+.hover-bg-main-two-800:hover {
+  @apply !bg-[#e3550d];
+}
+
+.hover-bg-main-two-900:hover {
+  @apply !bg-[#c74a0c];
+}
+
+.hover-bg-main-three-25:hover {
+  @apply !bg-[#f1fbf5];
+}
+
+.hover-bg-main-three-50:hover {
+  @apply !bg-[#e8f8ef];
+}
+
+.hover-bg-main-three-100:hover {
+  @apply !bg-[#d1f2de];
+}
+
+.hover-bg-main-three-200:hover {
+  @apply !bg-[#baebce];
+}
+
+.hover-bg-main-three-300:hover {
+  @apply !bg-[#a3e5bd];
+}
+
+.hover-bg-main-three-400:hover {
+  @apply !bg-[#8cdead];
+}
+
+.hover-bg-main-three-500:hover {
+  @apply !bg-[#75d89c];
+}
+
+.hover-bg-main-three-600:hover {
+  @apply !bg-[#2fa75f];
+}
+
+.hover-bg-main-three-700:hover {
+  @apply !bg-[#2a9656];
+}
+
+.hover-bg-main-three-800:hover {
+  @apply !bg-[#26864c];
+}
+
+.hover-bg-main-three-900:hover {
+  @apply !bg-[#217543];
+}
+
+.hover-bg-neutral-10:hover {
+  @apply !bg-white;
+}
+
+.hover-bg-neutral-20:hover {
+  @apply !bg-[#f5f6f7];
+}
+
+.hover-bg-neutral-30:hover {
+  @apply !bg-[#ebecef];
+}
+
+.hover-bg-neutral-40:hover {
+  @apply !bg-[#dfe0e4];
+}
+
+.hover-bg-neutral-50:hover {
+  @apply !bg-[#c1c4cc];
+}
+
+.hover-bg-neutral-60:hover {
+  @apply !bg-[#b2b6bf];
+}
+
+.hover-bg-neutral-70:hover {
+  @apply !bg-[#a6aab5];
+}
+
+.hover-bg-neutral-80:hover {
+  @apply !bg-[#979ca8];
+}
+
+.hover-bg-neutral-90:hover {
+  @apply !bg-[#888e9c];
+}
+
+.hover-bg-neutral-100:hover {
+  @apply !bg-[#798090];
+}
+
+.hover-bg-neutral-200:hover {
+  @apply !bg-[#6a7283];
+}
+
+.hover-bg-neutral-300:hover {
+  @apply !bg-[#5b6477];
+}
+
+.hover-bg-neutral-400:hover {
+  @apply !bg-[#4f586d];
+}
+
+.hover-bg-neutral-500:hover {
+  @apply !bg-[#404a60];
+}
+
+.hover-bg-neutral-600:hover {
+  @apply !bg-[#343e56];
+}
+
+.hover-bg-neutral-700:hover {
+  @apply !bg-[#222e48];
+}
+
+.hover-bg-neutral-800:hover {
+  @apply !bg-[#13203b];
+}
+
+.hover-bg-neutral-900:hover {
+  @apply !bg-[#071431];
+}
+
+.hover-bg-light-50:hover {
+  @apply !bg-[#f5f6fa];
+}
+
+.hover-bg-light-100:hover {
+  @apply !bg-gray-100;
+}
+
+.hover-bg-light-600:hover {
+  @apply !bg-[#e4f1ff];
+}
+
+.hover-bg-light-700:hover {
+  @apply !bg-gray-700;
+}
+
+.hover-bg-light-800:hover {
+  @apply !bg-gray-800;
+}
+
+.hover-bg-primary-50:hover {
+  @apply !bg-[#e4f1ff];
+}
+
+.hover-bg-primary-100:hover {
+  @apply !bg-[#bfdcff];
+}
+
+.hover-bg-primary-200:hover {
+  @apply !bg-[#95c7ff];
+}
+
+.hover-bg-primary-300:hover {
+  @apply !bg-[#6bb1ff];
+}
+
+.hover-bg-primary-400:hover {
+  @apply !bg-[#519fff];
+}
+
+.hover-bg-primary-500:hover {
+  @apply !bg-[#458eff];
+}
+
+.hover-bg-primary-600:hover {
+  @apply !bg-[#487fff];
+}
+
+.hover-bg-primary-700:hover {
+  @apply !bg-[#486cea];
+}
+
+.hover-bg-primary-800:hover {
+  @apply !bg-[#4759d6];
+}
+
+.hover-bg-primary-900:hover {
+  @apply !bg-[#4536b6];
+}
+
+.hover-bg-danger-50:hover {
+  @apply !bg-red-50;
+}
+
+.hover-bg-danger-100:hover {
+  @apply !bg-red-100;
+}
+
+.hover-bg-danger-200:hover {
+  @apply !bg-red-200;
+}
+
+.hover-bg-danger-300:hover {
+  @apply !bg-red-300;
+}
+
+.hover-bg-danger-400:hover {
+  @apply !bg-red-400;
+}
+
+.hover-bg-danger-500:hover {
+  @apply !bg-red-500;
+}
+
+.hover-bg-danger-600:hover {
+  @apply !bg-red-600;
+}
+
+.hover-bg-danger-700:hover {
+  @apply !bg-red-700;
+}
+
+.hover-bg-danger-800:hover {
+  @apply !bg-red-800;
+}
+
+.hover-bg-danger-900:hover {
+  @apply !bg-red-900;
+}
+
+.hover-bg-success-50:hover {
+  @apply !bg-green-50;
+}
+
+.hover-bg-success-100:hover {
+  @apply !bg-green-100;
+}
+
+.hover-bg-success-200:hover {
+  @apply !bg-green-200;
+}
+
+.hover-bg-success-300:hover {
+  @apply !bg-green-300;
+}
+
+.hover-bg-success-400:hover {
+  @apply !bg-green-400;
+}
+
+.hover-bg-success-500:hover {
+  @apply !bg-green-500;
+}
+
+.hover-bg-success-600:hover {
+  @apply !bg-green-600;
+}
+
+.hover-bg-success-700:hover {
+  @apply !bg-green-700;
+}
+
+.hover-bg-success-800:hover {
+  @apply !bg-green-800;
+}
+
+.hover-bg-success-900:hover {
+  @apply !bg-green-900;
+}
+
+.hover-bg-warning-5:hover {
+  @apply !bg-[#f376390d];
+}
+
+.hover-bg-warning-30:hover {
+  @apply !bg-[#f376390d];
+}
+
+.hover-bg-warning-50:hover {
+  @apply !bg-yellow-50;
+}
+
+.hover-bg-warning-100:hover {
+  @apply !bg-yellow-100;
+}
+
+.hover-bg-warning-200:hover {
+  @apply !bg-yellow-200;
+}
+
+.hover-bg-warning-300:hover {
+  @apply !bg-yellow-300;
+}
+
+.hover-bg-warning-400:hover {
+  @apply !bg-yellow-400;
+}
+
+.hover-bg-warning-500:hover {
+  @apply !bg-yellow-500;
+}
+
+.hover-bg-warning-600:hover {
+  @apply !bg-[#ff9f29];
+}
+
+.hover-bg-warning-700:hover {
+  @apply !bg-[#f39016];
+}
+
+.hover-bg-warning-800:hover {
+  @apply !bg-[#e58209];
+}
+
+.hover-bg-warning-900:hover {
+  @apply !bg-[#d77907];
+}
+
+.hover-bg-info-50:hover {
+  @apply !bg-blue-50;
+}
+
+.hover-bg-info-100:hover {
+  @apply !bg-blue-100;
+}
+
+.hover-bg-info-200:hover {
+  @apply !bg-blue-200;
+}
+
+.hover-bg-info-300:hover {
+  @apply !bg-blue-300;
+}
+
+.hover-bg-info-400:hover {
+  @apply !bg-blue-400;
+}
+
+.hover-bg-info-500:hover {
+  @apply !bg-[#9570f4];
+}
+
+.hover-bg-info-600:hover {
+  @apply !bg-[#875bf7];
+}
+
+.hover-bg-info-700:hover {
+  @apply !bg-blue-700;
+}
+
+.hover-bg-info-800:hover {
+  @apply !bg-blue-800;
+}
+
+.hover-bg-info-900:hover {
+  @apply !bg-blue-900;
+}
+
+.hover-bg-purple-50:hover {
+  @apply !bg-[#ede7fe];
+}
+
+.hover-bg-purple-100:hover {
+  @apply !bg-[#cab6fb];
+}
+
+.hover-bg-purple-200:hover {
+  @apply !bg-[#a685f9];
+}
+
+.hover-bg-purple-300:hover {
+  @apply !bg-[#8255f7];
+}
+
+.hover-bg-purple-400:hover {
+  @apply !bg-[#5f24f4];
+}
+
+.hover-bg-purple-500:hover {
+  @apply !bg-[#5314f2];
+}
+
+.hover-bg-purple-600:hover {
+  @apply !bg-[#450bdb];
+}
+
+.hover-bg-purple-700:hover {
+  @apply !bg-[#3608aa];
+}
+
+.hover-bg-purple-800:hover {
+  @apply !bg-[#27067a];
+}
+
+.hover-bg-purple-900:hover {
+  @apply !bg-[#170449];
+}
+
+.hover-bg-yellow-50:hover {
+  @apply !bg-[#fcefc1];
+}
+
+.hover-bg-yello w-100:hover {
+  @apply !bg-[#f8e6a7];
+}
+
+.hover-bg-yellow-600:hover {
+  @apply !bg-[#ffca0e];
+}
+
+.hover-bg-yellow-700:hover {
+  @apply !bg-[#e1b001];
+}
+
+.bg-color-three {
+  @apply !bg-[rgba(47,167,95,0.05)];
+}
+
+.bg-dark-yellow {
+  @apply !bg-[#F3B439];
+}
+
+.hover-bg-white:hover {
+  @apply !bg-white;
+}
+
+.bg-color-black {
+  @apply bg-[#0b1323];
+}
+
+.bg-color-deep-green {
+  @apply bg-[#00a76f];
+}
+
+.bg-color-violet {
+  @apply bg-[#8e33ff];
+}
+
+.bg-color-info {
+  @apply bg-[#00b8d9];
+}
+
+.bg-color-light-green {
+  @apply bg-green-500;
+}
+
+.bg-color-yellow {
+  @apply bg-[#ffab00];
+}
+
+.bg-color-danger {
+  @apply bg-[#ff5630];
+}
+
+.bg-color-blue {
+  @apply bg-[#0066ff];
+}
+
+.bg-color-main-500 {
+  @apply bg-[#066bc9b7];
+}
+
+.bg-color-paste {
+  @apply bg-[#33ff00];
+}
+
+.bg-color-warning {
+  @apply bg-[#ff7a00];
+}
+
+.bg-transparent {
+  @apply !bg-transparent;
+}

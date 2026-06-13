@@ -1,0 +1,39 @@
+.item-hover:hover .item-hover__text {
+  @apply !text-white;
+}
+
+.item-hover:hover .item-hover__text-main {
+  @apply !text-[#066ccb];
+}
+
+.item-hover:hover .item-hover__bg {
+  @apply !bg-white;
+}
+
+.item-hover:hover .item-hover__bg-main {
+  @apply !bg-[#066ccb];
+}
+
+.item-hover:hover .group-hover-item {
+  @apply !block;
+}
+
+.item-hover:hover .group-hover-visible {
+  @apply !visible !opacity-100;
+}
+
+.item-hover:hover .group-hover-transform {
+  @apply opacity-100 scale-90;
+}
+
+.hover-margin-left:hover {
+  margin-inline-start: 16px;
+}
+
+.hover-underline:hover {
+  @apply underline;
+}
+
+.transfrom-scale-0 {
+  @apply opacity-0 scale-0;
+}

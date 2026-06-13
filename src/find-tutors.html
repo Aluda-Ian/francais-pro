@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Find French Tutors | IB, IGCSE &amp; CBSE Experts — Français Pro</title>
+        <link rel="shortcut icon" href="./images/logo/favicon.png" type="image/x-icon">
+        <link rel="icon" href="./images/logo/favicon.png" type="image/x-icon">
+        <meta name="keywords" content="French tutor, IB French, IGCSE French, CBSE French, learn French online">
+        <meta name="description" content="Find expert French tutors for IB, IGCSE, and CBSE. Browse profiles and book trial sessions.">
+        
+        <!-- Google Fonts: Plus Jakarta Sans + Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        
+        <!-- Français Pro Brand Overrides -->
+        <style>
+          :root {
+            --fp-primary: #1754bf;
+            --fp-primary-light: #3071db;
+            --fp-primary-dark: #0f3d91;
+            --fp-accent: #ff0000;
+            --fp-accent-light: #ff3333;
+            --fp-white: #FFFFFF;
+            --fp-cream: #f8f9ff;
+            --fp-font: 'Plus Jakarta Sans', 'Inter', sans-serif;
+          }
+          body { font-family: var(--fp-font) !important; background-color: var(--fp-cream) !important; }
+          .text-main-600 { color: var(--fp-primary) !important; }
+          .bg-main-600 { background-color: var(--fp-primary) !important; }
+          .btn-main { background-color: var(--fp-primary) !important; border-color: var(--fp-primary) !important; }
+          .btn-main:hover { background-color: var(--fp-primary-dark) !important; }
+          .btn-outline-main { color: var(--fp-primary) !important; border-color: var(--fp-primary) !important; }
+          .btn-outline-main:hover { background-color: var(--fp-primary) !important; color: white !important; }
+          .text-main-two-600 { color: var(--fp-accent) !important; }
+          .bg-main-25 { background-color: var(--fp-cream) !important; }
+          .header::before {
+            content: '';
+            display: block;
+            height: 4px;
+            background: linear-gradient(90deg, var(--fp-primary) 33.3%, white 33.3% 66.6%, var(--fp-accent) 66.6%);
+          }
+          .badge-ib { background: #1754bf; color: white; }
+          .badge-igcse { background: #1a3aad; color: white; }
+          .badge-cbse { background: #ED2939; color: white; }
+          .curriculum-badge {
+            padding: 3px 10px; border-radius: 50px;
+            font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+          }
+          .live-class-card {
+            border-left: 4px solid var(--fp-primary);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+          }
+          .live-class-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,35,149,0.12);
+          }
+        </style>
+    </head>
+    <body>
+        <!-- Header element replaced dynamically by navigation.js -->
+        <header class="header"></header>
+
+        <!-- Breadcrumb Section -->
+        <section class="breadcrumb bg-main-25 relative z-1 mb-0 overflow-hidden py-60 border-b border-neutral-10">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="breadcrumb__wrapper text-center">
+                            <h1 class="breadcrumb__title display-5 fw-bold mb-8 text-neutral-800">
+                                Find Expert French Tutors
+                            </h1>
+                            <p class="text-neutral-500 max-w-md mx-auto mb-0">
+                                Connect with specialized instructors for IB, IGCSE, CBSE, and Conversational French.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Listing Section -->
+        <section class="py-60">
+            <div class="container">
+                <div class="row gap-y-32">
+                    <!-- Filters Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="sidebar rounded-16 border border-neutral-30 bg-white p-32">
+                            <h4 class="mb-24 fw-bold">Filter Tutors</h4>
+                            
+                            <!-- Search -->
+                            <div class="mb-24">
+                                <label class="mb-8 text-sm font-semibold text-neutral-700">Search Name/Bio</label>
+                                <div class="relative">
+                                    <input type="text" id="search-input" class="common-input rounded-pill bg-main-25 border-neutral-30 w-full py-12 px-20 text-sm" placeholder="Enter tutor name...">
+                                </div>
+                            </div>
+                            
+                            <!-- Curriculum -->
+                            <div class="mb-24">
+                                <label class="mb-8 text-sm font-semibold text-neutral-700">Curriculum</label>
+                                <select id="selectCurriculum" class="common-input bg-main-25 rounded-pill border-neutral-30 form-select py-12 px-20 text-sm w-full">
+                                    <option value="">All Curriculums</option>
+                                    <option value="IB">IB French</option>
+                                    <option value="IGCSE">IGCSE French</option>
+                                    <option value="CBSE">CBSE French</option>
+                                    <option value="Conversation">Conversation</option>
+                                    <option value="DELF">DELF/DALF Prep</option>
+                                </select>
+                            </div>
+
+                            <!-- Gender -->
+                            <div class="mb-24">
+                                <label class="mb-8 text-sm font-semibold text-neutral-700">Gender</label>
+                                <select id="selectGender" class="common-input bg-main-25 rounded-pill border-neutral-30 form-select py-12 px-20 text-sm w-full">
+                                    <option value="">All Genders</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+
+                            <!-- Location/Country -->
+                            <div class="mb-32">
+                                <label class="mb-8 text-sm font-semibold text-neutral-700">Location/Country</label>
+                                <input type="text" id="location-input" class="common-input rounded-pill bg-main-25 border-neutral-30 w-full py-12 px-20 text-sm" placeholder="e.g. France, Canada">
+                            </div>
+
+                            <!-- Reset Button -->
+                            <button type="button" id="reset-filters-btn" class="btn btn-outline-main rounded-pill fw-semibold w-full py-12 flex items-center justify-center gap-8 text-sm">
+                                <i class="ph ph-arrow-clockwise"></i>
+                                Reset Filters
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tutors List Grid -->
+                    <div class="col-lg-8">
+                        <div class="mb-24 flex items-center justify-between">
+                            <span id="results-count" class="text-neutral-500 font-medium">Loading tutors...</span>
+                        </div>
+                        
+                        <div class="row gap-y-24" id="tutors-container">
+                            <!-- Injected dynamically by tutors.js -->
+                            <div class="col-12 text-center py-40">
+                                <span class="spinner-border text-main-600" role="status"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Footer injected by navigation.js -->
+        <footer class="footer"></footer>
+    </body>
+</html>

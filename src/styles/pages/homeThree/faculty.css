@@ -1,0 +1,9 @@
+.check-list {
+  @apply grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-2;
+}
+
+.text-up {
+  @apply absolute;
+  inset-inline-end: 32px;
+  inset-block-end: calc(100% - 24px);
+}

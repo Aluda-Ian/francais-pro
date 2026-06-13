@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog CMS | Français Pro</title>
+        <link rel="shortcut icon" href="./images/logo/favicon.png" type="image/x-icon">
+        <link rel="icon" href="./images/logo/favicon.png" type="image/x-icon">
+        <meta name="keywords" content="education, lms, Kindergarten, course, online, tutor, tailwind, css, html">
+        <meta name="description" content="LMS, Tutors, Education & Online Course Tailwind CSS Template">
+    </head>
+    <body>
+        
+
+        <!-- ==================== Scroll to Top End Here ==================== -->
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+            </svg>
+        </div>
+        <!-- ==================== Scroll to Top End Here ==================== -->
+
+        <!-- ==================== Header Start Here ==================== -->
+        <header class="header bg-neutral-900"></header>
+        <!-- ==================== Header End Here ==================== -->
+
+        <!-- ========== Dashboard Section Start =========== -->
+        <div class="dashbord bg-main-25 py-40">
+            <div class="container--lg container">
+                <div class="flex flex-col lg:flex-row gap-24">
+                    
+                    <!-- Sidebar Start -->
+                    <div class="dashboard-sidebar max-w-288-px border border-neutral-40 rounded-10 w-100 bg-white px-20 py-24 flex-shrink-0">
+                        <div class="scrollbar min-w-max">
+                            <span class="fw-normal text-14 mb-16 text-neutral-500 block">Français Pro CMS</span>
+                            <ul>
+                                <li class="mb-8">
+                                    <a href="instructor-dashboard.html" class="align-items-center text-14 hover-bg-main-600 hover-text-white rounded-12 item-hover flex flex-wrap gap-8 px-24 py-10 font-medium text-neutral-500">
+                                        <span class="text-16 text-main-600 item-hover__text transition-03">
+                                            <i class="ph-bold ph-house"></i>
+                                        </span>
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="mb-8">
+                                    <a href="cms-blogs.html" class="align-items-center text-14 bg-main-600 text-white rounded-12 item-hover flex flex-wrap gap-8 px-24 py-10 font-medium">
+                                        <span class="text-16 text-white item-hover__text transition-03">
+                                            <i class="ph ph-file-text"></i>
+                                        </span>
+                                        Manage Blogs
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Sidebar End -->
+
+                    <!-- CMS Body Start -->
+                    <div class="dashbord-body flex-grow-1">
+                        <!-- Blog Editor Card -->
+                        <div class="bg-white rounded-16 border border-neutral-30 p-24 mb-32">
+                            <h4 id="editor-title" class="fw-semibold text-neutral-800 mb-20">Create New Blog Post</h4>
+                            
+                            <form id="blog-form">
+                                <input type="hidden" id="blog-id">
+                                <div class="row gap-y-[1rem]">
+                                    <div class="col-sm-12">
+                                        <label for="title" class="mb-8 text-neutral-500 font-medium">Title</label>
+                                        <input type="text" id="title" class="common-input rounded-pill" placeholder="Enter post title..." required>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label for="tags" class="mb-8 text-neutral-500 font-medium">Tags (Comma-separated)</label>
+                                        <input type="text" id="tags" class="common-input rounded-pill" placeholder="e.g. IB, French Grammar, Study Tips">
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label for="summary" class="mb-8 text-neutral-500 font-medium">Summary (Short excerpt)</label>
+                                        <textarea id="summary" class="common-input rounded-12 p-16" style="height: 80px;" placeholder="Brief summary of the article..." maxlength="500"></textarea>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label for="content" class="mb-8 text-neutral-500 font-medium">Body Content</label>
+                                        <textarea id="content" class="common-input rounded-12 p-16" style="height: 300px;" placeholder="Write your blog post content here (HTML supported)..." required></textarea>
+                                    </div>
+                                    <div class="col-sm-12 flex items-center gap-8 py-8">
+                                        <input type="checkbox" id="isPublished" class="w-18 h-18 text-main-600 rounded">
+                                        <label for="isPublished" class="text-neutral-500 font-medium cursor-pointer">Publish Immediately</label>
+                                    </div>
+                                    <div class="col-sm-12 flex gap-12 mt-16">
+                                        <button type="submit" id="submit-btn" class="btn btn-main rounded-pill py-12 px-32 text-white">Save Post</button>
+                                        <button type="button" id="cancel-btn" class="btn btn-outline-main rounded-pill py-12 px-32 hidden">Cancel Edit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Blog Listing Card -->
+                        <div class="bg-white rounded-16 border border-neutral-30 p-24">
+                            <h4 class="fw-semibold text-neutral-800 mb-20">Your Blog Posts</h4>
+                            <div class="overflow-x-auto">
+                                <table class="table w-full text-left" style="min-width: 600px;">
+                                    <thead>
+                                        <tr class="border-b border-neutral-40">
+                                            <th class="py-12 px-8 font-semibold text-neutral-500 text-sm">Title</th>
+                                            <th class="py-12 px-8 font-semibold text-neutral-500 text-sm">Status</th>
+                                            <th class="py-12 px-8 font-semibold text-neutral-500 text-sm">Published At</th>
+                                            <th class="py-12 px-8 font-semibold text-neutral-500 text-sm text-right">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cms-blogs-list">
+                                        <!-- Dynamically loaded -->
+                                        <tr>
+                                            <td colspan="4" class="py-24 text-center text-neutral-400">Loading blog posts...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CMS Body End -->
+
+                </div>
+            </div>
+        </div>
+        <!-- ========== Dashboard Section End =========== -->
+
+        <!-- ==================== Footer Start Here ==================== -->
+        <footer></footer>
+        <!-- ==================== Footer End Here ==================== -->
+
+    </body>
+</html>

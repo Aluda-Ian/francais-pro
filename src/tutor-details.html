@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tutor Profile &amp; Booking — Français Pro</title>
+        <link rel="shortcut icon" href="./images/logo/favicon.png" type="image/x-icon">
+        <link rel="icon" href="./images/logo/favicon.png" type="image/x-icon">
+        
+        <!-- Google Fonts: Plus Jakarta Sans + Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        
+        <!-- Français Pro Brand Overrides -->
+        <style>
+          :root {
+            --fp-primary: #1754bf;
+            --fp-primary-light: #3071db;
+            --fp-primary-dark: #0f3d91;
+            --fp-accent: #ff0000;
+            --fp-accent-light: #ff3333;
+            --fp-white: #FFFFFF;
+            --fp-cream: #f8f9ff;
+            --fp-font: 'Plus Jakarta Sans', 'Inter', sans-serif;
+          }
+          body { font-family: var(--fp-font) !important; background-color: var(--fp-cream) !important; }
+          .text-main-600 { color: var(--fp-primary) !important; }
+          .bg-main-600 { background-color: var(--fp-primary) !important; }
+          .btn-main { background-color: var(--fp-primary) !important; border-color: var(--fp-primary) !important; }
+          .btn-main:hover { background-color: var(--fp-primary-dark) !important; }
+          .btn-outline-main { color: var(--fp-primary) !important; border-color: var(--fp-primary) !important; }
+          .btn-outline-main:hover { background-color: var(--fp-primary) !important; color: white !important; }
+          .text-main-two-600 { color: var(--fp-accent) !important; }
+          .bg-main-25 { background-color: var(--fp-cream) !important; }
+          .header::before {
+            content: '';
+            display: block;
+            height: 4px;
+            background: linear-gradient(90deg, var(--fp-primary) 33.3%, white 33.3% 66.6%, var(--fp-accent) 66.6%);
+          }
+          .badge-ib { background: #1754bf; color: white; }
+          .badge-igcse { background: #3071db; color: white; }
+          .badge-cbse { background: #ff0000; color: white; }
+          .curriculum-badge {
+            padding: 3px 10px; border-radius: 50px;
+            font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+          }
+          .live-class-card {
+            border-left: 4px solid var(--fp-primary);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+          }
+          .live-class-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,35,149,0.08);
+          }
+        </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header"></header>
+
+        <!-- Breadcrumb -->
+        <section class="breadcrumb bg-main-25 relative z-1 mb-0 overflow-hidden py-40 border-b border-neutral-10">
+            <div class="container">
+                <div class="breadcrumb__wrapper">
+                    <ul class="breadcrumb__list flex items-center gap-8 text-sm font-medium">
+                        <li class="breadcrumb__item">
+                            <a href="index.html" class="text-neutral-500 hover:text-main-600">Home</a>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <i class="ph ph-caret-right text-neutral-400"></i>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <a href="find-tutors.html" class="text-neutral-500 hover:text-main-600">Find Tutors</a>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <i class="ph ph-caret-right text-neutral-400"></i>
+                        </li>
+                        <li class="breadcrumb__item text-main-two-600" id="tutor-name-breadcrumb">
+                            Tutor Details
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutor Details Content Section -->
+        <section class="tutor-details py-60" id="tutor-details-section">
+            <div class="container">
+                <div class="row gap-y-32">
+                    <!-- Left Profile Column -->
+                    <div class="col-lg-4" id="tutor-profile-col">
+                        <div class="border-neutral-30 rounded-12 border bg-white p-8">
+                            <div class="text-center py-40">
+                                <span class="spinner-border text-main-600" role="status"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Tabs Column -->
+                    <div class="col-lg-8">
+                        <!-- Navigation Tabs -->
+                        <ul class="nav nav-pills common-tab border-neutral-30 rounded-pill inline-flex gap-16 border bg-white p-12 w-full flex-wrap justify-start" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link rounded-pill bg-main-25 text-sm active py-10 px-20 font-medium text-neutral-600" id="pills-tutionInfo-tab" data-bs-toggle="pill" data-bs-target="#pills-tutionInfo" type="button" role="tab" aria-selected="true">
+                                    Profile &amp; Spec
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link rounded-pill bg-main-25 text-sm py-10 px-20 font-medium text-neutral-600" id="pills-qualification-tab" data-bs-toggle="pill" data-bs-target="#pills-qualification" type="button" role="tab" aria-selected="false">
+                                    Qualifications
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link rounded-pill bg-main-25 text-sm py-10 px-20 font-medium text-neutral-600" id="pills-slots-tab" data-bs-toggle="pill" data-bs-target="#pills-slots" type="button" role="tab" aria-selected="false">
+                                    Available Slots
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content Container -->
+                        <div class="tab-content" id="tutor-tabs-content">
+                            <!-- Tuition Info Tab -->
+                            <div class="tab-pane fade show active" id="pills-tutionInfo" role="tabpanel">
+                                <div class="text-center py-40">Loading details...</div>
+                            </div>
+                            
+                            <!-- Qualifications Tab -->
+                            <div class="tab-pane fade" id="pills-qualification" role="tabpanel">
+                                <div class="text-center py-40">Loading credentials...</div>
+                            </div>
+
+                            <!-- Booking Slots Tab -->
+                            <div class="tab-pane fade" id="pills-slots" role="tabpanel">
+                                <div class="text-center py-40">Loading slots...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer"></footer>
+    </body>
+</html>

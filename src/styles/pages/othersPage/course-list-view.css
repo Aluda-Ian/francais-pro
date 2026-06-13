@@ -1,0 +1,24 @@
+@media screen and (max-width: 1399px) {
+  .sidebar {
+    @apply !p-6;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .sidebar {
+    @apply !p-4;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .sidebar {
+    @apply !fixed z-[99] w-full max-w-[348px] -translate-x-full overflow-y-auto h-screen !rounded-none !border-0 top-0;
+    transition: 0.2s linear;
+    inset-inline-start: 0;
+    border-inline-end: 1px solid #ebecef !important;
+  }
+
+  .sidebar.active {
+    @apply translate-x-[0%];
+  }
+}

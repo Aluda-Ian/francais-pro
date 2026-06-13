@@ -1,0 +1,39 @@
+.mash-bg-main {
+  @apply relative before:absolute before:content-[""] before:w-[200px] before:h-[200px] before:bg-[#066ccb] before:blur-[400px] before:-translate-y-2/4 before:z-[-1] before:rounded-[50%] before:top-2/4 relative before:absolute before:content-[""] before:w-[200px] before:h-[200px] before:bg-[#066ccb] before:blur-[400px] before:-translate-y-2/4 before:z-[-1] before:rounded-[50%] before:top-2/4;
+}
+
+.mash-bg-main.mash-main-style-two::before {
+  @apply w-[585px] h-[585px] bg-[#baebce];
+  inset-inline-start: 10%;
+}
+
+.mash-bg-main::before {
+  inset-inline-start: 0;
+}
+
+.mash-bg-main-two {
+  @apply relative after:absolute after:content-[""] after:w-[200px] after:h-[200px] after:bg-[#f37739] after:blur-[400px] after:-translate-y-2/4 after:z-[-1] after:rounded-[50%] after:top-2/4;
+}
+
+.mash-bg-main-two.mash-two-style-two::after {
+  @apply w-[585px] h-[585px] bg-[#fcddcd];
+  inset-inline-end: 10%;
+}
+
+.mash-bg-main-two::after {
+  inset-inline-end: 0;
+}
+
+.mash-reverse.mash-bg-main::before {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+.mash-reverse.mash-bg-main::after {
+  inset-inline-end: auto;
+  inset-inline-start: 0;
+}
+
+.mash-bg-main::before {
+  inset-inline-start: 0;
+}

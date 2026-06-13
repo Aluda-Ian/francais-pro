@@ -1,0 +1,201 @@
+.text-inherit {
+  @apply !text-[inherit];
+}
+.text-xs {
+  @apply !text-xs;
+}
+.text-sm {
+  @apply !text-sm;
+}
+.text-md {
+  @apply !text-base;
+}
+.text-lg {
+  @apply !text-lg;
+}
+.text-xl {
+  @apply !text-xl;
+}
+.text-2xl {
+  @apply !text-2xl;
+}
+.text-3xl {
+  @apply !text-3xl;
+}
+.text-4xl {
+  @apply !text-4xl;
+}
+.text-5xl {
+  @apply !text-5xl;
+}
+.text-6xl {
+  @apply !text-6xl;
+}
+.text-6xxl {
+  @apply !text-7xl;
+}
+.text-6xxxl {
+  @apply !text-[5rem];
+}
+.text-1 {
+  @apply !text-[0.0625rem];
+}
+.text-2 {
+  @apply !text-[0.125rem];
+}
+.text-3 {
+  @apply !text-[0.1875rem];
+}
+.text-4 {
+  @apply !text-[0.25rem];
+}
+.text-5 {
+  @apply !text-[0.3125rem];
+}
+.text-6 {
+  @apply !text-[0.375rem];
+}
+.text-7 {
+  @apply !text-[0.4375rem];
+}
+.text-8 {
+  @apply !text-[0.5rem];
+}
+.text-9 {
+  @apply !text-[0.5625rem];
+}
+.text-10 {
+  @apply !text-[0.625rem];
+}
+.text-11 {
+  @apply !text-[0.6875rem];
+}
+.text-12 {
+  @apply !text-xs;
+}
+.text-13 {
+  @apply !text-[0.8125rem];
+}
+.text-14 {
+  @apply !text-sm;
+}
+.text-16 {
+  @apply !text-base;
+}
+.text-18 {
+  @apply !text-lg;
+}
+.text-20 {
+  @apply !text-xl;
+}
+.text-21 {
+  @apply !text-[1.3125rem];
+}
+.text-22 {
+  @apply !text-[1.375rem];
+}
+.text-24 {
+  @apply !text-2xl;
+}
+.text-26 {
+  @apply !text-[1.625rem];
+}
+.text-28 {
+  @apply !text-[1.75rem];
+}
+.text-30 {
+  @apply !text-3xl;
+}
+.text-32 {
+  @apply !text-[2rem];
+}
+.text-36 {
+  @apply !text-4xl;
+}
+.text-38 {
+  @apply !text-[2.375rem];
+}
+.text-40 {
+  @apply !text-[2.5rem];
+}
+.text-44 {
+  @apply !text-[2.75rem];
+}
+.text-48 {
+  @apply !text-5xl;
+}
+.text-50 {
+  @apply !text-[3.125rem];
+}
+.text-51 {
+  @apply !text-[3.1875rem];
+}
+.text-52 {
+  @apply !text-[3.25rem];
+}
+.text-54 {
+  @apply !text-[3.375rem];
+}
+.text-56 {
+  @apply !text-[3.5rem];
+}
+.text-60 {
+  @apply !text-6xl;
+}
+.text-64 {
+  @apply !text-[4rem];
+}
+.text-68 {
+  @apply !text-[4.25rem];
+}
+.text-72 {
+  @apply !text-7xl;
+}
+.text-76 {
+  @apply !text-[4.75rem];
+}
+.text-80 {
+  @apply !text-[5rem];
+}
+.text-85 {
+  @apply !text-[5.3125rem];
+}
+.text-90 {
+  @apply !text-[5.625rem];
+}
+.text-96 {
+  @apply !text-8xl;
+}
+.text-104 {
+  @apply !text-[6.5rem];
+}
+.text-110 {
+  @apply !text-[6.875rem];
+}
+.text-120 {
+  @apply !text-[7.5rem];
+}
+.text-126 {
+  @apply !text-[7.875rem];
+}
+.text-136 {
+  @apply !text-[8.5rem];
+}
+.text-144 {
+  @apply !text-[9rem];
+}
+.text-154 {
+  @apply !text-[9.625rem];
+}
+.text-160 {
+  @apply !text-[10rem];
+}
+.text-184 {
+  @apply !text-[11.5rem];
+}
+.text-187 {
+  @apply !text-[11.6875rem];
+}
+.font-size-20-px {
+  @apply !text-[clamp(1rem,_0.25rem_+_1.5625vw,_1.25rem)];
+}

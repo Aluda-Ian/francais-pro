@@ -1,0 +1,29 @@
+.overlay {
+  @apply fixed w-full h-full content-[""] bg-[#00000060] z-[99] transition-[0.2s] duration-[linear] invisible opacity-0;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+}
+
+.overlay.show-overlay {
+  @apply visible opacity-100;
+}
+
+.side-overlay {
+  @apply fixed w-full h-full content-[""] bg-[#00000060] z-[99] transition-[0.2s] duration-[linear] invisible opacity-0;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+}
+
+.side-overlay.show {
+  @apply visible opacity-100;
+}
+
+.student-overlay-sidebar {
+  @apply fixed w-full h-full content-[""] bg-[#00000060] z-[99] transition-[0.2s] duration-[linear] invisible opacity-0;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+}
+
+.student-overlay-sidebar.show {
+  @apply visible opacity-100;
+}

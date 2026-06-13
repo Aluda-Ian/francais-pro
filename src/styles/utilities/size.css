@@ -1,0 +1,623 @@
+.w-1 {
+  @apply !w-px;
+}
+
+.w-2 {
+  @apply !w-0.5;
+}
+
+.w-3 {
+  @apply !w-[0.1875rem];
+}
+
+.w-4 {
+  @apply !w-1;
+}
+
+.w-5 {
+  @apply !w-[0.3125rem];
+}
+
+.w-6 {
+  @apply !w-1.5;
+}
+
+.w-7 {
+  @apply !w-[0.4375rem];
+}
+
+.w-8 {
+  @apply !w-2;
+}
+
+.w-9 {
+  @apply !w-[0.5625rem];
+}
+
+.w-10 {
+  @apply !w-2.5;
+}
+
+.w-11 {
+  @apply !w-[0.6875rem];
+}
+
+.w-12 {
+  @apply !w-3;
+}
+
+.w-13 {
+  @apply !w-[0.8125rem];
+}
+
+.w-14 {
+  @apply !w-3.5;
+}
+
+.w-16 {
+  @apply !w-4;
+}
+
+.w-18 {
+  @apply !w-[1.125rem];
+}
+
+.w-20 {
+  @apply !w-5;
+}
+
+.w-21 {
+  @apply !w-[1.3125rem];
+}
+
+.w-22 {
+  @apply !w-[1.375rem];
+}
+
+.w-24 {
+  @apply !w-6;
+}
+
+.w-26 {
+  @apply !w-[1.625rem];
+}
+
+.w-28 {
+  @apply !w-7;
+}
+
+.w-30 {
+  @apply !w-[1.875rem];
+}
+
+.w-32 {
+  @apply !w-8;
+}
+
+.w-36 {
+  @apply !w-9;
+}
+
+.w-38 {
+  @apply !w-[2.375rem];
+}
+
+.w-40 {
+  @apply !w-10;
+}
+
+.w-44 {
+  @apply !w-11;
+}
+
+.w-48 {
+  @apply !w-12;
+}
+
+.w-50 {
+  @apply !w-[3.125rem];
+}
+
+.w-51 {
+  @apply !w-[3.1875rem];
+}
+
+.w-52 {
+  @apply !w-[3.25rem];
+}
+
+.w-54 {
+  @apply !w-[3.375rem];
+}
+
+.w-56 {
+  @apply !w-14;
+}
+
+.w-60 {
+  @apply !w-[3.75rem];
+}
+
+.w-64 {
+  @apply !w-16;
+}
+
+.w-68 {
+  @apply !w-[4.25rem];
+}
+
+.w-72 {
+  @apply !w-[4.5rem];
+}
+
+.w-76 {
+  @apply !w-[4.75rem];
+}
+
+.w-80 {
+  @apply !w-20;
+}
+
+.w-85 {
+  @apply !w-[5.3125rem];
+}
+
+.w-90 {
+  @apply !w-[5.625rem];
+}
+
+.w-96 {
+  @apply !w-24;
+}
+
+.w-104 {
+  @apply !w-[6.5rem];
+}
+
+.w-110 {
+  @apply !w-[6.875rem];
+}
+
+.w-120 {
+  @apply !w-[7.5rem];
+}
+
+.w-126 {
+  @apply !w-[7.875rem];
+}
+
+.w-136 {
+  @apply !w-[8.5rem];
+}
+
+.w-144 {
+  @apply !w-36;
+}
+
+.w-154 {
+  @apply !w-[9.625rem];
+}
+
+.w-160 {
+  @apply !w-40;
+}
+
+.w-184 {
+  @apply !w-[11.5rem];
+}
+
+.w-187 {
+  @apply !w-[11.6875rem];
+}
+
+.h-1 {
+  @apply !h-px;
+}
+
+.h-2 {
+  @apply !h-0.5;
+}
+
+.h-3 {
+  @apply !h-[0.1875rem];
+}
+
+.h-4 {
+  @apply !h-1;
+}
+
+.h-5 {
+  @apply !h-[0.3125rem];
+}
+
+.h-6 {
+  @apply !h-1.5;
+}
+
+.h-7 {
+  @apply !h-[0.4375rem];
+}
+
+.h-8 {
+  @apply !h-2;
+}
+
+.h-9 {
+  @apply !h-[0.5625rem];
+}
+
+.h-10 {
+  @apply !h-2.5;
+}
+
+.h-11 {
+  @apply !h-[0.6875rem];
+}
+
+.h-12 {
+  @apply !h-3;
+}
+
+.h-13 {
+  @apply !h-[0.8125rem];
+}
+
+.h-14 {
+  @apply !h-3.5;
+}
+
+.h-16 {
+  @apply !h-4;
+}
+
+.h-18 {
+  @apply !h-[1.125rem];
+}
+
+.h-20 {
+  @apply !h-5;
+}
+
+.h-21 {
+  @apply !h-[1.3125rem];
+}
+
+.h-22 {
+  @apply !h-[1.375rem];
+}
+
+.h-24 {
+  @apply !h-6;
+}
+
+.h-26 {
+  @apply !h-[1.625rem];
+}
+
+.h-28 {
+  @apply !h-7;
+}
+
+.h-30 {
+  @apply !h-[1.875rem];
+}
+
+.h-32 {
+  @apply !h-8;
+}
+
+.h-36 {
+  @apply !h-9;
+}
+
+.h-38 {
+  @apply !h-[2.375rem];
+}
+
+.h-40 {
+  @apply !h-10;
+}
+
+.h-44 {
+  @apply !h-11;
+}
+
+.h-48 {
+  @apply !h-12;
+}
+
+.h-50 {
+  @apply !h-[3.125rem];
+}
+
+.h-51 {
+  @apply !h-[3.1875rem];
+}
+
+.h-52 {
+  @apply !h-[3.25rem];
+}
+
+.h-54 {
+  @apply !h-[3.375rem];
+}
+
+.h-56 {
+  @apply !h-14;
+}
+
+.h-60 {
+  @apply !h-[3.75rem];
+}
+
+.h-64 {
+  @apply !h-16;
+}
+
+.h-68 {
+  @apply !h-[4.25rem];
+}
+
+.h-72 {
+  @apply !h-[4.5rem];
+}
+
+.h-76 {
+  @apply !h-[4.75rem];
+}
+
+.h-80 {
+  @apply !h-20;
+}
+
+.h-85 {
+  @apply !h-[5.3125rem];
+}
+
+.h-90 {
+  @apply !h-[5.625rem];
+}
+
+.h-96 {
+  @apply !h-24;
+}
+
+.h-104 {
+  @apply !h-[6.5rem];
+}
+
+.h-110 {
+  @apply !h-[6.875rem];
+}
+
+.h-120 {
+  @apply !h-[7.5rem];
+}
+
+.h-126 {
+  @apply !h-[7.875rem];
+}
+
+.h-136 {
+  @apply !h-[8.5rem];
+}
+
+.h-144 {
+  @apply !h-36;
+}
+
+.h-154 {
+  @apply !h-[9.625rem];
+}
+
+.h-160 {
+  @apply !h-40;
+}
+
+.h-184 {
+  @apply !h-[11.5rem];
+}
+
+.h-187 {
+  @apply !h-[11.6875rem];
+}
+
+.min-h-252 {
+  @apply !min-h-[252px];
+}
+
+.min-h-inherit {
+  @apply !min-h-[inherit];
+}
+
+.max-h-unset {
+  @apply !max-h-[unset];
+}
+
+.max-h-416 {
+  @apply !max-h-[416px];
+}
+
+.max-h-150 {
+  @apply !max-h-[150px];
+}
+
+.max-w-unset {
+  @apply !max-w-[unset];
+}
+
+.max-w-340 {
+  @apply !max-w-[340px];
+}
+
+@media (min-width: 576x) {
+  .max-w-274 {
+    @apply !max-w-[274px];
+  }
+}
+
+.max-w-176 {
+  @apply !max-w-[176px];
+}
+
+.max-w-116 {
+  @apply !max-w-[116px];
+}
+
+.max-w-454 {
+  @apply !max-w-[454px];
+}
+
+.max-w-306 {
+  @apply !max-w-[306px];
+}
+
+.max-w-708 {
+  @apply !max-w-[708px];
+}
+
+.min-w-320 {
+  @apply !min-w-[320px];
+}
+
+.max-w-150 {
+  @apply !max-w-[150px];
+}
+
+.max-w-636 {
+  @apply !max-w-[636px];
+}
+
+.max-w-646 {
+  @apply !max-w-[646px];
+}
+
+.max-w-611 {
+  @apply !max-w-[611px];
+}
+
+.max-w-416 {
+  @apply !max-w-[416px];
+}
+
+.tw-max-width-742-px {
+  @apply !max-w-[742px];
+}
+
+.tw-max-width-22 {
+  @apply !max-w-[22%];
+}
+
+.max-w-416-px {
+  @apply !max-w-[416px];
+}
+
+.max-w-557-px {
+  @apply !max-w-[557px];
+}
+
+.max-w-357-px {
+  @apply !max-w-[357px];
+}
+
+.max-w-506-px {
+  @apply !max-w-[506px];
+}
+
+.max-w-535-px {
+  @apply !max-w-[535px];
+}
+
+.max-w-526-px {
+  @apply !max-w-[526px];
+}
+
+.max-w-632-px {
+  @apply !max-w-[632px];
+}
+
+.max-w-636-px {
+  @apply !max-w-[636px];
+}
+
+.max-w-286-px {
+  @apply !max-w-[286px];
+}
+
+.max-w-288-px {
+  @apply !max-w-[288px];
+}
+
+.max-w-1536-px {
+  @apply !max-w-screen-2xl;
+}
+
+.max-w-1016-px {
+  @apply !max-w-[1016px];
+}
+
+.max-w-366-px {
+  @apply !max-w-[366px];
+}
+
+.max-w-344-px {
+  @apply !max-w-[344px];
+}
+
+.max-w-420-px {
+  @apply !max-w-[420px];
+}
+
+.max-w-514-px {
+  @apply !max-w-[514px];
+}
+
+.max-w-220-px {
+  @apply !max-w-[220px];
+}
+
+.max-w-240-px {
+  @apply !max-w-[240px];
+}
+
+.max-w-330-px {
+  @apply !max-w-[330px];
+}
+
+.max-w-268-px {
+  @apply !max-w-[268px];
+}
+
+.max-w-234-px {
+  @apply !max-w-[234px];
+}
+
+@media (min-width: 992px) {
+  .lg-w-50-percent {
+    @apply !w-6/12;
+  }
+}
+
+.w-50-percent {
+  @apply !w-6/12;
+}
+
+.h-50-px {
+  @apply h-[50px];
+}
+
+.h-166-px {
+  @apply h-[166px];
+}
+
+.w-257-px {
+  @apply w-[257px];
+}
+
+.min-w-max {
+  @apply min-w-max;
+}
+
+.h-6px {
+  @apply h-1.5;
+}

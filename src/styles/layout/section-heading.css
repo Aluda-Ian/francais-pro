@@ -1,0 +1,51 @@
+.section-heading {
+  @apply max-w-screen-sm;
+  @apply mb-[clamp(2rem,_-0.13rem_+_4.437vw,_3.75rem)];
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.section-heading__subtitle {
+  @apply bg-white uppercase tracking-[0.11em] px-2.5 py-[5px] rounded-[3px];
+  margin-block-end: 10px;
+}
+
+.section-heading__title {
+  @apply relative;
+  margin-block-end: 16px;
+}
+
+.section-heading__desc {
+  @apply max-w-[750px];
+  @apply mt-[clamp(1rem,_-0.217rem_+_2.536vw,_2rem)] text-[clamp(1rem,_0.848rem_+_0.317vw,_1.125rem)];
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.section-heading.style-left {
+  @apply text-left;
+  margin-inline-start: 0;
+}
+
+.section-heading.style-left .section-heading__desc {
+  margin-inline-start: 0;
+}
+
+.section-heading.style-flex {
+  @apply flex max-w-[unset] items-center justify-between flex-wrap;
+}
+
+.section-heading.style-flex .section-heading__inner {
+  @apply max-w-[630px];
+}
+
+.section-heading.style-flex .section-heading__content {
+  @apply max-w-[432px];
+  margin-inline-start: 0;
+}
+
+@media (min-width: 1199px) {
+  .section-heading.style-flex .section-heading__content {
+    margin-inline-start: auto !important;
+  }
+}

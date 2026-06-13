@@ -1,0 +1,22 @@
+.testimonials-three-item {
+  transition: 0.2s linear;
+}
+
+@media (min-width: 575px) {
+  .testimonials-three .slick-list {
+    @apply !px-0 !py-[90px];
+  }
+
+  .testimonials-three .slick-slide {
+    @apply opacity-60 m-0;
+    transition: 0.4s linear;
+  }
+
+  .testimonials-three .slick-slide.slick-current.slick-center {
+    @apply opacity-100 origin-center scale-x-[1.36] scale-y-125;
+  }
+
+  .testimonials-three .slick-slide.slick-current.slick-center .testimonials-three-item {
+    @apply !shadow-[0_6px_30px_0px_rgba(0,0,0,0.14)];
+  }
+}

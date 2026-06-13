@@ -1,0 +1,27 @@
+@media screen and (max-width: 1399px) {
+  .course-details .p-32 {
+    @apply !p-6;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .course-details .p-32 {
+    @apply !p-4;
+  }
+}
+
+.curriculam-item {
+  @apply px-8 py-5 border-b-[#ebecef] border-b border-dashed last:!border-b-0;
+}
+
+@media screen and (max-width: 1399px) {
+  .curriculam-item {
+    @apply !px-6 !py-5;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .curriculam-item {
+    @apply p-4;
+  }
+}

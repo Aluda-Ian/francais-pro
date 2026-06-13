@@ -1,0 +1,77 @@
+.dashboard-sidebar {
+  @apply h-screen !fixed z-[999] top-0;
+}
+
+.dashboard-sidebar ul li.activePage>a {
+  @apply !text-white bg-[#066ccb];
+}
+
+.dashboard-sidebar ul li.activePage>a i {
+  @apply text-white;
+}
+
+.student-dashboard-sidebar {
+  @apply h-screen z-[999] top-0 !sticky;
+}
+
+.student-dashboard-sidebar ul li.activePage>a {
+  @apply !text-white bg-[#066ccb];
+}
+
+.student-dashboard-sidebar ul li.activePage>a i {
+  @apply text-white;
+}
+
+.student-dashboard-sidebar.active {
+  @apply translate-x-0;
+}
+
+@media (max-width: 1200px) {
+  .student-dashboard-sidebar {
+    @apply !fixed !z-[999] w-full max-w-[348px] -translate-x-full overflow-y-auto h-screen !rounded-none !border-0 top-0;
+    transition: 0.3s !important;
+    inset-inline-start: 0;
+    border-inline-end: 1px solid #ebecef !important;
+  }
+}
+
+.dashboard-sidebar.active {
+  @apply translate-x-0;
+}
+
+
+
+@media (max-width: 991px) {
+  .dashboard-sidebar {
+    @apply !fixed z-[99] w-full max-w-[348px] -translate-x-full overflow-y-auto h-screen !rounded-none !border-0 top-0;
+    transition: 0.2s linear;
+    inset-inline-start: 0;
+    border-inline-end: 1px solid #ebecef !important;
+  }
+}
+
+div.dt-container.dt-empty-footer tbody>tr:last-child>* {
+  @apply border-b-[#ebecef] border-b border-solid;
+}
+
+table.dataTable.display>tbody>tr>* {
+  @apply border-t-[#ebecef] border-t border-solid;
+}
+
+@media (min-width: 992px) {
+  .dashbord-body {
+    margin-inline-start: 288px;
+  }
+}
+
+.scrollbar {
+  @apply h-[calc(100vh_-_167px)] overflow-y-auto pb-6;
+}
+
+.student-dashbord-scrollbar {
+  @apply h-[calc(100vh_-_349px)] overflow-y-auto pb-6;
+}
+
+.dataTables_scrollHeadInner {
+  @apply !pr-0;
+}
