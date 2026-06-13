@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const token = localStorage.getItem('token');
+    // Only run on dashboard page
+    if (!window.location.pathname.includes('dashboard.html')) return;
+
+    const token = localStorage.getItem('fp_token') || localStorage.getItem('token');
     if (!token) {
         window.location.href = 'sign-in.html';
         return;
@@ -14,6 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
         if (!meRes.ok) {
+            localStorage.removeItem('fp_token');
             localStorage.removeItem('token');
             window.location.href = 'sign-in.html';
             return;
@@ -37,35 +41,124 @@ document.addEventListener('DOMContentLoaded', async () => {
         const dashData = await dashRes.json();
 
         // 3. Update DOM dynamically
-        // Replace user name in sidebar
-        const nameElements = Array.from(document.querySelectorAll('span')).filter(el => el.textContent.includes('Welcome'));
-        nameElements.forEach(el => {
-            el.textContent = `Welcome ${meData.user.name},`;
+
+        // --- Sidebar Filtering ---
+        const sidebarItems = document.querySelectorAll('li[data-allowed-roles]');
+        sidebarItems.forEach(item => {
+            const allowedRoles = item.getAttribute('data-allowed-roles').split(',');
+            if (!allowedRoles.includes(role)) {
+                item.style.display = 'none';
+            }
         });
 
-        const updateMetric = (label, value) => {
-            document.querySelectorAll('span').forEach(el => {
-                if (el.textContent.trim() === label) {
-                    const h6 = el.nextElementSibling;
-                    if (h6 && h6.tagName === 'H6') {
-                        h6.textContent = value;
-                    }
-                }
-            });
+        // --- Metric Updating ---
+        // Replace user name in sidebar and header
+        const nameElements = document.querySelectorAll('.user-display-name');
+        nameElements.forEach(el => {
+            el.textContent = meData.user.name;
+        });
+
+        const metricCols = document.querySelectorAll('.col-xl-4.col-sm-6');
+        metricCols.forEach(col => col.style.display = 'none');
+        
+        const updateMetricCard = (cardIndex, label, value, iconFile) => {
+            if (cardIndex < metricCols.length) {
+                const col = metricCols[cardIndex];
+                col.style.display = 'block';
+                const labelEl = col.querySelector('span.fw-normal');
+                const valEl = col.querySelector('h6');
+                const imgEl = col.querySelector('img');
+                
+                if(labelEl) labelEl.textContent = label;
+                if(valEl) valEl.textContent = value;
+                if(imgEl && iconFile) imgEl.src = `./images/icons/${iconFile}`;
+            }
         };
 
         if (role === 'admin') {
-            updateMetric('Total Courses', dashData.metrics.totalCourses);
-            updateMetric('Total Students', dashData.metrics.totalStudents);
-            updateMetric('Total Instructors', dashData.metrics.totalInstructors || '0');
-            updateMetric('Enrolled Courses', dashData.metrics.totalEnrollments);
+            updateMetricCard(0, 'Total Courses', dashData.metrics.totalCourses, 'dashbord-item1.png');
+            updateMetricCard(1, 'Total Students', dashData.metrics.totalStudents, 'dashbord-item5.png');
+            updateMetricCard(2, 'Total Instructors', dashData.metrics.totalInstructors || '0', 'dashbord-item2.png');
+            updateMetricCard(3, 'Enrolled Courses', dashData.metrics.totalEnrollments, 'dashbord-item4.png');
         } else if (role === 'student') {
-            updateMetric('Enrolled Courses', dashData.metrics.totalEnrolled);
-            updateMetric('Active Courses', dashData.metrics.activeCourses);
-            updateMetric('Completed Courses', dashData.metrics.completedCourses);
+            updateMetricCard(0, 'Enrolled Courses', dashData.metrics.totalEnrolled, 'dashbord-item1.png');
+            updateMetricCard(1, 'Active Courses', dashData.metrics.activeCourses, 'dashbord-item3.png');
+            updateMetricCard(2, 'Completed Courses', dashData.metrics.completedCourses, 'dashbord-item4.png');
         } else if (role === 'instructor') {
-            updateMetric('Total Courses', dashData.metrics.totalCourses);
-            updateMetric('Total Students Enrolled', dashData.metrics.totalStudentsEnrolled);
+            updateMetricCard(0, 'Total Courses', dashData.metrics.totalCourses, 'dashbord-item1.png');
+            updateMetricCard(1, 'Students Enrolled', dashData.metrics.totalStudentsEnrolled, 'dashbord-item5.png');
+        }
+
+        // --- Render Admin Tables ---
+        if (role === 'admin' && dashData.recentBookings) {
+            // Find the table container (e.g. Recent Course table or Reviews table) and hijack it for Bookings
+            const tables = document.querySelectorAll('.rounded-10.bg-white.px-24.py-24');
+            if (tables.length > 0) {
+                const tableContainer = tables[0];
+                tableContainer.innerHTML = `
+                    <div class="align-items-center justify-content-between mb-24 flex">
+                        <h6 class="text-16 mb-0 font-medium text-neutral-500">Recent Live Class Bookings</h6>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="display min-w-max w-100 table-borderless">
+                            <thead>
+                                <tr class="bg-main-25 border-bottom border-neutral-30">
+                                    <th class="text-12 px-20 py-16 font-medium text-neutral-500">Student</th>
+                                    <th class="text-12 px-20 py-16 font-medium text-neutral-500">Class Title</th>
+                                    <th class="text-12 px-20 py-16 font-medium text-neutral-500">Status</th>
+                                    <th class="text-12 px-20 py-16 font-medium text-neutral-500">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${dashData.recentBookings.length === 0 ? '<tr><td colspan="4" class="px-20 py-22 text-neutral-500">No bookings yet.</td></tr>' : 
+                                  dashData.recentBookings.map(b => `
+                                  <tr class="hover-bg-neutral-20 border-bottom transition-03">
+                                      <td class="px-20 py-22 text-14">${b.student?.name || 'Unknown'}</td>
+                                      <td class="px-20 py-22 text-14">${b.liveClass?.title || 'Unknown'}</td>
+                                      <td class="px-20 py-22 text-14"><span class="badge ${b.status === 'confirmed' ? 'bg-success-50 text-success-600' : 'bg-danger-50 text-danger'} px-12 py-6 rounded-pill">${b.status}</span></td>
+                                      <td class="px-20 py-22 text-14">${new Date(b.createdAt).toLocaleDateString()}</td>
+                                  </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            }
+            
+            // Hijack second table for Enrollments
+            if (tables.length > 1 && dashData.recentEnrollments) {
+                const tableContainer2 = tables[1];
+                tableContainer2.innerHTML = `
+                    <div class="align-items-center justify-content-between mb-24 flex">
+                        <h6 class="text-16 mb-0 font-medium text-neutral-500">Recent Course Enrollments</h6>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="display min-w-max w-100 table-borderless">
+                            <thead>
+                                <tr class="bg-main-25 border-bottom border-neutral-30">
+                                    <th class="text-12 px-20 py-16 font-medium text-neutral-500">Student</th>
+                                    <th class="text-12 px-20 py-16 font-medium text-neutral-500">Course</th>
+                                    <th class="text-12 px-20 py-16 font-medium text-neutral-500">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${dashData.recentEnrollments.length === 0 ? '<tr><td colspan="3" class="px-20 py-22 text-neutral-500">No enrollments yet.</td></tr>' : 
+                                  dashData.recentEnrollments.map(e => `
+                                  <tr class="hover-bg-neutral-20 border-bottom transition-03">
+                                      <td class="px-20 py-22 text-14">${e.student?.name || 'Unknown'}</td>
+                                      <td class="px-20 py-22 text-14">${e.course?.title || 'Unknown'}</td>
+                                      <td class="px-20 py-22 text-14">${new Date(e.createdAt).toLocaleDateString()}</td>
+                                  </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            }
+        } else {
+            // For instructor and student, hide the demo tables for now until specific data feeds are built
+            const tables = document.querySelectorAll('.rounded-10.bg-white.px-24.py-24');
+            tables.forEach(t => t.style.display = 'none');
         }
 
     } catch (err) {

@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // Redirect based on role
                     if (data.user.role === 'student') {
-                        window.location.href = 'student-dashbord.html';
+                        window.location.href = 'dashboard.html';
                     } else {
-                        window.location.href = 'instructor-dashboard.html';
+                        window.location.href = 'dashboard.html';
                     }
                 } catch (err) {
                     console.error(err);
@@ -118,9 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // Redirect based on role
                     if (data.user.role === 'student') {
-                        window.location.href = 'student-dashbord.html';
+                        window.location.href = 'dashboard.html';
                     } else {
-                        window.location.href = 'instructor-dashboard.html';
+                        window.location.href = 'dashboard.html';
                     }
                 } catch (err) {
                     console.error(err);
@@ -133,21 +133,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 3. DASHBOARD PAGE ROUTE GUARDS
     // ==========================================
-    if (page === 'student-dashbord.html') {
-        const token = localStorage.getItem('fp_token');
+    if (page === 'dashboard.html') {
+        const token = localStorage.getItem('fp_token') || localStorage.getItem('token');
         const userJson = localStorage.getItem('fp_user');
         let user = null;
         if (userJson) {
             try { user = JSON.parse(userJson); } catch (e) {}
         }
 
-        if (!token || !user || user.role !== 'student') {
-            alert('Access Denied. Please log in as a student.');
+        if (!token) {
             window.location.href = 'sign-in.html';
         }
     }
 
-    if (page === 'instructor-dashboard.html' || page === 'cms-blogs.html') {
+    if (page === 'cms-blogs.html') {
         const token = localStorage.getItem('fp_token');
         const userJson = localStorage.getItem('fp_user');
         let user = null;
@@ -161,14 +160,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Update dashboard sidebar profile if present
-    const sidebar = document.querySelector('.student-dashboard-sidebar');
-    if (sidebar) {
-        const token = localStorage.getItem('fp_token');
-        const userJson = localStorage.getItem('fp_user');
-        if (token && userJson) {
-            try {
-                const user = JSON.parse(userJson);
+    // Global profile UI update
+    const token = localStorage.getItem('fp_token') || localStorage.getItem('token');
+    const userJson = localStorage.getItem('fp_user');
+    if (token && userJson) {
+        try {
+            const user = JSON.parse(userJson);
+            
+            // Update all name placeholders
+            document.querySelectorAll('.user-display-name').forEach(el => {
+                el.textContent = user.name;
+            });
+            
+            // Optional: Update global avatars
+            document.querySelectorAll('.user-display-avatar').forEach(imgEl => {
+                imgEl.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=002395&color=fff&size=128`;
+            });
+
+            // Update specific sidebar elements if present (legacy support)
+            const sidebar = document.querySelector('.student-dashboard-sidebar');
+            if (sidebar) {
                 const nameEl = sidebar.querySelector('h5');
                 const emailEl = sidebar.querySelector('span.text-14');
                 const imgEl = sidebar.querySelector('img');
@@ -183,7 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     imgEl.style.objectFit = "cover";
                     imgEl.style.margin = "0 auto";
                 }
-            } catch (e) {}
+            }
+        } catch (e) {
+            console.error('Error parsing user data:', e);
         }
     }
 });

@@ -127,5 +127,9 @@
 // preloader
 $(window).on("load", function () {
   var preLoder = $(".preloader");
-  preLoder.fadeOut(0);
+  if (preLoder.length) {
+    setTimeout(() => {
+        preLoder.fadeOut(500);
+    }, 600); // 600ms buffer for dynamic data to populate
+  }
 });

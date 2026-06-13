@@ -9,6 +9,20 @@ const { createMeetSession, cancelCalendarEvent } = require('../utils/googleCalen
 const { sendBookingConfirmation, sendCancellationNotice } = require('../utils/emailService');
 
 // ============================================================
+// GET /api/live-classes/my-classes — Instructor's own classes
+// ============================================================
+router.get('/my-classes', authMiddleware, authorize('instructor', 'admin'), async (req, res, next) => {
+  try {
+    const classes = await LiveClass.find({ instructor: req.user._id })
+      .populate('relatedCourse', 'title')
+      .sort({ scheduledAt: 1 });
+    res.json({ liveClasses: classes });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// ============================================================
 // GET /api/live-classes — Browse available live classes
 // ============================================================
 router.get('/', async (req, res, next) => {

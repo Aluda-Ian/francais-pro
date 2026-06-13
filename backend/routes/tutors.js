@@ -10,9 +10,9 @@ router.get('/', async (req, res, next) => {
   try {
     const { search, country, gender, curriculum, specialization } = req.query;
 
-    // Filter by active instructors/admins
+    // Filter by active instructors
     const filter = {
-      role: { $in: ['instructor', 'admin'] },
+      role: 'instructor',
       isActive: true
     };
 
@@ -62,7 +62,7 @@ router.get('/:id', async (req, res, next) => {
   try {
     const tutor = await User.findOne({
       _id: req.params.id,
-      role: { $in: ['instructor', 'admin'] },
+      role: 'instructor',
       isActive: true
     });
 

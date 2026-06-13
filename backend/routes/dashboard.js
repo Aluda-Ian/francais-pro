@@ -20,6 +20,12 @@ router.get('/admin', requireAuth, authorizeRoles('admin'), async (req, res, next
             .populate('student', 'name email avatar')
             .populate('course', 'title');
 
+        const recentBookings = await require('../models/Booking').find()
+            .sort({ createdAt: -1 })
+            .limit(5)
+            .populate('student', 'name email avatar')
+            .populate('liveClass', 'title');
+
         res.json({
             metrics: {
                 totalStudents,
@@ -27,7 +33,8 @@ router.get('/admin', requireAuth, authorizeRoles('admin'), async (req, res, next
                 totalCourses,
                 totalEnrollments
             },
-            recentEnrollments
+            recentEnrollments,
+            recentBookings
         });
     } catch (err) {
         next(err);

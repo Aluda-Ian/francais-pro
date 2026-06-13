@@ -28,6 +28,10 @@ import "./modules/navigation.js";
 import "./modules/auth.js";
 import "./modules/blogs.js";
 import "./modules/tutors.js";
+import "./modules/course-grid.js";
+import "./modules/dashboard-subpages.js";
+import "./modules/create-course.js";
+import "./backend-dashboard.js";
 
 // bootstrap js
 import * as bootstrap from "bootstrap";
@@ -35,3 +39,10 @@ import * as bootstrap from "bootstrap";
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => {
   new bootstrap.Tooltip(el);
 });
+import './modules/live-classes-dashboard.js'; 
+import './modules/student-bookings-calendar.js';
+import { initChat } from './modules/chat.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    initChat();
+}); 

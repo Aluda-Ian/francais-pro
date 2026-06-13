@@ -83,7 +83,7 @@ module.exports = (env, argv) => {
       fullySpecified: false,
     },
     plugins: [
-      ...glob.sync("./src/**/*.html").map((file) => {
+      ...glob.sync("./src/**/*.html", { ignore: './src/partials/**' }).map((file) => {
         return new HtmlWebpackPlugin({
           template: file,
           filename: path.basename(file),

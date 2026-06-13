@@ -29,22 +29,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: "Home", url: "index.html" },
                 { name: "Courses", url: "course.html" },
                 { name: "Find Tutors", url: "find-tutors.html" },
-                { name: "Blog", url: "blog.html" },
+                { name: "Resources", url: "#", sub: [
+                    { name: "Blog", url: "blog.html" },
+                    { name: "Guide/Help", url: "faq.html" },
+                    { name: "FAQs", url: "faq.html" }
+                ]},
                 { name: "About", url: "about.html" },
                 { name: "Contact", url: "contact.html" }
             ];
 
             const navHtml = menuItems.map(item => {
-                const isActive = page === item.url ? 'text-main-600 font-semibold' : 'text-neutral-700';
-                return `<li class="nav-menu__item">
-                    <a href="${item.url}" class="nav-menu__link hover-text-main-600 ${isActive}">${item.name}</a>
-                </li>`;
+                if (item.sub) {
+                    const subHtml = item.sub.map(subItem => `
+                        <li class="nav-submenu__item">
+                            <a href="${subItem.url}" class="nav-submenu__link hover-bg-neutral-30 py-8 px-16 block">${subItem.name}</a>
+                        </li>
+                    `).join('');
+                    return `<li class="nav-menu__item has-submenu group relative">
+                        <a href="javascript:void(0)" class="nav-menu__link hover-text-main-600">${item.name}</a>
+                        <ul class="nav-submenu scroll-sm absolute top-full left-0 bg-white shadow-md rounded-12 py-12 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            ${subHtml}
+                        </ul>
+                    </li>`;
+                } else {
+                    const isActive = page === item.url ? 'text-main-600 font-semibold' : 'text-neutral-700';
+                    return `<li class="nav-menu__item">
+                        <a href="${item.url}" class="nav-menu__link hover-text-main-600 ${isActive}">${item.name}</a>
+                    </li>`;
+                }
             }).join('');
 
             // Build Right Side Auth Action Buttons
             let authButtonsHtml = '';
             if (token && user) {
-                const dashboardUrl = user.role === 'student' ? 'student-dashbord.html' : 'instructor-dashboard.html';
+                const dashboardUrl = user.role === 'student' ? 'dashboard.html' : 'dashboard.html';
                 authButtonsHtml = `
                     <a href="${dashboardUrl}" class="btn btn-main rounded-pill flex items-center gap-8 py-8 px-16 text-white text-sm">
                         <i class="ph ph-user-circle text-lg"></i>
@@ -102,14 +120,23 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <button id="close-mobile-menu" class="text-3xl"><i class="ph ph-x"></i></button>
                             </div>
                             <ul class="flex flex-col gap-16 text-lg">
-                                ${menuItems.map(item => `
-                                    <li><a href="${item.url}" class="block py-8 text-neutral-700 hover:text-main-600">${item.name}</a></li>
-                                `).join('')}
+                                ${menuItems.map(item => {
+                                    if (item.sub) {
+                                        return `<li>
+                                            <span class="block py-8 text-neutral-700 font-semibold">${item.name}</span>
+                                            <ul class="pl-16 flex flex-col gap-8 mt-8">
+                                                ${item.sub.map(subItem => `<li><a href="${subItem.url}" class="block text-neutral-600 hover:text-main-600">${subItem.name}</a></li>`).join('')}
+                                            </ul>
+                                        </li>`;
+                                    } else {
+                                        return `<li><a href="${item.url}" class="block py-8 text-neutral-700 hover:text-main-600">${item.name}</a></li>`;
+                                    }
+                                }).join('')}
                             </ul>
                         </div>
                         <div class="flex flex-col gap-12 border-t pt-24">
                             ${token ? `
-                                <a href="${user.role === 'student' ? 'student-dashbord.html' : 'instructor-dashboard.html'}" class="btn btn-main py-12 rounded-pill text-center text-white">Dashboard</a>
+                                <a href="${user.role === 'student' ? 'dashboard.html' : 'dashboard.html'}" class="btn btn-main py-12 rounded-pill text-center text-white">Dashboard</a>
                                 <button id="fp-mobile-logout-btn" class="btn btn-outline-main py-12 rounded-pill">Sign Out</button>
                             ` : `
                                 <a href="sign-in.html" class="btn btn-outline-main py-12 rounded-pill text-center">Sign In</a>

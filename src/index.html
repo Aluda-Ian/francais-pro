@@ -104,6 +104,14 @@
     </head>
     <body>
 
+    <!--==================== Preloader Start ====================-->
+    <div class="preloader">
+        <div class="loader" style="border: 4px solid #f3f3f3; border-top: 4px solid var(--main-600, #4f46e5); border-radius: 50%; width: 50px; height: 50px; animation: spin 1s linear infinite;"></div>
+        <style>@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }</style>
+    </div>
+    <!--==================== Preloader End ====================-->
+
+
         <!--==================== Overlay Start ====================-->
         <div class="overlay"></div>
         <!--==================== Overlay End ====================-->
@@ -302,7 +310,7 @@
                             <a href="javascript:void(0)" class="nav-menu__link">Dashboard</a>
                             <ul class="nav-submenu scroll-sm">
                                 <li class="nav-submenu__item">
-                                    <a href="admin-dashbord.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    <a href="dashboard.html" class="nav-submenu__link hover-bg-neutral-30">
                                         Admin Dashbord
                                     </a>
                                 </li>
@@ -342,7 +350,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-submenu__item">
-                                    <a href="student-dashbord.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    <a href="dashboard.html" class="nav-submenu__link hover-bg-neutral-30">
                                         Student Admin Dashbord
                                     </a>
                                 </li>
@@ -387,7 +395,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-submenu__item">
-                                    <a href="instructor-dashboard.html" class="nav-submenu__link hover-bg-neutral-30">
+                                    <a href="dashboard.html" class="nav-submenu__link hover-bg-neutral-30">
                                         Instructor Dashbord
                                     </a>
                                 </li>
@@ -735,7 +743,7 @@
                                     </a>
                                     <ul class="nav-submenu scroll-sm">
                                         <li class="nav-submenu__item">
-                                            <a href="admin-dashbord.html" class="nav-submenu__link hover-bg-neutral-30">
+                                            <a href="dashboard.html" class="nav-submenu__link hover-bg-neutral-30">
                                                 Admin Dashbord
                                             </a>
                                         </li>
@@ -775,7 +783,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-submenu__item">
-                                            <a href="student-dashbord.html" class="nav-submenu__link hover-bg-neutral-30">
+                                            <a href="dashboard.html" class="nav-submenu__link hover-bg-neutral-30">
                                                 Student Admin Dashbord
                                             </a>
                                         </li>
@@ -820,7 +828,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-submenu__item">
-                                            <a href="instructor-dashboard.html" class="nav-submenu__link hover-bg-neutral-30">
+                                            <a href="dashboard.html" class="nav-submenu__link hover-bg-neutral-30">
                                                 Instructor Dashbord
                                             </a>
                                         </li>
@@ -1050,45 +1058,7 @@
             </div>
         </section>
         <!-- ========================= Banner SEction End =============================== -->
-        <!-- ========================== Brand Section Start =========================== -->
-        <div class="brand wow fadeInUpBig" data-wow-duration="1s" data-wow-delay=".5s">
-            <div class="container--lg container">
-                <div class="brand-box bg-main-25 border-neutral-30 rounded-16 border px-16 py-80">
-                    <h5 class="mb-40 text-center text-neutral-500">
-                        PREPARING STUDENTS FOR WORLD-CLASS EXAMINATIONS
-                    </h5>
-                    <div class="container">
-                        <div class="brand-slider">
-                            <div class="brand-slider__item px-24">
-                                <img src="./images/thumbs/brand-img1.png" alt="Image">
-                            </div>
-                            <div class="brand-slider__item px-24">
-                                <img src="./images/thumbs/brand-img2.png" alt="Image">
-                            </div>
-                            <div class="brand-slider__item px-24">
-                                <img src="./images/thumbs/brand-img3.png" alt="Image">
-                            </div>
-                            <div class="brand-slider__item px-24">
-                                <img src="./images/thumbs/brand-img4.png" alt="Image">
-                            </div>
-                            <div class="brand-slider__item px-24">
-                                <img src="./images/thumbs/brand-img5.png" alt="Image">
-                            </div>
-                            <div class="brand-slider__item px-24">
-                                <img src="./images/thumbs/brand-img6.png" alt="Image">
-                            </div>
-                            <div class="brand-slider__item px-24">
-                                <img src="./images/thumbs/brand-img7.png" alt="Image">
-                            </div>
-                            <div class="brand-slider__item px-24">
-                                <img src="./images/thumbs/brand-img3.png" alt="Image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ========================== Brand Section End =========================== -->
+        <!-- ========================== Brand Section Removed =========================== -->
         <!-- ============================= Features Section Start ============================== -->
         <section class="features relative overflow-hidden py-120">
             <img src="./images/shapes/shape2.png" alt="Image" class="shape two animation-scalation">
@@ -1108,8 +1078,8 @@
                     <!-- IB French -->
                     <div class="px-8" data-aos="zoom-in" data-aos-duration="400">
                         <div class="features-item item-hover animation-item bg-main-25 border-neutral-30 rounded-16 transition-1 hover-bg-main-600 hover-border-main-600 border">
-                            <span class="rounded-circle mb-32 !flex h-110 w-110 items-center justify-center bg-white">
-                                <i class="ph ph-graduation-cap" style="font-size:52px;color:var(--fp-primary);"></i>
+                            <span class="rounded-circle mb-32 !flex h-110 w-110 items-center justify-center bg-white p-12">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/0/07/International_Baccalaureate_logo.svg" alt="IB Logo" style="max-height:80%; max-width:80%;">
                             </span>
                             <span class="curriculum-badge badge-ib mb-12" style="display:inline-block;">IB Programme</span>
                             <h4 class="transition-1 item-hover__text mb-16">IB French A &amp; B</h4>
@@ -1126,8 +1096,8 @@
                     <!-- IGCSE French -->
                     <div class="px-8" data-aos="zoom-in" data-aos-duration="800">
                         <div class="features-item item-hover animation-item bg-main-25 border-neutral-30 rounded-16 transition-1 hover-bg-main-600 hover-border-main-600 border">
-                            <span class="rounded-circle mb-32 !flex h-110 w-110 items-center justify-center bg-white">
-                                <i class="ph ph-book-open" style="font-size:52px;color:var(--fp-primary);"></i>
+                            <span class="rounded-circle mb-32 !flex h-110 w-110 items-center justify-center bg-white p-12">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Cambridge_Assessment_International_Education_Logo.svg" alt="Cambridge IGCSE Logo" style="max-height:80%; max-width:80%;">
                             </span>
                             <span class="curriculum-badge badge-igcse mb-12" style="display:inline-block;">Cambridge IGCSE</span>
                             <h4 class="transition-1 item-hover__text mb-16">IGCSE French (0520)</h4>
@@ -1144,8 +1114,8 @@
                     <!-- CBSE French -->
                     <div class="px-8" data-aos="zoom-in" data-aos-duration="1200">
                         <div class="features-item item-hover animation-item bg-main-25 border-neutral-30 rounded-16 transition-1 hover-bg-main-600 hover-border-main-600 border">
-                            <span class="rounded-circle mb-32 !flex h-110 w-110 items-center justify-center bg-white">
-                                <i class="ph ph-student" style="font-size:52px;color:var(--fp-accent);"></i>
+                            <span class="rounded-circle mb-32 !flex h-110 w-110 items-center justify-center bg-white p-12">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/0/0f/CBSE_logo.svg" alt="CBSE Logo" style="max-height:80%; max-width:80%;">
                             </span>
                             <span class="curriculum-badge badge-cbse mb-12" style="display:inline-block;">CBSE</span>
                             <h4 class="transition-1 item-hover__text mb-16">CBSE French (Class 9–12)</h4>
@@ -3927,13 +3897,13 @@
                                 <div class="mb-40">
                                     <div class="wow bounceInDown mb-16 flex items-center gap-8">
                                         <span class="bg-main-600 rounded-circle h-8 w-8"></span>
-                                        <h5 class="text-main-600 mb-0">About EduAll</h5>
+                                        <h5 class="text-main-600 mb-0">About Français Pro</h5>
                                     </div>
                                     <h2 class="wow bounceIn mb-24">
                                         The Place Where You Can Achieve
                                     </h2>
                                     <p class="text-line-2 wow bounceInUp text-neutral-500">
-                                        Welcome to EduAll, where learning knows no bounds. Whether
+                                        Welcome to Français Pro, where learning knows no bounds. Whether
                     you're a student, professional, or lifelong learner...
                                     </p>
                                 </div>
@@ -4167,10 +4137,10 @@
                                     <h5 class="text-main-600 mb-0">What Our Students Say</h5>
                                 </div>
                                 <h2 class="wow bounceIn mb-24">
-                                    Testimonials from Happy Learners for EduAll
+                                    Testimonials from Happy Learners for Français Pro
                                 </h2>
                                 <p class="text-line-2 wow bounceInUp text-neutral-500">
-                                    16+ million Students are already learning on EduAll Platform
+                                    16+ million Students are already learning on Français Pro Platform
                                 </p>
                             </div>
                             <div class="testimonials__slider">
@@ -4193,7 +4163,7 @@
                                         </li>
                                     </ul>
                                     <p class="text-neutral-700" data-aos="fade-left" data-aos-duration="1200">
-                                        "Enrolling in courses at EduAll was one of the best
+                                        "Enrolling in courses at Français Pro was one of the best
                     decisions I've made for my career. The flexibility of the
                     online learning platform allowed me to study at my own pace
                     while balancing my work”
@@ -4224,7 +4194,7 @@
                                         </li>
                                     </ul>
                                     <p class="text-neutral-700" data-aos="fade-left" data-aos-duration="1200">
-                                        "Signing up for courses at EduAll was quite possibly of the
+                                        "Signing up for courses at Français Pro was quite possibly of the
                     best choice I've made for my vocation. The adaptability of
                     the internet learning stage permitted me to learn at my own
                     speed while adjusting my work"
@@ -4439,7 +4409,7 @@
                                             <h5 class="mb-0 text-white">Get Certificate</h5>
                                         </div>
                                         <h2 class="wow bounceIn mb-40 font-medium text-white">
-                                            Get Quality Skills Certificate From the EduAll
+                                            Get Quality Skills Certificate From the Français Pro
                                         </h2>
                                         <a href="sign-up.html" class="btn btn-white rounded-pill hover-bg-main-800 wow bounceInUp !inline-flex items-center gap-8">
                                             Get Started Now
@@ -4474,7 +4444,7 @@
                                     </a>
                                 </div>
                                 <p class="mt-[25px] mb-32">
-                                    EduAll exceeded all my expectations! The instructors were not
+                                    Français Pro exceeded all my expectations! The instructors were not
                   only experts
                                 </p>
                                 <ul class="social-list !flex items-center gap-24">
@@ -4589,8 +4559,8 @@
                                         <a href="mailto:dwallo@gmail.com" class="hover-text-main-600 mb-4 block text-neutral-500">
                                             dwallo@gmail.com
                                         </a>
-                                        <a href="mailto:eduAll@gmail.com" class="hover-text-main-600 mb-0 block text-neutral-500">
-                                            eduAll@gmail.com
+                                        <a href="mailto:contact@francaispro.com" class="hover-text-main-600 mb-0 block text-neutral-500">
+                                            contact@francaispro.com
                                         </a>
                                     </div>
                                 </div>
@@ -4635,8 +4605,7 @@
                             <p class="bottom-footer__text">
                                 Copyright &copy;
                                 <span id="copyrightYear"></span>
-                                <a href="index.html" class="text-main-600 font-medium">EduAll
-                                </a
+                                <a href="index.html" class="text-main-600 font-medium">Français Pro</a
                 >
                                 . All Rights Reserved.
                             </p>

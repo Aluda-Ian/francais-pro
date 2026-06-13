@@ -94,15 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Store token
             localStorage.setItem('token', data.token);
 
-            // Redirect based on role
-            const role = data.user?.role;
-            if (role === 'admin') {
-                window.location.href = 'admin-dashbord.html';
-            } else if (role === 'instructor') {
-                window.location.href = 'instructor-dashboard.html';
-            } else {
-                window.location.href = 'student-dashbord.html';
-            }
+            // Redirect all users to the universal dashboard
+            setTimeout(() => {
+                window.location.href = 'dashboard.html';
+            }, 500);
         } catch (err) {
             console.error('Login error:', err);
             // Check if it's a "Failed to fetch" error

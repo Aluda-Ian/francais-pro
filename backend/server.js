@@ -20,6 +20,8 @@ const blogRoutes = require('./routes/blogs');
 const tutorRoutes = require('./routes/tutors');
 const dashboardRoutes = require('./routes/dashboard');
 const settingsRoutes = require('./routes/settings');
+const messageRoutes = require('./routes/messages');
+const path = require('path');
 
 // --- App Init ---
 const app = express();
@@ -72,6 +74,10 @@ app.use('/api/blogs', blogRoutes);
 app.use('/api/tutors', tutorRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/settings', settingsRoutes);
+app.use('/api/messages', messageRoutes);
+
+// --- Serve Frontend ---
+app.use(express.static(path.join(__dirname, '../src')));
 
 // --- Socket.io: Real-time notifications ---
 io.on('connection', (socket) => {
@@ -90,6 +96,21 @@ io.on('connection', (socket) => {
       message: 'Your class starts in 15 minutes!',
       meetLink,
     });
+  });
+
+  // --- Chat Application Socket Logic ---
+  
+  // User connects to their personal notification/message room
+  socket.on('join-user-room', (userId) => {
+    socket.join(`user:${userId}`);
+    console.log(`[Socket] ${socket.id} joined personal room user:${userId}`);
+  });
+
+  // Handle incoming private message
+  socket.on('send-private-message', (data) => {
+    // data = { senderId, receiverId, content, _id, createdAt }
+    // Emit the message to the receiver's personal room
+    io.to(`user:${data.receiverId}`).emit('receive-private-message', data);
   });
 
   socket.on('disconnect', () => {

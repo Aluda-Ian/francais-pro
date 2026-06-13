@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 if (!bookRes.ok) throw new Error(bookData.error || 'Booking failed.');
 
                                 alert(bookData.message || '🎉 Booking confirmed successfully! Google Calendar invite sent.');
-                                window.location.href = 'student-dashbord.html';
+                                window.location.href = 'dashboard.html';
                             } catch (err) {
                                 alert(err.message);
                                 e.target.disabled = false;

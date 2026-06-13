@@ -4,16 +4,25 @@ const Course = require('../models/Course');
 const authMiddleware = require('../middleware/auth');
 const { authorize } = require('../middleware/auth');
 
+// GET /api/courses/my-courses — Instructor's own courses
+router.get('/my-courses', authMiddleware, authorize('instructor', 'admin'), async (req, res, next) => {
+  try {
+    const courses = await Course.find({ instructor: req.user._id }).sort('-createdAt');
+    res.json({ data: courses });
+  } catch (err) { next(err); }
+});
+
 // GET /api/courses — Browse courses
 router.get('/', async (req, res, next) => {
   try {
-    const { curriculum, level, isFree, search, page = 1, limit = 12, sort = '-createdAt' } = req.query;
+    const { curriculum, level, isFree, search, instructor, page = 1, limit = 12, sort = '-createdAt' } = req.query;
 
     const filter = { isPublished: true };
     if (curriculum) filter.curriculum = curriculum;
     if (level) filter.level = level;
     if (isFree === 'true') filter.isFree = true;
     if (search) filter.$text = { $search: search };
+    if (instructor) filter.instructor = instructor;
 
     const courses = await Course.find(filter)
       .populate('instructor', 'name avatar qualifications')
