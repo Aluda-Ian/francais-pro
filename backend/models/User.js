@@ -57,6 +57,11 @@ const userSchema = new mongoose.Schema(
 
     enrolledCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }],
 
+    subscription: { type: mongoose.Schema.Types.ObjectId, ref: 'SubscriptionType' },
+    subscriptionExpiresAt: { type: Date },
+    coursesEnrolledCount: { type: Number, default: 0 },
+    liveClassesBookedCount: { type: Number, default: 0 },
+
     isActive: { type: Boolean, default: true },
     isEmailVerified: { type: Boolean, default: false },
     emailVerificationToken: { type: String, select: false },
@@ -100,14 +105,21 @@ userSchema.methods.toPublicProfile = function () {
     name: this.name,
     email: this.email,
     role: this.role,
+    avatar: this.avatar,
     avatarUrl: this.avatarUrl,
     bio: this.bio,
+    phone: this.phone,
     country: this.country,
     gender: this.gender,
     curriculum: this.curriculum,
     level: this.level,
     specializations: this.specializations,
     qualifications: this.qualifications,
+    subscription: this.subscription,
+    subscriptionExpiresAt: this.subscriptionExpiresAt,
+    coursesEnrolledCount: this.coursesEnrolledCount,
+    liveClassesBookedCount: this.liveClassesBookedCount,
+    isGoogleConnected: !!(this.googleAccessToken || this.googleRefreshToken || this.googleId),
     createdAt: this.createdAt,
   };
 };

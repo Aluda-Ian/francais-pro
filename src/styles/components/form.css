@@ -231,3 +231,8 @@ input[type="number"] {
   @apply font-medium w-[calc(100%_-_18px)] cursor-pointer text-[#222e48];
   padding-inline-start: 12px;
 }
+
+.common-check.common-radio .form-check-label {
+  width: auto;
+  display: inline-flex;
+}

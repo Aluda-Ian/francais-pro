@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 3. Render clean header (Skip on dashboard pages to preserve template designs)
-    const isDashboard = page.includes('dashboard') || page.includes('dashbord');
+    const isDashboard = page.includes('dashboard') || page.includes('dashbord') || page.includes('deshbord') || page.includes('my-profile');
     
     if (!isDashboard) {
         const headers = document.querySelectorAll('header.header, header.lc-header');

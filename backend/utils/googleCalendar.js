@@ -47,8 +47,8 @@ const createMeetSession = async ({
       reminders: {
         useDefault: false,
         overrides: [
-          { method: 'email', minutes: 24 * 60 }, // 1 day before
-          { method: 'popup', minutes: 15 },        // 15 min before
+          { method: 'email', minutes: 30 },
+          { method: 'popup', minutes: 30 },
         ],
       },
       colorId: '11', // Tomato red (French flag accent)
@@ -113,8 +113,8 @@ const addToStudentCalendar = async ({
       reminders: {
         useDefault: false,
         overrides: [
-          { method: 'email', minutes: 60 },
-          { method: 'popup', minutes: 15 },
+          { method: 'email', minutes: 30 },
+          { method: 'popup', minutes: 30 },
         ],
       },
     };
@@ -167,9 +167,9 @@ const getInstructorBusySlots = async ({ instructorCalendarId, timeMin, timeMax }
  * @param {string} eventId - Google Calendar event ID
  * @param {string} [calendarId='primary']
  */
-const cancelCalendarEvent = async (eventId, calendarId = 'primary') => {
+const cancelCalendarEvent = async (eventId, calendarId = 'primary', accessToken = null, refreshToken = null) => {
   try {
-    const auth = createServiceAccountClient();
+    const auth = accessToken || refreshToken ? createOAuth2Client(accessToken, refreshToken) : createServiceAccountClient();
     const calendar = google.calendar({ version: 'v3', auth });
 
     await calendar.events.delete({ calendarId, eventId, sendUpdates: 'all' });

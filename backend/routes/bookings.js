@@ -4,7 +4,7 @@ const authMiddleware = require('../middleware/auth');
 const LiveClass = require('../models/LiveClass');
 const Booking = require('../models/Booking');
 const User = require('../models/User');
-const { addToStudentCalendar } = require('../utils/googleCalendar');
+const { addToStudentCalendar, cancelCalendarEvent, updateCalendarEvent } = require('../utils/googleCalendar');
 const { sendBookingConfirmation } = require('../utils/emailService');
 
 // ============================================================
@@ -23,8 +23,11 @@ router.post('/', authMiddleware, async (req, res, next) => {
     if (liveClass.status !== 'scheduled') {
       return res.status(400).json({ error: `Cannot book a class that is ${liveClass.status}.` });
     }
-    if (liveClass.scheduledAt < new Date()) {
-      return res.status(400).json({ error: 'This class has already passed.' });
+    const minutesUntilStart = (new Date(liveClass.scheduledAt) - new Date()) / (1000 * 60);
+    if (minutesUntilStart < 30) {
+      return res.status(400).json({
+        error: 'Bookings must be made at least 30 minutes before the class starts.',
+      });
     }
     if (liveClass.isFull) {
       return res.status(409).json({ error: 'This class is fully booked. Please choose another session.' });
@@ -34,6 +37,31 @@ router.post('/', authMiddleware, async (req, res, next) => {
     const existingBooking = await Booking.findOne({ student: student._id, liveClass: liveClassId });
     if (existingBooking) {
       return res.status(409).json({ error: 'You have already booked this class.' });
+    }
+
+    // 2b. Fetch user and verify subscription limits
+    const user = await User.findById(student._id).populate('subscription');
+    if (!user) {
+      return res.status(404).json({ error: 'User not found.' });
+    }
+
+    if (!user.subscription) {
+      return res.status(403).json({
+        error: 'You do not have an active subscription. Please subscribe to a plan to book live classes.'
+      });
+    }
+
+    if (user.subscriptionExpiresAt && new Date(user.subscriptionExpiresAt) < new Date()) {
+      return res.status(403).json({
+        error: 'Your subscription plan has expired. Please renew or upgrade your plan to book live classes.'
+      });
+    }
+
+    const limit = user.subscription.liveClassLimit;
+    if (limit !== -1 && user.liveClassesBookedCount >= limit) {
+      return res.status(403).json({
+        error: `You have reached your subscription's live class booking limit of ${limit} classes. Please upgrade your plan to book more classes.`
+      });
     }
 
     // 3. Add student to live class
@@ -70,7 +98,29 @@ router.post('/', authMiddleware, async (req, res, next) => {
       }
     }
 
+    // Sync attendee list to instructor's Google Calendar event if it exists
+    if (liveClass.googleCalendarEventId) {
+      try {
+        const enrolledUsers = await User.find({ _id: { $in: liveClass.enrolledStudents } }).select('email');
+        const attendeeEmails = enrolledUsers.map(u => u.email);
+        if (liveClass.instructor?.email) attendeeEmails.push(liveClass.instructor.email);
+
+        await updateCalendarEvent({
+          eventId: liveClass.googleCalendarEventId,
+          updates: {
+            attendees: attendeeEmails.map(email => ({ email }))
+          }
+        });
+      } catch (calErr) {
+        console.warn('[Booking] Instructor calendar attendee sync failed (non-critical):', calErr.message);
+      }
+    }
+
     await booking.save();
+
+    // Increment user's live class booked count
+    user.liveClassesBookedCount = (user.liveClassesBookedCount || 0) + 1;
+    await user.save();
 
     // 6. Send confirmation email
     try {
@@ -117,6 +167,38 @@ router.post('/', authMiddleware, async (req, res, next) => {
       },
       message: `🎉 Booking confirmed! Check your email for the Google Meet link.`,
     });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// ============================================================
+// GET /api/bookings — Get all bookings (Admin only)
+// ============================================================
+router.get('/', authMiddleware, async (req, res, next) => {
+  try {
+    if (req.user.role !== 'admin' && req.user.role !== 'instructor') {
+      return res.status(403).json({ error: 'Access denied.' });
+    }
+
+    let query = {};
+    if (req.user.role === 'instructor') {
+      // Fetch classes of this instructor to scope the bookings
+      const instructorClasses = await LiveClass.find({ instructor: req.user._id }).select('_id');
+      const classIds = instructorClasses.map(c => c._id);
+      query = { liveClass: { $in: classIds } };
+    }
+
+    const bookings = await Booking.find(query)
+      .populate('student', 'name email')
+      .populate({
+        path: 'liveClass',
+        select: 'title scheduledAt durationMinutes status instructor',
+        populate: { path: 'instructor', select: 'name email' }
+      })
+      .sort({ createdAt: -1 });
+
+    res.json({ bookings });
   } catch (err) {
     next(err);
   }
@@ -211,11 +293,11 @@ router.delete('/:id', authMiddleware, async (req, res, next) => {
 
     const liveClass = booking.liveClass;
 
-    // Check cancellation policy: must cancel at least 2 hours before
-    const hoursUntilClass = (new Date(liveClass.scheduledAt) - new Date()) / (1000 * 60 * 60);
-    if (hoursUntilClass < 2) {
+    // Check cancellation policy: must cancel at least 30 minutes before
+    const minutesUntilClass = (new Date(liveClass.scheduledAt) - new Date()) / (1000 * 60);
+    if (minutesUntilClass < 30) {
       return res.status(400).json({
-        error: 'Cancellations must be made at least 2 hours before the class starts.',
+        error: 'Cancellations must be made at least 30 minutes before the class starts.',
       });
     }
 
@@ -224,11 +306,51 @@ router.delete('/:id', authMiddleware, async (req, res, next) => {
     booking.cancellationReason = req.body.reason || 'Student cancelled';
     await booking.save();
 
+    // Decrement user's live class booked count
+    const user = await User.findById(req.user._id);
+    if (user && user.liveClassesBookedCount > 0) {
+      user.liveClassesBookedCount -= 1;
+      await user.save();
+    }
+
     // Remove student from live class
     liveClass.enrolledStudents = liveClass.enrolledStudents.filter(
       (id) => id.toString() !== req.user._id.toString()
     );
     await liveClass.save();
+
+    // Sync Google Calendars on cancellation
+    const studentWithTokens = await User.findById(req.user._id).select('+googleAccessToken +googleRefreshToken');
+    if (booking.studentCalendarEventId && studentWithTokens?.googleAccessToken) {
+      try {
+        await cancelCalendarEvent(
+          booking.studentCalendarEventId,
+          'primary',
+          studentWithTokens.googleAccessToken,
+          studentWithTokens.googleRefreshToken
+        );
+      } catch (calErr) {
+        console.warn('[Booking] Student calendar event cancel failed (non-critical):', calErr.message);
+      }
+    }
+
+    if (liveClass.googleCalendarEventId) {
+      try {
+        const enrolledUsers = await User.find({ _id: { $in: liveClass.enrolledStudents } }).select('email');
+        const attendeeEmails = enrolledUsers.map(u => u.email);
+        const instructorUser = await User.findById(liveClass.instructor).select('email');
+        if (instructorUser?.email) attendeeEmails.push(instructorUser.email);
+
+        await updateCalendarEvent({
+          eventId: liveClass.googleCalendarEventId,
+          updates: {
+            attendees: attendeeEmails.map(email => ({ email }))
+          }
+        });
+      } catch (calErr) {
+        console.warn('[Booking] Instructor calendar attendee sync failed (non-critical):', calErr.message);
+      }
+    }
 
     res.json({ message: 'Booking cancelled successfully.', refundEligible: liveClass.price > 0 });
   } catch (err) {

@@ -21,6 +21,7 @@ const tutorRoutes = require('./routes/tutors');
 const dashboardRoutes = require('./routes/dashboard');
 const settingsRoutes = require('./routes/settings');
 const messageRoutes = require('./routes/messages');
+const subscriptionRoutes = require('./routes/subscriptions');
 const path = require('path');
 
 // --- App Init ---
@@ -75,6 +76,7 @@ app.use('/api/tutors', tutorRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/messages', messageRoutes);
+app.use('/api/subscriptions', subscriptionRoutes);
 
 // --- Serve Frontend ---
 app.use(express.static(path.join(__dirname, '../src')));

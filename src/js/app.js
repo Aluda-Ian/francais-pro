@@ -41,6 +41,9 @@ document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((el) => {
 });
 import './modules/live-classes-dashboard.js'; 
 import './modules/student-bookings-calendar.js';
+import './modules/settings-profile.js';
+import './modules/subscriptions-dashboard.js';
+import './modules/course-enroll.js';
 import { initChat } from './modules/chat.js';
 
 document.addEventListener('DOMContentLoaded', () => {

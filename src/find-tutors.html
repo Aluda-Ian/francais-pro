@@ -72,17 +72,34 @@
         <header class="header"></header>
 
         <!-- Breadcrumb Section -->
-        <section class="breadcrumb bg-main-25 relative z-1 mb-0 overflow-hidden py-60 border-b border-neutral-10">
+        <section class="breadcrumb bg-main-25 relative z-1 mb-0 overflow-hidden py-120">
+            <img src="./images/shapes/shape1.png" alt="Image" class="shape one animation-rotation hidden md:block">
+            <img src="./images/shapes/shape2.png" alt="Image" class="shape two animation-scalation hidden md:block">
+            <img src="./images/shapes/shape3.png" alt="Image" class="shape eight animation-walking hidden md:block">
+            <img src="./images/shapes/shape5.png" alt="Image" class="shape six animation-walking hidden md:block">
+            <img src="./images/shapes/shape4.png" alt="Image" class="shape four animation-scalation">
+            <img src="./images/shapes/shape4.png" alt="Image" class="shape nine animation-scalation">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <div class="breadcrumb__wrapper text-center">
-                            <h1 class="breadcrumb__title display-5 fw-bold mb-8 text-neutral-800">
+                        <div class="breadcrumb__wrapper">
+                            <h1 class="breadcrumb__title display-4 fw-semibold text-center">
                                 Find Expert French Tutors
                             </h1>
-                            <p class="text-neutral-500 max-w-md mx-auto mb-0">
-                                Connect with specialized instructors for IB, IGCSE, CBSE, and Conversational French.
-                            </p>
+                            <ul class="breadcrumb__list align-items-center justify-content-center flex gap-4">
+                                <li class="breadcrumb__item">
+                                    <a href="index.html" class="breadcrumb__link hover-text-main-600 font-medium text-neutral-500">
+                                        <i class="ph-bold ph-house inline-flex text-lg"></i>
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="breadcrumb__item">
+                                    <i class="ph-bold ph-caret-right flex text-neutral-500"></i>
+                                </li>
+                                <li class="breadcrumb__item">
+                                    <span class="text-main-two-600"> Find Tutors</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -90,66 +107,92 @@
         </section>
 
         <!-- Main Listing Section -->
-        <section class="py-60">
+        <section class="course-list-view background-img bg-img bg-img-eleven py-120">
             <div class="container">
-                <div class="row gap-y-32">
+                <div class="row">
                     <!-- Filters Sidebar -->
                     <div class="col-lg-4">
-                        <div class="sidebar rounded-16 border border-neutral-30 bg-white p-32">
-                            <h4 class="mb-24 fw-bold">Filter Tutors</h4>
-                            
-                            <!-- Search -->
-                            <div class="mb-24">
-                                <label class="mb-8 text-sm font-semibold text-neutral-700">Search Name/Bio</label>
-                                <div class="relative">
-                                    <input type="text" id="search-input" class="common-input rounded-pill bg-main-25 border-neutral-30 w-full py-12 px-20 text-sm" placeholder="Enter tutor name...">
+                        <div class="sidebar rounded-12 box-shadow-md bg-white p-32">
+                            <form action="#" onsubmit="return false;">
+                                <div class="mb-24 flex items-center justify-between">
+                                    <h4 class="mb-0">Filter Tutors</h4>
+                                    <button type="button" class="sidebar-close hover-text-main-600 text-xl text-neutral-500 lg:hidden">
+                                        <i class="ph-bold ph-x"></i>
+                                    </button>
                                 </div>
-                            </div>
-                            
-                            <!-- Curriculum -->
-                            <div class="mb-24">
-                                <label class="mb-8 text-sm font-semibold text-neutral-700">Curriculum</label>
-                                <select id="selectCurriculum" class="common-input bg-main-25 rounded-pill border-neutral-30 form-select py-12 px-20 text-sm w-full">
-                                    <option value="">All Curriculums</option>
-                                    <option value="IB">IB French</option>
-                                    <option value="IGCSE">IGCSE French</option>
-                                    <option value="CBSE">CBSE French</option>
-                                    <option value="Conversation">Conversation</option>
-                                    <option value="DELF">DELF/DALF Prep</option>
-                                </select>
-                            </div>
+                                
+                                <!-- Search -->
+                                <div class="relative mb-24">
+                                    <input type="text" id="search-input" class="common-input rounded-pill bg-main-25 pe-48" placeholder="Search Name/Bio...">
+                                    <button type="submit" class="translate-middle-y inset-inline-end-0 hover-text-main-600 absolute top-50 me-24 flex text-xl text-neutral-500">
+                                        <i class="ph-bold ph-magnifying-glass"></i>
+                                    </button>
+                                </div>
+                                
+                                <span class="border-neutral-30 my-24 block border border-dashed"></span>
+                                
+                                <div class="flex-column flex gap-32">
+                                    <!-- Curriculum -->
+                                    <div>
+                                        <h6 class="fw-semibold mb-24 text-lg">Curriculum</h6>
+                                        <select id="selectCurriculum" class="common-input form-select rounded-pill focus-border-main-600 bg-main-25 border-transparent">
+                                            <option value="">All Curriculums</option>
+                                            <option value="IB">IB French</option>
+                                            <option value="IGCSE">IGCSE French</option>
+                                            <option value="CBSE">CBSE French</option>
+                                            <option value="Conversation">Conversation</option>
+                                            <option value="DELF">DELF/DALF Prep</option>
+                                        </select>
+                                    </div>
 
-                            <!-- Gender -->
-                            <div class="mb-24">
-                                <label class="mb-8 text-sm font-semibold text-neutral-700">Gender</label>
-                                <select id="selectGender" class="common-input bg-main-25 rounded-pill border-neutral-30 form-select py-12 px-20 text-sm w-full">
-                                    <option value="">All Genders</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                            </div>
+                                    <!-- Gender -->
+                                    <div>
+                                        <h6 class="fw-semibold mb-24 text-lg">Gender</h6>
+                                        <select id="selectGender" class="common-input form-select rounded-pill focus-border-main-600 bg-main-25 border-transparent">
+                                            <option value="">All Genders</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
 
-                            <!-- Location/Country -->
-                            <div class="mb-32">
-                                <label class="mb-8 text-sm font-semibold text-neutral-700">Location/Country</label>
-                                <input type="text" id="location-input" class="common-input rounded-pill bg-main-25 border-neutral-30 w-full py-12 px-20 text-sm" placeholder="e.g. France, Canada">
-                            </div>
+                                    <!-- Location/Country -->
+                                    <div>
+                                        <h6 class="mb-20 text-lg font-medium">Location/Country</h6>
+                                        <input type="text" id="location-input" class="common-input rounded-pill focus-border-main-600 bg-main-25 border-transparent" placeholder="e.g. France, Canada">
+                                    </div>
+                                </div>
 
-                            <!-- Reset Button -->
-                            <button type="button" id="reset-filters-btn" class="btn btn-outline-main rounded-pill fw-semibold w-full py-12 flex items-center justify-center gap-8 text-sm">
-                                <i class="ph ph-arrow-clockwise"></i>
-                                Reset Filters
-                            </button>
+                                <span class="border-neutral-30 my-32 block border border-dashed"></span>
+                                
+                                <!-- Reset Button -->
+                                <button type="button" id="reset-filters-btn" class="btn btn-outline-main rounded-pill fw-semibold !flex w-100 items-center justify-center gap-16">
+                                    <i class="ph-bold ph-arrow-clockwise flex text-lg"></i>
+                                    Reset Filters
+                                </button>
+                            </form>
                         </div>
                     </div>
 
                     <!-- Tutors List Grid -->
                     <div class="col-lg-8">
-                        <div class="mb-24 flex items-center justify-between">
-                            <span id="results-count" class="text-neutral-500 font-medium">Loading tutors...</span>
+                        <div class="mb-40 flex flex-wrap items-center justify-between gap-16">
+                            <span id="results-count" class="text-neutral-500">Loading tutors...</span>
+                            <div class="flex items-center gap-16">
+                                <div class="flex items-center gap-8">
+                                    <span class="flex-shrink-0 text-neutral-500">Sort By :</span>
+                                    <select class="form-select rounded-pill bg-main-25 border-neutral-30 border py-8 ps-20 pe-28 font-medium text-neutral-700">
+                                        <option value="1">Newest</option>
+                                        <option value="1">Trending</option>
+                                        <option value="1">Popular</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="list-bar-btn bg-main-600 rounded-8 !flex h-40 w-40 items-center justify-center text-xl text-white lg:!hidden">
+                                    <i class="ph-bold ph-funnel"></i>
+                                </button>
+                            </div>
                         </div>
                         
-                        <div class="row gap-y-24" id="tutors-container">
+                        <div class="row gap-y-[1.5rem]" id="tutors-container">
                             <!-- Injected dynamically by tutors.js -->
                             <div class="col-12 text-center py-40">
                                 <span class="spinner-border text-main-600" role="status"></span>

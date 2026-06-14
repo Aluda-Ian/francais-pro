@@ -112,7 +112,12 @@
                         <!-- Navigation Tabs -->
                         <ul class="nav nav-pills common-tab border-neutral-30 rounded-pill inline-flex gap-16 border bg-white p-12 w-full flex-wrap justify-start" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link rounded-pill bg-main-25 text-sm active py-10 px-20 font-medium text-neutral-600" id="pills-tutionInfo-tab" data-bs-toggle="pill" data-bs-target="#pills-tutionInfo" type="button" role="tab" aria-selected="true">
+                                <button class="nav-link rounded-pill bg-main-25 text-sm active py-10 px-20 font-medium text-neutral-600" id="pills-slots-tab" data-bs-toggle="pill" data-bs-target="#pills-slots" type="button" role="tab" aria-selected="true">
+                                    Available Slots
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link rounded-pill bg-main-25 text-sm py-10 px-20 font-medium text-neutral-600" id="pills-tutionInfo-tab" data-bs-toggle="pill" data-bs-target="#pills-tutionInfo" type="button" role="tab" aria-selected="false">
                                     Profile &amp; Spec
                                 </button>
                             </li>
@@ -121,28 +126,23 @@
                                     Qualifications
                                 </button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link rounded-pill bg-main-25 text-sm py-10 px-20 font-medium text-neutral-600" id="pills-slots-tab" data-bs-toggle="pill" data-bs-target="#pills-slots" type="button" role="tab" aria-selected="false">
-                                    Available Slots
-                                </button>
-                            </li>
                         </ul>
 
                         <!-- Tab Content Container -->
                         <div class="tab-content" id="tutor-tabs-content">
+                            <!-- Booking Slots Tab -->
+                            <div class="tab-pane fade show active" id="pills-slots" role="tabpanel">
+                                <div class="text-center py-40">Loading slots...</div>
+                            </div>
+
                             <!-- Tuition Info Tab -->
-                            <div class="tab-pane fade show active" id="pills-tutionInfo" role="tabpanel">
+                            <div class="tab-pane fade" id="pills-tutionInfo" role="tabpanel">
                                 <div class="text-center py-40">Loading details...</div>
                             </div>
                             
                             <!-- Qualifications Tab -->
                             <div class="tab-pane fade" id="pills-qualification" role="tabpanel">
                                 <div class="text-center py-40">Loading credentials...</div>
-                            </div>
-
-                            <!-- Booking Slots Tab -->
-                            <div class="tab-pane fade" id="pills-slots" role="tabpanel">
-                                <div class="text-center py-40">Loading slots...</div>
                             </div>
                         </div>
                     </div>

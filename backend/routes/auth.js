@@ -80,8 +80,16 @@ router.post('/login', [
 // GET /api/auth/google — Initiate Google OAuth
 // ============================================================
 router.get('/google', (req, res) => {
-  const { role = 'student' } = req.query;
-  const authUrl = getAuthUrl(JSON.stringify({ role }));
+  const { role = 'student', connectCalendar, userId, redirect } = req.query;
+  const state = { role };
+  if (connectCalendar === 'true') {
+    state.connectCalendar = true;
+    state.userId = userId;
+  }
+  if (redirect) {
+    state.redirect = redirect;
+  }
+  const authUrl = getAuthUrl(JSON.stringify(state));
   res.redirect(authUrl);
 });
 
@@ -96,12 +104,26 @@ router.get('/google/callback', async (req, res, next) => {
     const tokens = await getTokensFromCode(code);
     const { access_token, refresh_token } = tokens;
 
+    const stateData = state ? JSON.parse(state) : {};
+
+    if (stateData.connectCalendar && stateData.userId) {
+      // Find user and connect calendar
+      const user = await User.findById(stateData.userId);
+      if (!user) return res.status(404).json({ error: 'User not found.' });
+
+      user.googleAccessToken = access_token;
+      if (refresh_token) user.googleRefreshToken = refresh_token;
+      await user.save({ validateBeforeSave: false });
+
+      // Redirect back to settings page
+      const defaultRedirect = stateData.redirect || 'http://localhost:3000/dashbord-settings.html';
+      return res.redirect(`${defaultRedirect}?calendar_connected=true`);
+    }
+
     // Fetch user info from Google
     const oauth2Client = createOAuth2Client(access_token, refresh_token);
     const oauth2 = google.oauth2({ version: 'v2', auth: oauth2Client });
     const { data: googleUser } = await oauth2.userinfo.get();
-
-    const stateData = state ? JSON.parse(state) : {};
 
     // Find or create user
     let user = await User.findOne({ $or: [{ googleId: googleUser.id }, { email: googleUser.email }] });
@@ -142,9 +164,35 @@ router.get('/google/callback', async (req, res, next) => {
 // ============================================================
 router.get('/me', require('../middleware/auth'), async (req, res, next) => {
   try {
-    const user = await User.findById(req.user.id);
+    const user = await User.findById(req.user.id).select('+googleAccessToken +googleRefreshToken').populate('subscription');
     if (!user) return res.status(404).json({ error: 'User not found.' });
     res.json({ user: user.toPublicProfile() });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// ============================================================
+// PUT /api/auth/profile — Update user profile
+// ============================================================
+router.put('/profile', require('../middleware/auth'), async (req, res, next) => {
+  try {
+    const user = await User.findById(req.user.id);
+    if (!user) return res.status(404).json({ error: 'User not found.' });
+
+    const { name, email, phone, gender, tagline, avatar } = req.body;
+
+    if (name !== undefined) user.name = name;
+    if (email !== undefined) user.email = email;
+    if (phone !== undefined) user.phone = phone;
+    if (gender !== undefined) user.gender = gender;
+    if (tagline !== undefined) user.bio = tagline; // bio is schema field
+    if (avatar !== undefined) user.avatar = avatar;
+
+    await user.save();
+    // Populate subscription before converting to public profile
+    await user.populate('subscription');
+    res.json({ success: true, user: user.toPublicProfile() });
   } catch (err) {
     next(err);
   }
@@ -154,8 +202,16 @@ router.get('/me', require('../middleware/auth'), async (req, res, next) => {
 // GET /api/auth/google-url — Get Google OAuth URL (for frontend)
 // ============================================================
 router.get('/google-url', (req, res) => {
-  const { role = 'student' } = req.query;
-  const authUrl = getAuthUrl(JSON.stringify({ role }));
+  const { role = 'student', connectCalendar, userId, redirect } = req.query;
+  const state = { role };
+  if (connectCalendar === 'true') {
+    state.connectCalendar = true;
+    state.userId = userId;
+  }
+  if (redirect) {
+    state.redirect = redirect;
+  }
+  const authUrl = getAuthUrl(JSON.stringify(state));
   res.json({ url: authUrl });
 });
 

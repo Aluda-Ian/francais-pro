@@ -17,59 +17,62 @@ document.addEventListener('DOMContentLoaded', async () => {
         const meData = await meRes.json();
         const role = meData.user.role;
 
-        // 2. Fetch the appropriate data based on role
-        let apiEndpoint = 'http://localhost:5000/api/live-classes'; // admin sees all
+        // 2. Hide tutor column header if instructor
         if (role === 'instructor') {
-            apiEndpoint = 'http://localhost:5000/api/live-classes/my-classes';
-        } else if (role === 'student') {
-            // For students, fetch bookings
-            apiEndpoint = 'http://localhost:5000/api/bookings/my-bookings';
+            const thTutor = document.getElementById('th-tutor-name');
+            if (thTutor) thTutor.style.display = 'none';
         }
 
-        const res = await fetch(apiEndpoint, {
+        // 3. Fetch bookings (scoped on backend based on role)
+        const res = await fetch('http://localhost:5000/api/bookings', {
             headers: { 'Authorization': `Bearer ${token}` }
         });
         
         if (!res.ok) {
-            tbody.innerHTML = '<tr><td colspan="4" class="text-center text-danger">Failed to load classes</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="5" class="text-center text-danger py-24">Failed to load bookings</td></tr>';
             return;
         }
 
         const data = await res.json();
-        
-        let items = [];
-        if (role === 'student') {
-            items = data.bookings.filter(b => b.liveClass); // only bookings that have a liveClass populated
-        } else {
-            items = data.liveClasses || [];
-        }
+        const bookings = data.bookings || [];
 
-        if (items.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="4" class="text-center py-24 text-neutral-500">No live classes found.</td></tr>';
+        if (bookings.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="5" class="text-center py-24 text-neutral-500">No bookings found.</td></tr>';
             return;
         }
 
-        // Render rows
-        tbody.innerHTML = items.map(item => {
-            const classInfo = role === 'student' ? item.liveClass : item;
-            const status = role === 'student' ? item.status : classInfo.status;
-            const instructorName = classInfo.instructor?.name || 'Unknown';
-            const date = new Date(classInfo.scheduledAt).toLocaleString();
-            
+        // 4. Render rows
+        tbody.innerHTML = bookings.map(b => {
+            const studentName = b.student?.name || 'Unknown Student';
+            const tutorName = b.liveClass?.instructor?.name || 'Unknown Tutor';
+            const classTitle = b.liveClass?.title || 'Unknown Class';
+            const time = b.liveClass?.scheduledAt ? new Date(b.liveClass.scheduledAt).toLocaleString() : 'N/A';
+            const status = b.status || 'N/A';
+
+            // Badge color based on status
+            let badgeClass = 'bg-neutral-50 text-neutral-600';
+            if (status === 'confirmed') badgeClass = 'bg-success-50 text-success-600';
+            else if (status === 'cancelled') badgeClass = 'bg-danger-50 text-danger-600';
+            else if (status === 'attended') badgeClass = 'bg-info-50 text-info-600';
+            else if (status === 'postponed') badgeClass = 'bg-warning-50 text-warning-600';
+
+            const tutorTd = role === 'instructor' ? '' : `<td class="px-20 py-22 text-14">${tutorName}</td>`;
+
             return `
                 <tr class="hover-bg-neutral-20 border-bottom transition-03">
-                    <td class="px-20 py-22 text-14 fw-medium">${classInfo.title}</td>
-                    <td class="px-20 py-22 text-14">${instructorName}</td>
+                    <td class="px-20 py-22 text-14 fw-medium">${studentName}</td>
+                    ${tutorTd}
+                    <td class="px-20 py-22 text-14">${classTitle}</td>
+                    <td class="px-20 py-22 text-14">${time}</td>
                     <td class="px-20 py-22 text-14">
-                        <span class="badge ${status === 'scheduled' || status === 'confirmed' ? 'bg-success-50 text-success-600' : 'bg-warning-50 text-warning-600'} px-12 py-6 rounded-pill">${status}</span>
+                        <span class="badge ${badgeClass} px-12 py-6 rounded-pill text-capitalize">${status}</span>
                     </td>
-                    <td class="px-20 py-22 text-14">${date}</td>
                 </tr>
             `;
         }).join('');
 
     } catch (err) {
-        console.error('Error fetching dashboard live classes:', err);
-        tbody.innerHTML = '<tr><td colspan="4" class="text-center text-danger">Error loading classes</td></tr>';
+        console.error('Error fetching dashboard bookings:', err);
+        tbody.innerHTML = '<tr><td colspan="5" class="text-center text-danger py-24">Error loading bookings</td></tr>';
     }
 });

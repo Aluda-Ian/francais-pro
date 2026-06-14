@@ -414,8 +414,8 @@ function renderUpcomingBookings() {
           <div class="bookings-empty__icon"><i class="ph ph-calendar-blank"></i></div>
           <div class="bookings-empty__title">No upcoming bookings</div>
           <div class="bookings-empty__text">You haven't booked any upcoming live classes yet. Browse available classes and book one to get started!</div>
-          <a href="live-classes.html" class="bookings-empty__cta">
-            <i class="ph ph-video-camera"></i> Browse Live Classes
+          <a href="find-tutors.html" class="bookings-empty__cta">
+            <i class="ph ph-users"></i> Find Tutors & Book Slots
           </a>
         </div>
       </div>
